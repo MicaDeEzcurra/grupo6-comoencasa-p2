@@ -1,0 +1,168 @@
+/*--- INDEX CSS ---*/
+
+/*--- Seteos básicos ---*/
+* {
+    box-sizing: border-box;
+}
+ul, ol{
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+/*--- BODY ---*/
+
+body{
+    font-family: 'Roboto'
+}
+
+/*--- Naranja deco ---*/
+    
+img.naranja{
+    width: 7%;
+    position: absolute;
+    left: 93.5%;
+    top: 60%;
+}
+
+ul.uk-slider-items.uk-grid.uk-grid-match{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+div.uk-cover-container{
+    border-radius: 50%;
+    background-color: rgb(43, 40, 40);
+    width: 150px;
+    height: 150px;
+}
+
+/*--- Header ---*/
+.main-header{
+    position: relative;
+}
+.nav-palabras ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0auto;
+}
+
+.nav-palabras ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 40px;
+    }
+    
+    a, a:hover{
+    color:#3D3D3D;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: -34px;
+    }
+
+
+/* --- Iconos ---*/ 
+
+/* Cada icono en específico */
+img.search-icon{
+    width: 6%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+img.profile-icon{
+    width: 6%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+img.guardados-icon{
+    width: 14px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+img.notification-icon{
+    width: 12px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+img.carrito-icon{
+    width: 14px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    
+   
+}
+/* Conjunto de todos los iconos */
+ ul.icons{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 67%;
+    justify-content: space-around;
+    top:86%;
+    }
+
+/* Logo */
+img.logo{
+    width: 4%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+
+/*--- Footer ---*/
+
+.main-footer nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.main-footer nav ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-top: 35%;
+}  
+
+/*--- Icons redes sociales. ---*/
+
+img.icon-twitter{
+    position: absolute;
+    left: 48.1%;
+    top: 135%;
+    width: 1.001%;
+}
+
+img.icon-instagram{
+    position: absolute;
+    left: 46%;
+    top: 135%;
+    width: 1.0%;
+}
+
+img.icon-facebook{
+    position: absolute;
+    left: 44%;
+    top: 135%;
+    width: 1.0%;
+}

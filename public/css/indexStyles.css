@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body{
+    background-image: url('../img/bordex.jpg');
+    font-family: 'Gilroy';
+}
+ul, ol{
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+body{
+    background-image: url('../img/bordex.jpg');
+    font-family: 'Roboto'
+}
+
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+/*Container del body*/
+.body-container {
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+a, a:hover{
+    color:#3D3D3D;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*HEADER*/
+/* Logo */
+.header-logo{
+    width: 29%;
+}
+.logo {
+    width: 20%;
+}
+
+/*--- Barra del header ---*/
+.header-home-barra {
+    margin-right: 20px;
+}
+.header-barra {
+    text-align: center;
+    width: 33%;
+}
+.header-barra-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+/* --- Iconos ---*/ 
+.header-icons {
+    text-align: center;
+}
+
+/* Cada icono en específico (ul) */
+.header-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+img.search-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.profile-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.guardados-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.notification-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.carrito-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+/*END OF HEADER*/
+
+/*--- Textos del body ---*/
+.texto-index{
+    text-align: center;
+    margin-top: 16%;
+    margin-right: 28%;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    color:#3D3D3D;
+    margin-bottom: 19px;
+ }
+.welcome{
+    text-align: center;
+    margin-right: 28%;
+}
+
+h2{
+    color: #707070;
+    font-weight: bold;
+    font-size: 18px; 
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: #FF9F0D;
+    color: white;
+    width: 145px;
+    height: 47px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 0px;
+   
+}
+
+p{
+    text-align: center;
+    margin-right: 28%;
+}
+    /*--- Hojas deco ---*/
+    img.hojas{
+        position: absolute;
+        left: 60%;
+        top: 37%;
+    }
+
+    /*--- Naranja deco ---*/
+    
+    img.naranja{
+        width: 7%;
+        position: absolute;
+        left: 93.5%;
+        top: 60%;
+    }
+ /*--- Footer ---*/
+/*FOOTER*/
+/*Main del footer*/
+.all-footer {
+    position: fixed;
+    bottom: 0;
+
+}
+.list-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+}
+.footer-item{
+    margin-right: 20px;
+}
+
+/*Iconos de redes sociales*/
+.list-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.icon-twitter
+{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+.icon-instagram {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+.icon-facebook {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+/*END OF FOOTER*/

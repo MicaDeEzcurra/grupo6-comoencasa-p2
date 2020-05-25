@@ -1,0 +1,67 @@
+<!-- LOGIN DE  USUARIOS -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head')%>
+<!-- END OF PARTIAL HEAD -->
+
+<body>
+    <!-- HEADER -->
+<%- include('./partials/header')%>
+    <!-- /HEADER -->
+
+
+    <!-- INDEX BODY -->
+
+    <!-- ESTE ES EL FORM DE UI KIT, PARA USARLO HAY QUE TENER LOS TAGS DE CSS Y JS PEGADOS -->
+    <form class="uk-form-stacked">
+
+        <div class="uk-margin">
+            <!-- ingreso -->
+            <label class="uk-form-label" for="form-stacked-text"></label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="form-stacked-text" placeholder="usuario o correo elec" type="text"
+                    name="name">
+            </div>
+
+            <!-- contraseña -->
+            <label class="uk-form-label" for="form-stacked-text"></label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="form-stacked-text" placeholder="contraseña" type="contraseña"
+                    name="contraseña">
+            </div>
+
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button><br>
+
+
+        <button type="submit" class="btn btn-primary">Log in whith Google</button><br>
+
+
+        <button type="submit" class="btn btn-primary">Olvidaste tu contraseña?</button><br>
+
+
+        <button type="submit" class="btn btn-primary">No tienes una cuenta? Registrate</button><br>
+
+    </form>
+
+
+    <!-- /INDEX BODY -->
+
+    <!-- PARTIAL JAVASCRIPT -->
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    <!-- /PARTIAL JAVASCRIPT -->
+
+    <!-- FOOTER -->
+<%- include('./partials/footer')%>
+    <!-- /FOOTER -->
+
+</body>
+
+</html>
