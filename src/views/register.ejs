@@ -3,68 +3,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- HEAD -->
-<!-- /HEAD -->
-
 <!-- PARTIAL HEAD -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- OUR STYLES SHEET -->
-    <link rel="stylesheet" href="/css/registerStyles.css">
-
-    <!--  link a la tipografia-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-
-    <title>Registro</title>
-</head>
+<%- include('./partials/head')%>
 <!-- END OF PARTIAL HEAD -->
-
-
 
 <body>
     <div class="body-container">
-        <!-- PARTIAL HEADER -->
-        <header class="main-header">
-            <div class="row header-container">
-                <!-- Logo -->
-                <div class="header-logo">
-                    <a href=""><img class="logo" src="./ComoEnCasa/public/css/img/LogoC.png" alt=""></a>
-                </div>
-
-                <!-- Home y Que cocinan cerca -->
-                <div class="header-barra">
-                    <ul class="header-barra-container">
-                        <li class="header-home-barra"><a href="#">HOME</a></li>
-                        <li><a href="#">QUE COCINAN CERCA</a></li>
-                    </ul>
-                </div>
-
-                <!-- Icons -->
-                <div class="header-icons"></div>
-                <ul class="header-icons-container">
-                    <li><a href=""><img src="./ComoEnCasa/public/css/img/search.png" alt="" class="search-icon"></a>
-                    </li>
-
-                    <li><a href=""><img src="./ComoEnCasa/public/css/img/profile.png" alt="" class="profile-icon"></a>
-                    </li>
-
-                    <li><a href=""><img src="./ComoEnCasa/public/css/img/bell.png" alt="" class="notification-icon"></a>
-                    </li>
-
-                    <li><a href=""><img src="./ComoEnCasa/public/css/img/cart.png" alt="" class="carrito-icon"></a></li>
-
-                    <li><a href=""><img src="./ComoEnCasa/public/css/img/save.png" alt="" class="guardados-icon"></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <!-- END OF PARTIAL HEADER -->
-
+<!-- PARTIAL HEADER -->
+<%- include('./partials/header')%>
+<!-- END OF PARTIAL HEADER -->
 
         <!-- INDEX BODY -->
 
@@ -134,35 +81,9 @@
         <!-- /PARTIAL JAVASCRIPT -->
 
 
-        <!-- PARTIAL FOOTER -->
-        <footer>
-            <div class="all-footer">
-                <div class="footer-icons">
-                    <ul class="list-icons-container">
-
-                        <li><a href="https://twitter.com/"><img src="./ComoEnCasa/public/css/img/twitter.png" alt=""
-                                    class="icon-twitter"></a></li>
-
-                        <li><a href="https://www.instagram.com/"><img src="./ComoEnCasa/public/css/img/instagram.png"
-                                    alt="" class="icon-instagram"></a></li>
-
-                        <li><a href="https://www.facebook.com/"><img src="./ComoEnCasa/public/css/img/facebook.png"
-                                    alt="" class="icon-facebook"></a></li>
-
-                    </ul>
-                </div>
-                <div class="main-footer">
-                    <ul class="list-main-container">
-                        <li><a href="#"><i class="footer-item contact"></i>CONTACTO |</a></li>
-                        <li><a href="#"><i class="footer-item terms-cond"></i>TÉRMINOS Y CONDICIONES | </a></li>
-                        <li><a href="#"><i class="footer-item cookies"></i>COOKIES | </a></li>
-                        <li><a href="#"><i class="footer-item shipping-policy"></i>POLÍTICA DE ENVÍO | </a></li>
-                        <li><a href="#"><i class="footer-item privacy-policy"></i>POLÍTICA DE PRIVACIDAD</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!-- END OF PARTIAL FOOTER -->
+<!-- PARTIAL FOOTER -->
+<%- include('./partials/footer')%>
+<!-- END OF PARTIAL FOOTER -->
     </div>
 </body>
 
