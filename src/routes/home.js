@@ -7,4 +7,4 @@ router.get('/', homeController.index);
 
 module.exports = router;
 
-//TERMINADO, NO TOCAR
+//TERMINADO

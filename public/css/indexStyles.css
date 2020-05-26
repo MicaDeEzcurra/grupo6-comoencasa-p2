@@ -5,7 +5,7 @@
     outline: none;
 }
 body{
-    background-image: url('../img/bordex.jpg');
+    background-image: url(./img/bordex.jpg);
     font-family: 'Gilroy';
 }
 ul, ol{
@@ -20,7 +20,7 @@ a, a:hover {
 }
 
 body{
-    background-image: url('../img/bordex.jpg');
+    background-image: url(./img/bordex.jpg);
     font-family: 'Roboto'
 }
 

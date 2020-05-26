@@ -6,3 +6,5 @@ router.get('/', registerController.create);
 router.post('/', registerController.store);
 
 module.exports = router;
+
+//TERMINADO

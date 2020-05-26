@@ -8,4 +8,4 @@ router.post('/', loginController.login)
 
 module.exports = router;
 
-//TERMINADO, NO TOCAR
+//TERMINADO
