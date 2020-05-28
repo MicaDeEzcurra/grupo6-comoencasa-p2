@@ -1,5 +1,5 @@
 const fs = require('fs');
-const bcryptjs = require('bcryptjs');
+// const bcryptjs = require('bcryptjs');
 
 const registerController = {
     //Mostar formulario de register
@@ -15,7 +15,7 @@ const registerController = {
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
+            password: req.body.password,
             genero: req.body.genero
             //faltaria agregar para q guarde la location
         }
@@ -36,3 +36,10 @@ const registerController = {
 
 
 module.exports = registerController;
+
+
+//PERMITE GUARDAR LOS USUARIOS EN EL JSON. 
+//FALTA:
+//HASHEAR LA CONTRASEÑA
+//PONER CAMPOS OBLIGATORIOS
+//LO DE LA LOCATION
