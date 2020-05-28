@@ -4,10 +4,6 @@
 *:focus {
     outline: none;
 }
-body{
-    background-image: url(./img/bordex.jpg);
-    font-family: 'Roboto';
-}
 ul, ol{
     padding: 0;
 }
@@ -20,7 +16,8 @@ a, a:hover {
 }
 
 body{
-    background-image: url(./img/bordex.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: 'Roboto'
 }
 
@@ -105,62 +102,80 @@ img.carrito-icon{
 }
 /*END OF HEADER*/
 
-/*--- Textos del body ---*/
-.texto-index{
+/*Login container*/
+.login-container {
+ color: #3D3D3D ;
+ width: 100%;
+ height: 100%;
+ flex-direction: column;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin-top: 10%;
+}
+
+/*Titulo del Login*/
+.title-of-login {
+    color: #3D3D3D ;
+    position: relative;
     text-align: center;
-    margin-top: 16%;
-    margin-right: 28%;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #707070; 
+    padding: 7px;
+}
+/*Llenar campos*/
+.uk-input {
+    width: 250px;
+    border: #FF9F0D 2px solid;
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 7px;
+}
+.uk-input:focus {
+    border-color: #FF9F0D;
 }
 
-h1{
-    font-weight: bold;
-    font-size: 40px;
-    color:#3D3D3D;
-    margin-bottom: 19px;
- }
-.welcome{
-    text-align: center;
-    margin-right: 28%;
+
+/*Olvido su contraseña?*/
+.forget-pass {
+    font-size: 12px;
+}
+.forget-pass:hover {
+    font-size: 12px;
 }
 
-h2{
-    color: #707070;
-    font-weight: bold;
-    font-size: 18px; 
-    margin-bottom: 20px;
+/*Hipervinculo*/
+.hipervinculo:hover {
+    color: #FF9F0D;
+    padding: 4px;
+}
+.hipervinculo {
+    font-weight: inherit;
 }
 
-button{
+/*Boton de iniciar sesion*/
+.boton-iniciar {
+    margin: 10px;
     background-color: #FF9F0D;
     color: white;
     width: 145px;
     height: 47px;
     border-radius: 50px;
     font-weight: bold;
-    border: 0px;
-   
 }
 
-p{
-    text-align: center;
-    margin-right: 28%;
-}
-    /*--- Hojas deco ---*/
-    img.hojas{
-        position: absolute;
-        left: 60%;
-        top: 37%;
-    }
-
-    /*--- Naranja deco ---*/
+/*--- Naranja deco ---*/
     
-    img.naranja{
-        width: 7%;
-        position: absolute;
-        left: 93.5%;
-        top: 60%;
-    }
- /*--- Footer ---*/
+img.naranja{
+    width: 7%;
+    position: absolute;
+    left: 93.5%;
+    top: 60%;
+}
+
+
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {

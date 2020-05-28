@@ -3,6 +3,9 @@
 
 <!-- PARTIAL HEAD -->
 <%- include('./partials/head')%>
+<!--  link a css-->
+<link href="/css/homeStyles.css" rel="stylesheet">
+<title> Home </title>
 <!-- END OF PARTIAL HEAD -->
 
 <body>
@@ -13,84 +16,52 @@
 
     <!--BODY HOME -->
 
-    <!-- Banner Home 1 -->
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+    <!-- Carrousel Home 1-->
 
-        <ul class="uk-slideshow-items">
-            <li>
-                <img src="images/photo.jpg" alt="" uk-cover>
-            </li>
-            <li>
-                <img src="images/dark.jpg" alt="" uk-cover>
-            </li>
-            <li>
-                <img src="images/light.jpg" alt="" uk-cover>
-            </li>
-        </ul>
-
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-            uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-            uk-slideshow-item="next"></a>
-
-    </div>
-    <!-- /Banner Home 1-->
-
-    <!-- Navegacion de categorias -->
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
 
-        <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
+        <ul class="uk-slider-items uk-grid">
             <li class="uk-width-3-4">
-                <div class="uk-cover-container">
-                    <img src="images/photo.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-panel">
-                        <h1>1</h1>
-                    </div>
+                <div class="uk-panel">
+                    <img src="/img/Promo.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>1</h1></div>
                 </div>
             </li>
             <li class="uk-width-3-4">
-                <div class="uk-cover-container">
-                    <img src="images/dark.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-panel">
-                        <h1>2</h1>
-                    </div>
+                <div class="uk-panel">
+                    <img src="/img/Promo.jpg" alt=" alt=">
+                    <div class="uk-position-center uk-panel"><h1>2</h1></div>
                 </div>
             </li>
             <li class="uk-width-3-4">
-                <div class="uk-cover-container">
-                    <img src="images/light.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-panel">
-                        <h1>3</h1>
-                    </div>
+                <div class="uk-panel">
+                    <img src="/img/Promo.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>3</h1></div>
                 </div>
             </li>
             <li class="uk-width-3-4">
-                <div class="uk-cover-container">
-                    <img src="images/photo2.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-panel">
-                        <h1>4</h1>
-                    </div>
+                <div class="uk-panel">
+                    <img src="/img/Promo.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>4</h1></div>
                 </div>
             </li>
             <li class="uk-width-3-4">
-                <div class="uk-cover-container">
-                    <img src="images/photo3.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-panel">
-                        <h1>5</h1>
-                    </div>
+                <div class="uk-panel">
+                    <img src="/img/Promo.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>5</h1></div>
                 </div>
             </li>
         </ul>
-
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-            uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-            uk-slider-item="next"></a>
-
+    
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    
     </div>
 
+    <!-- Navegacion de categorias -->
 
-    <!--<nav class="nav-categorias">
+    
+     <nav class="nav-categorias">
             <ul class="cuatro-circulos">
                 <li><a href="#DESAYUNO"><img src="" alt="" class="circulo-categ">DESAYUNO</a></li>
         
@@ -101,15 +72,16 @@
                 <li><a href="#CENA"><img src="" alt="" class="circulo-categ">CENA</a></li>
             </ul>
         </nav>
- -->
+
     <!-- Banner Home 2-->
     <div class="banner-home">
-        <h1 class="texto-banner2">"Queremos que comas como en casa, al mejor precio y la comida más rica"</h1>
+    <h1 class="texto-banner2">"Queremos que comas como en casa, al mejor precio y la comida más rica"</h1>
     </div>
-    <!-- /Banner Home 2-->
+   
+ <!-- Naranja decoración -->
+ <img src="/img/naranja.jpg" alt="" class="naranja">
 
-    <!-- Naranja decoración -->
-    <img src="/img/naranja.jpg" alt="" class="naranja">
+
 
     <!-- END INDEX BODY -->
 

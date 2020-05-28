@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head')%>
+<!--  link a css-->
+<link href="/css/buscadorStyles.css" rel="stylesheet">
+<title> Buscador </title>
+<!-- END OF PARTIAL HEAD -->
+
+<body>
+<div class="body-container">
+<!-- PARTIAL HEADER -->
+<%- include('./partials/header')%>
+<!-- /PARTIAL HEADER -->
+
+    <!--BODY HOME -->
+<!-- Buscador -->
+<form class="uk-search uk-search-large">
+    <span uk-search-icon></span>
+    <input class="uk-search-input" type="search" placeholder="Search...">
+</form>
+
+<h1 class="uk-heading-line uk-text-center"><span>Recomendados</span></h1>
+
+<div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Torta de chocolate</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Scons de Queso</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Medialunas de J&Q</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Sandwiches de miga</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Frutos Secos</div>
+    </div>
+</div>
+
+     
+    <!-- Naranja decoración -->
+ <img src="/img/naranja.jpg" alt="" class="naranja">
+
+    <!-- END INDEX BODY -->
+
+<!-- PARTIAL FOOTER -->
+<%- include('./partials/footer')%>
+<!-- END OF PARTIAL FOOTER -->
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>

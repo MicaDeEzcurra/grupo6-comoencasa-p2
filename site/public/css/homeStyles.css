@@ -22,12 +22,11 @@ a, a:hover {
     justify-content: space-between;
     align-self: flex-start;
 }
-/*Container del body */
+/*Container del body 
 .body-container {
     max-width: 800px; 
     margin: 0 auto;
-}
-
+}*/
 a, a:hover{
     color:#3D3D3D;
     font-weight: 600;
@@ -35,6 +34,10 @@ a, a:hover{
 }
 
 /*HEADER*/
+.row.header-container{
+    max-width: 800px; 
+    margin: 0 auto;
+}
 /* Logo */
 .header-logo{
     width: 29%;
