@@ -1,0 +1,270 @@
+/*--- INDEX CSS ---*/
+
+/*--- Seteos básicos ---*/
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+ul, ol{
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*HEADER*/
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+a, a:hover{
+    color:#3D3D3D;
+    font-weight: 600;
+    font-size: 14px;
+}
+/*---------------*/
+
+.row.header-container{
+    max-width: 800px; 
+    margin: 0 auto;
+}
+/* Logo Header */
+.header-logo{
+    width: 29%;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.logo {
+    width: 15%;
+}
+
+/*--- Barra del header ---*/
+.header-home-barra {
+    margin-right: 20px;
+}
+.header-barra {
+    text-align: center;
+    width: 33%;
+    margin-top: 50px;
+}
+.header-barra-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    
+}
+/* --- Iconos del header ---*/ 
+.header-icons {
+    text-align: center;
+   
+}
+
+/* Cada icono en específico (ul) */
+.header-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+img.search-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.profile-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.guardados-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.notification-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+img.carrito-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+/*END OF HEADER*/
+
+/*--- BODY ---*/
+body{
+    font-family: 'Roboto'
+}
+.product-description {
+    position: relative;
+    top: 0;
+}
+/*TITULO*/
+.title-of-cart {
+    color: #3D3D3D ;
+    position: relative;
+    border-bottom: 2px solid #707070; 
+    width: 100%;
+    font-family: none;
+    
+    }
+
+.title-of-cart-container {
+    text-align: center;
+}
+/*--- Naranja deco ---*/
+img.naranja{
+    width: 7%;
+    position: absolute;
+    left: 93.5%;
+    top: 60%;
+}
+
+/*CARRITO CONTAINER*/
+.container-cart {
+color: #3D3D3D ;
+width: 90% ;
+justify-content: center;
+margin: 45px auto;
+}
+/*FOTO BIZCOCHUELO*/
+.img-bizco {
+    width: 30%;
+    padding: 10px;
+}
+
+.producto {
+    width: 40%;
+}
+.cantidad {
+    width: 15%;
+}
+.precio {
+    width: 20%
+}
+.subtotal {
+    width: 20%;
+}
+.eliminar {
+    width: 5%;
+}
+/*Subtitulos Carrito*/
+ 
+.align-cart {
+text-align: start;
+}
+
+/* total carrito */
+.total-carrito {
+    font-weight: bold;
+    border-top: solid #707070 1px;
+    text-align: end;
+    margin-top: 3%
+}
+/*Botones*/
+/* Boton seleccionar*/
+.boton-seleccionar {
+    background-color: white;
+    border: 2px #FF9F0D solid;
+    color: #3D3D3D;
+    border-radius: 50px;
+    font-family: none;
+    margin-left: 10%;
+}
+/*Boton eliminar*/
+.boton-eliminar {
+color: #707070;
+}
+.boton-eliminar:hover{
+    color: #FF9F0D
+}
+/* Boton finalizar */
+.boton-finalizar {
+    background-color: #FF9F0D;
+    color: white;
+    width: 125px;
+    height: 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    border-color: transparent;
+}
+.costo-envio {
+    padding-right: 2%;
+    margin-top: 0%; 
+    margin-bottom: 3px;
+
+}
+.total-margin {
+    padding-right: 2%;
+    margin-top: 0%;
+}
+.boton-finalizar-container {
+    text-align: end;
+    margin-right: 20px;
+
+}
+/*--- END OF BODY ---*/
+
+
+/*FOOTER*/
+
+/*Main del footer*/
+.all-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+}
+.list-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+}
+.footer-item{
+    margin-right: 20px;
+}
+
+/*Iconos de redes sociales*/
+.list-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.icon-twitter
+{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+.icon-instagram {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+.icon-facebook {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+/*END OF FOOTER*/
