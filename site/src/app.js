@@ -7,8 +7,9 @@ const logger = require('morgan');
 //REQUIRED ROUTES
 const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/home');
-const loginRouter = require('./routes/login');
-const registerRouter = require('./routes/register');
+const usersRouter = require('./routes/users');
+// const loginRouter = require('./routes/login');
+// const registerRouter = require('./routes/register');
 const buscadorRouter = require('./routes/buscador');
 const categoriaRouter = require('./routes/buscador');
 const productoRouter = require('./routes/producto');
@@ -30,8 +31,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 //ROUTES
 app.use('/', indexRouter);
 app.use('/home', homeRouter);
-app.use('/login', loginRouter);
-app.use('/register', registerRouter);
+app.use('/users', usersRouter);
+// app.use('/login', loginRouter);
+// app.use('/register', registerRouter);
 app.use('/buscador', buscadorRouter);
 app.use('/categoria', categoriaRouter);
 app.use('/producto', productoRouter);
