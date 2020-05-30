@@ -4,7 +4,7 @@ const categoriaController = {
             title: 'Categoría'
          
      }
-        res.render ('categoria', vac); 
+       return res.render ('categoria', vac); 
     }
 };
 

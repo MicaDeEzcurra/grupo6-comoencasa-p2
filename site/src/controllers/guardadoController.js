@@ -3,7 +3,7 @@ const guardadoController = {
           let vac = {
               title: 'guardado'
           }
-          res.render('guardado', vac);
+        return  res.render('guardado', vac);
       }
 };
 

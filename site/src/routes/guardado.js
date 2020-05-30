@@ -2,6 +2,6 @@ const express = require('express');
 const router = express.Router();
 const guardadoController = require('../controllers/guardadoController');
 
-router.get('/guardado', guardadoController.index);
+router.get('/', guardadoController.index);
 
 module.exports = router;

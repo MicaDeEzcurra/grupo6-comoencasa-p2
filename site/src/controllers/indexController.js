@@ -3,7 +3,7 @@ const indexController = {
         let vac = {
             title: 'HOME'
         }
-        res.render('index', vac);
+       return  res.render('index', vac);
     }
 };
 

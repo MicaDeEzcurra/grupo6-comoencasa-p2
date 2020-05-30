@@ -3,7 +3,7 @@ const homeController = {
         let vac = {
             title: 'HOME'
         }
-        res.render('home', vac);
+        return res.render('home', vac);
     }
 };
 

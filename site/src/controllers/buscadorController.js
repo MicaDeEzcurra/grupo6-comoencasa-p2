@@ -8,6 +8,22 @@ const buscadorController = {
 
 };
 
-
-
 module.exports = buscadorController;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

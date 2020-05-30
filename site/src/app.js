@@ -33,9 +33,10 @@ const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const buscadorRouter = require('./routes/buscador');
-const categoriaRouter = require('./routes/buscador');
+const categoriaRouter = require('./routes/categoria');
 const productoRouter = require('./routes/producto');
 const guardadoRouter = require('./routes/guardado');
+const carritoRouter = require('./routes/carrito');
 
 app.use('/', indexRouter);
 app.use('/home', homeRouter);
@@ -44,6 +45,7 @@ app.use('/buscador', buscadorRouter);
 app.use('/categoria', categoriaRouter);
 app.use('/producto', productoRouter);
 app.use('/guardado', guardadoRouter);
+app.use('/carrito', carritoRouter);
 
 
 

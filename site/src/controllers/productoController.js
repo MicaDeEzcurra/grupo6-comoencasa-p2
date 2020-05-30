@@ -1,9 +1,10 @@
+
 const productoController = {
     index: (req, res) => {
         let vac = {
             title: 'Producto'
         }
-    res.render('producto', vac);
+    return res.render('producto', vac);
     }
 
 };
