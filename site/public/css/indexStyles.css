@@ -207,3 +207,83 @@ p{
     padding: 5px;
 }
 /*END OF FOOTER*/
+
+@media (max-width: 480px){
+
+    
+    .logo {
+        width: 12%;
+        position: absolute;
+        left: 5%;
+        top: 2%;
+    }
+    .header-barra {
+        text-align: center;
+        position: absolute;
+        top: 4%;
+        z-index: 1;
+        left: 45%;
+        width: 50%;
+
+    }
+
+    .header-home-barra {
+       
+        position: absolute;
+        right: 115%;
+        top: 0px;
+    }
+
+    .header-barra-container {
+      position: relative;
+       
+    }
+    .texto-index {     
+        text-align: center;     
+        position: absolute;     
+        top: 28%;     
+        width: 69%;
+    
+    } 
+    
+    img.naranja {     
+        width: 19%;     
+        position: absolute;     
+        left: -0.5%;
+        top: 60%;
+        transform: rotate(179deg);
+        z-index: -1;
+    }
+    
+   img.hojas {
+    position: absolute;
+    left: 60%;
+    top: 37%;
+    width: 71%;
+    z-index: -1;
+    }
+     
+    .welcome {
+        text-align: center;
+        position: absolute;
+        bottom: 28%;
+        left: 20%;
+    }
+    
+    p {
+        text-align: center;
+        position: absolute;
+        bottom: 20%;
+        left: 29%;
+    }
+
+
+    .all-footer {
+    width: 73%;
+    position: fixed;
+    bottom: 0;
+    margin: 0auto;
+    right: 27%;
+    
+    }
+}

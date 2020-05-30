@@ -206,3 +206,90 @@ img.naranja{
     padding: 5px;
 }
 /*END OF FOOTER*/
+
+@media (max-width: 480px){
+
+    .logo {
+        width: 12%;
+        position: absolute;
+        left: 5%;
+        top: 2%;
+    }
+    .header-barra {
+        text-align: center;
+        position: absolute;
+        top: 4%;
+        z-index: 1;
+        left: 45%;
+        width: 50%;
+    
+
+    }
+
+    .header-home-barra {
+       
+        position: absolute;
+        right: 115%;
+        top: 0px;
+    }
+
+    .header-barra-container {
+      position: relative;
+    
+       
+    }
+
+    .uk-width-1-2\@m {
+        position: relative;
+        margin-top: 35%;
+        margin-left: 4%;
+    }
+
+    h4.precio {
+        font-size: 28px;
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 75%;
+        left: 38%;
+    }
+
+    .uk-button-default {
+        background-color: #FF9F0D;
+        color: white;
+        border-radius: 50px;
+        border: 0px;
+        left: 23%;
+        position: absolute;
+        bottom: 4%;
+    }
+
+    div.iconos {
+        display: flex;
+        position: absolute;
+        left: 75%;
+        top: 81%;
+        width: 15%;
+    }
+
+    .uk-card-footer {
+        padding: 50px 30px;
+    }
+
+
+    img.naranja {
+        width: 7%;
+        position: absolute;
+        left: 93.5%;
+        top: 60%;
+        display: none;
+    }
+
+    .all-footer {
+        width: 100%;
+        position: inherit;
+        bottom: 0;
+    
+    }
+}
