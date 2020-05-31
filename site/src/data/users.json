@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "di",
+  "lastname": "br",
+  "email": "d@gmail.com",
+  "password": "$2a$10$PvnPXphxoKyLqxlv5zVkvukAU01wY5ZmQBKlAtIAeTbIQRZUVE9hq",
+  "genero": "hombre"
+ },
+ {
+  "id": 2,
+  "name": "diego",
+  "lastname": "brusco",
+  "email": "diego@gmail.com",
+  "password": "$2a$10$KqY/HIx.c1J58S7Kfq8xBuS31MnkefaJBlZZJ2SNUavwcbKlHCHtu",
+  "genero": "Genero"
+ }
+]
