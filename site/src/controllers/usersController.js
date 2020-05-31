@@ -31,7 +31,7 @@ const controller = {
 
         userModel.save(newUser);
 
-        return res.redirect('/users/login');
+            return res.redirect('/users/login');
     }
 
        return res.render('/users/register', {errors: errors.mapped(), old:req.body})
@@ -58,7 +58,7 @@ const controller = {
                 req.session.user = user;
            
     
-            return res.redirect('/users/login');
+            return res.redirect('home');
 
 }
      return res.render('users/login', { errors: errors.mapped(), old: req.body })   

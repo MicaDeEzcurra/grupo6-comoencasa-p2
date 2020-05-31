@@ -14,5 +14,21 @@
   "email": "diego@gmail.com",
   "password": "$2a$10$KqY/HIx.c1J58S7Kfq8xBuS31MnkefaJBlZZJ2SNUavwcbKlHCHtu",
   "genero": "Genero"
+ },
+ {
+  "id": 3,
+  "name": "Hola",
+  "lastname": "chau",
+  "email": "mwojwkeds@gmail.com",
+  "password": "$2a$10$X.NrXb3b4WtiVduNJKTQROWdxOGs83MJyu29ZRaxVwIkfb1Xfi25S",
+  "genero": "hombre"
+ },
+ {
+  "id": 4,
+  "name": "mica",
+  "lastname": "de Ezcurra",
+  "email": "micaeladeezcurra@gmail.com",
+  "password": "$2a$10$ZkYENBVkwXWYS5PLHI/9gON/PQmVuFnm1sxIanHv5LjzCBn7AhDr2",
+  "genero": "hombre"
  }
 ]
