@@ -1,1 +1,34 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "",
+  "lastname": "",
+  "email": "",
+  "password": "$2a$10$nwH/kHdrt9.PTc.HDqYcPuZ4zqmIZyKS5VQ7RKEO5mzvLzY/e/0bG",
+  "genero": "Genero"
+ },
+ {
+  "id": 2,
+  "name": "",
+  "lastname": "",
+  "email": "",
+  "password": "$2a$10$QW6rHpHdWPI8GisTPvqeyeepyD6.VCg5ZNARZYs8F./s2PsmpUdu6",
+  "genero": "Genero"
+ },
+ {
+  "id": 3,
+  "name": "",
+  "lastname": "",
+  "email": "",
+  "password": "$2a$10$A1144Id6tPi5t8w.OC154.lLMf2IpaoA.OhrrvAVNZvf0HUcNTs/i",
+  "genero": "Genero"
+ },
+ {
+  "id": 4,
+  "name": "hola",
+  "lastname": "como",
+  "email": "ejdfns@gmail.com",
+  "password": "$2a$10$/9RthZJayTL/91VdhzyOe.VTgy1dh6xkooClHBkJcYzuQG7yGisPu",
+  "genero": "Genero"
+ }
+]

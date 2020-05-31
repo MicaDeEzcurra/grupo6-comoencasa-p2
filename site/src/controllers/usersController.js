@@ -26,7 +26,7 @@ const controller = {
 
         userModel.save(newUser);
 
-        return res.redirect('users/login');
+        return res.redirect('login');
     },
     
     login: function(req, res){
