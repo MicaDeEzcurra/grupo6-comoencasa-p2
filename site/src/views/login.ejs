@@ -4,7 +4,7 @@
 <html lang="en">
 
 <!-- PARTIAL HEAD -->
-<%- include('./partials/head')%>
+<%- include('./partials/head', {title: 'Login'})%>
 <!--  link a css-->
 <link href="/css/loginStyles.css" rel="stylesheet">
 <title> Login </title>
@@ -25,7 +25,7 @@
             <!-- ingreso -->
             <label class="uk-form-label" for="form-stacked-text"></label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" placeholder="correo elec" type="text"
+                <input class="uk-input" id="form-stacked-text" placeholder="Email" type="text"
                     name="name" value="<%= typeof old != 'undefined' ? old.email : ''%>"> 
                     <% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.email){ %>
@@ -37,8 +37,8 @@
             <!-- contraseña -->
             <label class="uk-form-label" for="form-stacked-text"></label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" placeholder="contraseña" type="contraseña"
-                    name="contraseña">
+                <input class="uk-input" id="form-stacked-text" placeholder="password" type="password"
+                    name="password">
             </div>
 
 

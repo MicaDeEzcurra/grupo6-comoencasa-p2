@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-//const log = require('./middlewares/log');
+const log = require('./middlewares/log');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -16,6 +16,7 @@ app.use(session({
   saveUninitialized: true
 }))
 
+app.use(log);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,8 +28,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
-//middlewares propios
-//app.use(log);
+
+
 
 
 // ************ WRITE YOUR CODE FROM HERE ************

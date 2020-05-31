@@ -59,12 +59,8 @@ const controller = {
            
     
             return res.redirect('home');
-
-}
+            }
      return res.render('users/login', { errors: errors.mapped(), old: req.body })   
+    }       
 }
-}
-
-
-
   module.exports = controller;

@@ -4,10 +4,9 @@
 <html lang="en">
 
 <!-- PARTIAL HEAD -->
-<%- include('./partials/head')%>
+<%- include('./partials/head', {title: 'Registro'})%>
 <!--  link a css-->
 <link href="/css/registerStyles.css" rel="stylesheet">
-<title> Registro </title>
 <!-- END OF PARTIAL HEAD -->
 
 <body>
@@ -68,7 +67,7 @@
                 <!-- retyepassword -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="exampleInputPassword1" placeholder=" Repite-Contraseña" type="password"
+                    <input class="uk-input" id="exampleInputPassword1" placeholder="Repetir Contraseña" type="password"
                         name="retype">
                     <% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.retype){ %>
