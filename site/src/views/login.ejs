@@ -25,8 +25,13 @@
             <!-- ingreso -->
             <label class="uk-form-label" for="form-stacked-text"></label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" placeholder="usuario o correo elec" type="text"
-                    name="name">
+                <input class="uk-input" id="form-stacked-text" placeholder="correo elec" type="text"
+                    name="name" value="<%= typeof old != 'undefined' ? old.email : ''%>"> 
+                    <% if(typeof errors != 'undefined'){ %>
+                        <%	if(errors.email){ %>
+                        <%= errors.email.msg %>
+                        <%	} %>
+                        <% } %>    
             </div>
 
             <!-- contraseña -->
