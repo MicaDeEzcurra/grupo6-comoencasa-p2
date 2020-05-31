@@ -5,8 +5,7 @@
     outline: none;
 }
 body{
-    background-image: url(./img/bordex.jpg);
-    font-family: 'Roboto';
+    font-family: 'Gilroy';
 }
 ul, ol{
     padding: 0;
@@ -20,7 +19,7 @@ a, a:hover {
 }
 
 body{
-    background-image: url(./img/bordex.jpg);
+    
     font-family: 'Roboto'
 }
 
@@ -208,36 +207,43 @@ p{
 }
 /*END OF FOOTER*/
 
+
 @media (max-width: 480px){
 
-    
+  body{
+      margin-right:0;
+  }
     .logo {
         width: 12%;
         position: absolute;
         left: 5%;
         top: 2%;
     }
-    .header-barra {
-        text-align: center;
-        position: absolute;
-        top: 4%;
-        z-index: 1;
-        left: 45%;
-        width: 50%;
+.header-logo{
+    width: 110%;
+    position: absolute;
+    left:0;}
 
+    .header-barra {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    z-index: 1;
+    left: 46%;
+    width: 50%;
     }
 
     .header-home-barra {
        
         position: absolute;
-        right: 115%;
+        right: 120%;
         top: 0px;
     }
 
     .header-barra-container {
-      position: relative;
-       
+      position: relative;  
     }
+    
     .texto-index {     
         text-align: center;     
         position: absolute;     
@@ -283,7 +289,7 @@ p{
     position: fixed;
     bottom: 0;
     margin: 0auto;
-    right: 27%;
+    
     
     }
 }

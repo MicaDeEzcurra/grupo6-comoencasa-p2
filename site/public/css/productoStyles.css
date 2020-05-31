@@ -119,13 +119,22 @@ body{
     background-color: #FF9F0D;
     color: white;
     border-radius: 50px;
-    border: 0px
-
+    border: 0px;
+    position: absolute;
+    bottom:4%;
+    left: 35%;
+        
 }
 
 div.iconos{
+    /*display: flex;
+    justify-content: flex-end;*/
+
     display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    left: 81%;
+    top: 82%;
+    width: 13%;
 }
 
 h4.precio {
@@ -133,7 +142,20 @@ h4.precio {
     line-height: 0;
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 78%;
+    left: 38%;
 }
+
+.uk-card-footer {
+    padding: 50px 30px;
+}
+
+
+.uk-card-footer {
+    padding: 50px 30px;
+}
+
 
 /*Comentarios*/
 .uk-comment{
