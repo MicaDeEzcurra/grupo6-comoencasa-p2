@@ -11,75 +11,82 @@
 <!-- END OF PARTIAL HEAD -->
 
 <body>
-<div class="body-container">
-<!-- PARTIAL HEADER -->
-<%- include('./partials/header')%>
-<!-- END OF PARTIAL HEADER -->
-    
-    <!-- BODY CARRITO -->
-    <div class= "container-cart">
-        <form class="align-cart">
-           <div class="title-of-cart-container"><h2 class="title-of-cart">CARRITO</h2></div>
-           <table class="uk-table uk-table-striped">
-            <!-- Subtitulos -->
-            <div class="cart-subtitles">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-            </thead>
+    <div class="body-container">
+        <!-- PARTIAL HEADER -->
+        <%- include('./partials/header')%>
+        <!-- END OF PARTIAL HEADER -->
+
+        <!-- BODY CARRITO -->
+        <div class="container-cart">
+            <div class="title-of-cart-container">
+                <h2 class="title-of-cart">CARRITO</h2>
             </div>
-            <div class="product-description">
-                    <td class="producto"> <img class="img-bizco" src="/img/bizco.jpg" alt="Bizcochuelo"> Bizcochuelo de chocolate</td>
-                    <td class="cantidad"><div class="uk-margin"> 
-                        <label for="">
-                            <select class="boton-seleccionar" name="pair" id="">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <button type="submit" class="btn btn-primary">Iniciar sesión</button><br>
-                            </select>
-                            <i class="culiao"></i>
-                        </label>
-                        </div>
-                    </td>
-                    <td class="precio"> $ 1.700</td> 
-                    <td class="subtotal">$ 1.700</td>
-                    <td class="eliminar"><button class="boton-eliminar" type="button" uk-close></button></a></td>
-            </div>
-            <div class="last-border"></div>
-        </table>
-            <div class="total-carrito">
-                <br>
-                <p class="costo-envio">Costo de envio: $ 80</p>
-                <p class="total-margin">TOTAL: $ 1.780</p>
-            </div>
-    
-            <div class="boton-finalizar-container">
-            <button type="submit" class="boton-finalizar">FINALIZAR</button>
-            </div>
-                
-         </form>        
-    </div>
-    <!-- END OF BODY CARRITO -->
-    
-    
-<!-- PARTIAL FOOTER -->
-<%- include('./partials/footer')%>
-<!-- END OF PARTIAL FOOTER -->
-    
-    <!-- PARTIAL JAVASCRIPT -->
+            <form class="align-cart">
+                <div class="title-of-cart-container">
+
+                    <div>
+                        <table class="">
+                            <!-- Subtitulos del carrito -->
+                            <thead class="cart-subtitles">
+                                <tr class="cart-subtitles">
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Subtotal</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <!-- Detalle del producto a comprar -->
+                            <div class="product-description">
+                                <td class="producto"> <img class="img-bizco" src="/img/bizco.jpg" alt="Bizcochuelo">
+                                    Bizcochuelo de chocolate</td>
+                                <td class="cantidad">
+                                    <label for="">
+                                        <select class="boton-seleccionar" name="pair" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <i class="culiao"></i>
+                                    </label>
+                            </div>
+                            </td>
+                            <td class="precio"> $ 200</td>
+                            <td class="subtotal">$ 200</td>
+                            <td class="eliminar"><button class="boton-eliminar" type="button" uk-close></button></a>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+                </table>
+                <div class="total-carrito">
+                    <br>
+                    <p class="costo-envio">Costo de envio: $ 80</p>
+                    <p class="total-margin">TOTAL: $ 280</p>
+                </div>
+
+                <div class="boton-finalizar-container">
+                    <button type="submit" class="boton-finalizar">FINALIZAR</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- END OF BODY CARRITO -->
+
+        <!-- Naranja decoración -->
+        <img src="img/naranja.jpg" alt="" class="naranja">
+        <!-- PARTIAL FOOTER -->
+        <%- include('./partials/footer')%>
+        <!-- END OF PARTIAL FOOTER -->
+
+        <!-- PARTIAL JAVASCRIPT -->
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
-    <!-- /PARTIAL JAVASCRIPT -->
-    </div>   
-    </body>
+        <!-- /PARTIAL JAVASCRIPT -->
+    </div>
+</body>
 
-    </html>
+</html>
