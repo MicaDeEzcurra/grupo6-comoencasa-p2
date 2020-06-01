@@ -27,53 +27,58 @@
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Nombre" type="text" name="name" value="<%= typeof old != 'undefined' ? old.name : ''%>">
-                    <% if(typeof errors != 'undefined'){ %>
+                    <p><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.name){ %>
                         <%= errors.name.msg %>
                         <%	} %>
                         <% } %>
+                    </p>    
                 </div>
                 <!-- apellido -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Apellido" type="text" name="lastname" value="<%= typeof old != 'undefined' ? old.lastname : ''%>">
-                    <% if(typeof errors != 'undefined'){ %>
+                    <p><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.lastname){ %>
                         <%= errors.lastname.msg %>
                         <%	} %>
                         <% } %>
+                    </p>    
                 </div>
                 <!-- email -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Email" type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : ''%>">
-                    <% if(typeof errors != 'undefined'){ %>
+                    <p><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.email){ %>
                         <%= errors.email.msg %>
                         <%	} %>
                         <% } %>
+                    </p>    
                 </div>
                 <!-- password -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="exampleInputPassword1" placeholder="Contraseña" type="password"
                         name="password">
-                     <% if(typeof errors != 'undefined'){ %>
+                    <p> <% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.password){ %>
 						<%= errors.password.msg %>
 						<%	} %>
-						<% } %>    
+                        <% } %> 
+                    </p>       
                 </div>
                 <!-- retyepassword -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="exampleInputPassword1" placeholder="Repetir Contraseña" type="password"
                         name="retype">
-                    <% if(typeof errors != 'undefined'){ %>
+                    <p><% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.retype){ %>
 						<%= errors.retype.msg %>
 						<%	} %>
-						<% } %>
+                        <% } %>
+                    </p>    
                 </div>
                 <!-- direccion -->
                 <label class="uk-form-label" for="form-stacked-select"></label>

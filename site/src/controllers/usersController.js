@@ -31,10 +31,10 @@ const controller = {
 
         userModel.save(newUser);
 
-            return res.redirect('/users/login');
+            return res.redirect('login');
     }
 
-       return res.render('/users/register', {errors: errors.mapped(), old:req.body})
+       return res.render('register', {errors: errors.mapped(), old:req.body})
     },
 
 
@@ -58,9 +58,9 @@ const controller = {
                 req.session.user = user;
            
     
-            return res.redirect('home');
+            return res.redirect('/');
             }
-     return res.render('users/login', { errors: errors.mapped(), old: req.body })   
+     return res.render('login', { errors: errors.mapped(), old: req.body })   
     }       
 }
   module.exports = controller;

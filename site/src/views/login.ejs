@@ -26,20 +26,21 @@
                 <!-- ingreso -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" placeholder="Usuario o Email" type="text" name="name"
+                    <input class="uk-input" id="form-stacked-text" placeholder="Email" type="text" name="email"
                         value="<%= typeof old != 'undefined' ? old.email : ''%>">
-                    <% if(typeof errors != 'undefined'){ %>
-                    <%	if(errors.email){ %>
-                    <%= errors.email.msg %>
-                    <%	} %>
-                    <% } %>
+                    <p><% if(typeof errors != 'undefined'){ %>
+                         <%	if(errors.email){ %>
+                         <%= errors.email.msg %>
+                         <%	} %>
+                         <% } %>
+                    </p>  
                 </div>
 
                 <!-- contraseña -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" placeholder="Contraseña" type="contraseña"
-                        name="contraseña">
+                    <input class="uk-input" id="form-stacked-text" placeholder="Contraseña" type="password"
+                        name="password">
                 </div>
                 <!-- Boton -->
                 <button type="submit" class="boton-iniciar">Iniciar sesión</button><br>

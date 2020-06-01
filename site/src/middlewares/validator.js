@@ -6,6 +6,16 @@ const bcrypt = require('bcryptjs');
 
  module.exports = {
     register:[
+
+        //nombre
+        body('name')
+        .notEmpty().withMessage('El campo nombre es obligatorio'),
+
+        //apellido
+        body('lastname')
+        .notEmpty().withMessage('El campo apellido es obligatorio'),
+
+        //email
         body('email')
         .notEmpty().withMessage('Este campo es obligatorio').bail()
            .isEmail().withMessage('Debes colocar un email válido').bail() 
