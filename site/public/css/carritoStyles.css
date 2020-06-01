@@ -119,8 +119,7 @@ body{
     position: relative;
     border-bottom: 2px solid #707070; 
     width: 100%;
-    font-family: none;
-    
+    font-size: 30px;
     }
 
 .title-of-cart-container {
