@@ -134,7 +134,8 @@ img.carrito-icon{
     border-radius: 3px;
     padding: 5px;
     margin: 5px;
-    width: 250px;         
+    width: 250px;
+    height: 40px;
     color:#707070 ;
 }
 /*Boton de registrarse*/
