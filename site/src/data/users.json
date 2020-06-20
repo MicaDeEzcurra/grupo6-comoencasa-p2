@@ -1,1 +1,8 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "silvia",
+  "email": "silvia@gmail.com",
+  "password": "$2a$10$pO5E8py1UEBo3HP9RSoGTe3diT6o7JMc3QWIfzVcQLIgQCmOneGy2"
+ }
+]

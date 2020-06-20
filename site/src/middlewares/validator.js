@@ -11,10 +11,6 @@ const bcrypt = require('bcryptjs');
         body('name')
         .notEmpty().withMessage('El campo nombre es obligatorio'),
 
-        //apellido
-        body('lastname')
-        .notEmpty().withMessage('El campo apellido es obligatorio'),
-
         //email
         body('email')
         .notEmpty().withMessage('Este campo es obligatorio').bail()
