@@ -36,7 +36,7 @@
                 <!-- email -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" placeholder="Email" type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : ''%>">
+                    <input class="uk-input" id="form-stacked-text-email" placeholder="Email" type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : ''%>">
                     <p><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.email){ %>
                         <%= errors.email.msg %>
@@ -59,7 +59,7 @@
                 <!-- retyepassword -->
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="exampleInputPassword1" placeholder="Repetir Contraseña" type="password"
+                    <input class="uk-input" id="exampleInputPassword2" placeholder="Repetir Contraseña" type="password"
                         name="retype">
                     <p><% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.retype){ %>
@@ -70,9 +70,10 @@
                 </div>
                 <button type="submit" class="boton-registrarse">Registrarse</button>
                 <p>Al registrarse acepta nuestros terminos. <br> Politica de datos y de cookies.</p><br>
+                <p>Si ya tiene una cuenta,<a href="/users/login"> haga click aquí para iniciar sesión.</a> </p>
             </div>
         </form>
-
+        
         <!-- Naranja decoración -->
         <img src="img/naranja.jpg" alt="" class="naranja">
         <!-- REGISTER BODY -->

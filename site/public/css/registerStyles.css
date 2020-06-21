@@ -251,3 +251,7 @@ img.naranja{
         bottom: 0;
     }
 }
+
+.uk-form-stacked-email {
+    display:block;
+    margin-bottom:5px}

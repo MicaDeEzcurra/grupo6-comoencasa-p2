@@ -19,23 +19,21 @@ const controller = {
         //return res.send(errors)
         const user = req.body;
         if(errors.isEmpty()){
-
         //hasheo la contrasena: aca le estoy diciendo q el req.password equivale a la contrasena haseada
         user.password = bcrypt.hashSync(user.password, 10);
-        
         //aca le digo que borre 
         delete user.retype;
         user.rol = 0,
 
-        //const newUser = {
-         //   id: userModel.nextId(),
-         //   ...req.body //aca le decimos que traiga todo el formulario q lleno el usuario, usamos spread operator
-        //};
-
         User.create(user)
              .then(function () {
-            return res.redirect('login');
-    })
+            return res.redirect('login')})
+            .catch(function(err) {
+                // print the error details
+                console.log(err);
+            });
+            
+    
     } else {  
        return res.render('register', {errors: errors.mapped(), old:req.body})
     }
@@ -59,17 +57,25 @@ const controller = {
             where: {
                 email: req.body.email
             }
-
         })
+        .then(function (user) {
+                if(user){
+               if(bcrypt.compareSync(req.body.password, user.password)){
+                  let userSession = user;
 
-            .then(function (user) {
-                delete user.password;
+                  delete userSession.password;
 
-                req.session.user = user;
-           
-    
-            return res.redirect('/');
-            })
+                  req.session.user = userSession;
+
+                  return res.redirect('/');
+
+               } else {
+                  return res.send('La password no coincide')
+               }
+            } else {
+               return res.send('No se encontro usuario')
+            }
+         })
     // return res.render('login', { errors: errors.mapped(), old: req.body })   
     //}       
 }
