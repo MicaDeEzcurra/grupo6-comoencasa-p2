@@ -1,9 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "comoencasa",
-    "port": 8889,
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": 0,

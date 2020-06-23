@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
         price: DataTypes.DECIMAL,
         img: DataTypes.STRING,
         idCategory: DataTypes.INTEGER,
-        idUser: DataTypes.INTEGER
+        idSeller: DataTypes.INTEGER
     }, {});
     Product.associate = function (models) {
         Product.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'idUser'
+            as: 'seller',
+            foreignKey: 'idSeller'
         })
         Product.belongsTo(models.Category, {
             as: 'category',
