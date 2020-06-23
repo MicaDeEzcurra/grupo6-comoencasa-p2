@@ -10,8 +10,8 @@ router.get('/register', usersController.register);
 router.post('/register', validator.register, usersController.processRegister);
 // /users/login
 router.get('/login', usersController.login);
-router.post('/login',// validator.login,
- usersController.processLogin);
+router.post('/login', usersController.processLogin);
+//validator.login,
 
 //EXPORTS
 module.exports = router;

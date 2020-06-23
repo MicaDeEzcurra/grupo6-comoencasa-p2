@@ -16,7 +16,7 @@ const controller = {
     processRegister: function(req, res) {
 
         const errors = validationResult(req);
-        //return res.send(errors)
+
         const user = req.body;
         if(errors.isEmpty()){
         //hasheo la contrasena: aca le estoy diciendo q el req.password equivale a la contrasena haseada
