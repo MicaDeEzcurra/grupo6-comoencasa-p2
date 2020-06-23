@@ -5,11 +5,11 @@ module.exports = (sequelize, DataTypes) => {
         idUser: DataTypes.INTEGER,
 
     }, {});
-    Cart.associate = function (models) {
-        Cart.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'idUser'
-        })
-    };
+    // Cart.associate = function (models) {
+    //     Cart.belongsTo(models.User, {
+    //         as: 'user',
+    //         foreignKey: 'idUser'
+    //     })
+    // };
     return Cart;
 };

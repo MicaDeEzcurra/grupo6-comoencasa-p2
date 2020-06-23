@@ -7,22 +7,24 @@ module.exports = (sequelize, DataTypes) => {
         idCart: DataTypes.INTEGER,
         idSeller: DataTypes.INTEGER,
         idUser: DataTypes.INTEGER,
-    }, {});
-    CartItem.associate = function (models) {
-        CartItem.belongsTo(models.Cart, {
-            as: 'cart',
-            foreignKey: 'idCart'
-        })
+    }, {
+        tablename:'cartitem'
+    });
+    // CartItem.associate = function (models) {
+    //     CartItem.belongsTo(models.Cart, {
+    //         as: 'cart',
+    //         foreignKey: 'idCart'
+    //     })
 
-        CartItem.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'idUser'
-        })
-        CartItem.belongsTo(models.User, {
-            as: 'seller',
-            foreignKey: 'idSeller'
-        })
-    };
+    //     CartItem.belongsTo(models.User, {
+    //         as: 'user',
+    //         foreignKey: 'idUser'
+    //     })
+    //     CartItem.belongsTo(models.User, {
+    //         as: 'seller',
+    //         foreignKey: 'idSeller'
+    //     })
+    // };
 
     return CartItem;
 };

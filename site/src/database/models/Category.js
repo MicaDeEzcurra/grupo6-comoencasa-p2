@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         tablename: 'categories'
     });
-    Category.associate = function (models) {
-        Category.hasMany(models.Product, {
-            as: 'products',
-            foreignKey: 'categoryId'
-        })
+    // Category.associate = function (models) {
+    //     Category.hasMany(models.Product, {
+    //         as: 'products',
+    //         foreignKey: 'categoryId'
+    //     })
 
-    };
+    // };
     return Category;
 };

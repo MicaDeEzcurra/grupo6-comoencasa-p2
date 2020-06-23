@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-
+const log = require('./middlewares/log')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 
-
+app.use(log)
 
 
 // ************ WRITE YOUR CODE FROM HERE ************

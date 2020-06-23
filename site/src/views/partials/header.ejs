@@ -18,14 +18,21 @@
         <div class="header-icons"></div>
         <ul class="header-icons-container">
             <li><a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a></li>
-
+            
+            <% if (locals.user) { %>
+            <%= locals.user.name  %> 
+            <!-- logout -->
+            <% }else { %>
+            
             <li><a href="/users/register"><img src="/img/profile.png" alt="" class="profile-icon"></a></li>
-
+                
             <!--<li><a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
-
+            
             <li><a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
-
+            
             <li><a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
+
+            <% } %>
         </ul>
     </div>
     </header>

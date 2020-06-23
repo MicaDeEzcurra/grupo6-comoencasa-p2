@@ -9,8 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         email: DataTypes.STRING,
         password: DataTypes.STRING,
         rol: DataTypes.BOOLEAN
-    }, {
-        timestamps: false
     });
     User.associate = function (models) {
         User.hasMany(models.Product, {
@@ -21,6 +19,26 @@ module.exports = (sequelize, DataTypes) => {
         User.hasMany(models.Cart, {
             as: 'carts',
             foreignKey: 'idUser'
+        })
+
+        // User.hasMany(models.Favorite, {
+        //     as: 'followers',
+        //     foreignKey: 'idUser'
+        // })
+
+        // User.hasMany(models.Favorite, {
+        //     as: 'follows',
+        //     foreignKey: 'idSeller'
+        // })
+
+        User.hasMany(models.CartItem, {
+            as: 'items',
+            foreignKey: 'idUser'
+        })
+
+        User.hasMany(models.CartItem, {
+            as: 'itemSeller',
+            foreignKey: 'idSeller'
         })
 
 

@@ -66,7 +66,7 @@ const controller = {
                   delete userSession.password;
 
                   req.session.user = userSession;
-
+                  
                   return res.redirect('/');
 
                } else {

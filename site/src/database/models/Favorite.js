@@ -3,16 +3,16 @@ module.exports = (sequelize, DataTypes) => {
         idUser: DataTypes.INTEGER,
         idSeller: DataTypes.INTEGER
 
-    }, {});
-    Favorite.associate = function (models) {
-        Favorite.hasMany(models.User, {
-            as: 'users',
-            foreignKey: 'idUser',
-        })
-        Favorite.hasMany(models.User, {
-            as: 'favoriteUsers',
-            foreignKey: 'idSeller',
-        })
-    };
+    });
+    // Favorite.associate = function (models) {
+    //     Favorite.hasMany(models.User, {
+    //         as: 'users',
+    //         foreignKey: 'idUser',
+    //     })
+    //     Favorite.hasMany(models.User, {
+    //         as: 'favoriteUsers',
+    //         foreignKey: 'idSeller',
+    //     })
+    // };
     return Favorite;
 };
