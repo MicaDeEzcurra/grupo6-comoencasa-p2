@@ -111,20 +111,21 @@ img.carrito-icon{
 
 /*Titulo del Register*/
 .title-of-register {
-    color: #3D3D3D ;
+    color: #5c5c5c;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070; 
+    border-bottom: 2px solid #707070;
     padding: 7px;
+    font-weight: 500;
 }
 /*Llenar campos*/
 .uk-input {
-    width: 250px;
+    width: 260px;
     border: #FF9F0D 2px solid;
-    border-radius: 3px;
+    border-radius: 50px;
     margin: 5px 0;
-    padding: 7px;
+    padding: 21px;
 }
 
 /*Opciones de registrarse*/
@@ -137,6 +138,15 @@ img.carrito-icon{
     width: 250px;
     height: 40px;
     color:#707070 ;
+}
+
+.datos{
+    font-size: 12px;
+}
+
+.cuenta{
+    font-size: 14px;
+    margin-top: 2%;
 }
 /*Boton de registrarse*/
 .boton-registrarse {

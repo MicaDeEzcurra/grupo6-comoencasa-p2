@@ -129,15 +129,18 @@ h2{
     margin-bottom: 20px;
 }
 
-button{
+.uk-button-default  {
     background-color: #FF9F0D;
-    color: white;
-    width: 145px;
-    height: 47px;
+    width: 151px;
+    height: 49px;
     border-radius: 50px;
     font-weight: bold;
     border: 0px;
    
+}
+
+.uk-button-default a {
+    color: white;
 }
 
 p{

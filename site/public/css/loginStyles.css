@@ -118,20 +118,21 @@ img.carrito-icon{
 
 /*Titulo del Login*/
 .title-of-login {
-    color: #3D3D3D ;
+    color: #5c5c5c;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070; 
+    border-bottom: 2px solid #707070;
     padding: 7px;
+    font-weight: 500;
 }
 /*Llenar campos*/
 .uk-input {
-    width: 250px;
+    width: 260px;
     border: #FF9F0D 2px solid;
-    border-radius: 3px;
+    border-radius: 50px;
     margin: 5px 0;
-    padding: 7px;
+    padding: 21px;
 }
 .uk-input:focus {
     border-color: #FF9F0D;
@@ -140,10 +141,10 @@ img.carrito-icon{
 
 /*Olvido su contraseña?*/
 .forget-pass {
-    font-size: 12px;
+    font-size: 15px;
 }
 .forget-pass:hover {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 /*Hipervinculo*/
@@ -157,15 +158,29 @@ img.carrito-icon{
 
 /*Boton de iniciar sesion*/
 .boton-iniciar {
-    margin: 10px;
+    margin: 7%;
     background-color: #FF9F0D;
     color: white;
-    width: 145px;
+    width: 149px;
     height: 47px;
     border-radius: 50px;
     font-weight: bold;
     border: transparent;
 }
+
+#recuerdame {
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+.uk-grid>*>:last-child {
+    margin-bottom: 0;
+    background-color: #FF9F0D;
+}
+
+
+
 
 /*--- Naranja deco ---*/
     
