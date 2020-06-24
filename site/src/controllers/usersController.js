@@ -58,10 +58,9 @@ const controller = {
             //guardo el usuario en session
                 //borro la contraseña pq es info sensible y no se guarda en session
             delete user.password;
-
             req.session.user = user; //aca guardamos el usuario a loguearse
-            //quiero que todas mis vistas tengan la info de session del usuario, entonces creo la variable locals (viene con el pack session), donde voy a almacenar esta info. la variable locals, me permite acceder a esta info desde la vista
-            res.locals.user = req.session.user;
+    
+
 
           if (req.body.remember) {
             res.cookie("email", user.email, {
