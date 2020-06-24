@@ -62,12 +62,16 @@ const controller = {
                 if(user){
                if(bcrypt.compareSync(req.body.password, user.password)){
                   let userSession = user;
+                    delete userSession.password;
+                    req.session.user = userSession;
+                  
+    
 
-                  delete userSession.password;
-
-                  req.session.user = userSession;
-
-                  return res.redirect('/');
+    if(req.body.remember){
+       res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });
+    }
+            
+                return res.redirect('/');
 
                } else {
                   return res.send('La password no coincide')
