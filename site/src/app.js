@@ -28,8 +28,9 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 
-app.use(log)
+// Tus middlewares
 
+app.use(log)
 
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
@@ -50,6 +51,8 @@ app.use('/categoria', categoriaRouter);
 app.use('/producto', productoRouter);
 app.use('/guardado', guardadoRouter);
 app.use('/carrito', carritoRouter);
+
+
 
 
 

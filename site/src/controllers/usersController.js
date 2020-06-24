@@ -1,14 +1,14 @@
 //requiero e instalo bcrypt - npm install bcryptjs
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 //requiero las funciones modelo q arme
 //const jsonModel = require('../models/jsonModels');
 //const userModel = jsonModel('users');
-const { validationResult } = require("express-validator");
-const { User } = require("../database/models");
+const { validationResult } = require('express-validator');
+const { User } = require('../database/models');
 
 const controller = {
   register: function (req, res) {
-    return res.render("register");
+    return res.render('register');
   },
 
   processRegister: function (req, res) {
@@ -23,19 +23,19 @@ const controller = {
       (user.rol = 0),
         User.create(user)
           .then(function () {
-            return res.redirect("login");
+            return res.redirect('login');
           })
           .catch(function (err) {
             // print the error details
             console.log(err);
           });
     } else {
-      return res.render("register", { errors: errors.mapped(), old: req.body });
+      return res.render('register', { errors: errors.mapped(), old: req.body });
     }
   },
 
   login: function (req, res) {
-    return res.render("login");
+    return res.render('login');
   },
 
   processLogin: function (req, res) {
@@ -50,32 +50,32 @@ const controller = {
       where: {
         email: req.body.email,
       },
-    }).then(function (user) {
+    }).then(function (usuarioEncontrado) {
       //si el usuario existe en la DB:
-      if (user) {
+      if (usuarioEncontrado) {
         //verifico la contraseña..
-        if (bcrypt.compareSync(req.body.password, user.password)) {
+        if (bcrypt.compareSync(req.body.password, usuarioEncontrado.password)) {
+            let user = usuarioEncontrado
             //guardo el usuario en session
                 //borro la contraseña pq es info sensible y no se guarda en session
             delete user.password;
             req.session.user = user; //aca guardamos el usuario a loguearse
-    
+            // return res.send(user)
 
+            if (req.body.remember) {
+                res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 * 30});
+            }
+            
+            return res.redirect('/');
+            
 
-          if (req.body.remember) {
-            res.cookie("email", user.email, {
-              maxAge: 1000 * 60 * 60 * 24,
-            });
-          } else {
-            return res.redirect("/");
-          }
         } else {
           //si la contraseña ingresada no existe, le digo que no existe (el usuario si existe)
-          return res.send("La password no coincide");
+          return res.send('La password no coincide');
         }
       } else {
         //si el usuario no existe, por que el mail no está en la DB, lo mando al register
-        return res.render("register");
+        return res.render('register');
       }
     });
     // return res.render('login', { errors: errors.mapped(), old: req.body })
@@ -85,10 +85,10 @@ const controller = {
     req.session.destroy();
 
     if (req.cookies.email) {
-      res.clearCookie("email");
+      res.clearCookie('email');
     }
 
-    return res.redirect("/");
+    return res.redirect('/');
   },
 
   // profile: function (req, res) {
