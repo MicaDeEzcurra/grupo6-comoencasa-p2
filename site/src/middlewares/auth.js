@@ -1,4 +1,4 @@
-module.exports = (req, res, next) => {
+function authMiddleware(req, res, next){
 
    if (req.session.user) {
       return next();
@@ -6,6 +6,8 @@ module.exports = (req, res, next) => {
 
    return res.redirect('/users/login')
 }
+
+module.exports = authMiddleware;
 
 {/* <ul class="right-navbar">
 				<% if(userLoggedIn) { %>

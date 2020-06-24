@@ -1,9 +1,9 @@
-let visitante = "";
+// let visitante = "";
 
-do {
-    visitante = prompt('Nos decís tu nombre ?');
-} while (visitante.length == 0);
+// do {
+//     visitante = prompt('Nos decís tu nombre ?');
+// } while (visitante.length == 0);
 
-alert('Hola' + " " + visitante + " " + 'bienvenido a nuestro sitio');
+// alert('Hola' + " " + visitante + " " + 'bienvenido a nuestro sitio');
 
-visitante = prompt('Preferís dulce o salado ?');
+// visitante = prompt('Preferís dulce o salado ?');
