@@ -66,7 +66,7 @@ const controller = {
                   delete userSession.password;
 
                   req.session.user = userSession;
-                  
+
                   return res.redirect('/');
 
                } else {
@@ -78,6 +78,19 @@ const controller = {
          })
     // return res.render('login', { errors: errors.mapped(), old: req.body })   
     //}       
-}
+},
+      logout: function (req, res) {
+        req.session.destroy();
+
+        if (req.cookies.email) {
+            res.clearCookie('email');
+        }
+
+        return res.redirect('/');
+    },
+
+    // profile: function (req, res) {
+    //     return res.render('users/profile')
+    //}
 }
   module.exports = controller;

@@ -22,7 +22,15 @@
             <% if (locals.user) { %>
             <%= locals.user.name  %> 
             <li><a href="carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
+
             <li><a href="guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
+             <li>
+                 <form action="/users/logout" method="POST">
+                    <button type="submit">
+                        Cerrar session <i class="fas fa-shopping-basket"></i>
+                    </button>
+                    </form>
+            </li>
             <!-- logout -->
             <% }else { %>
             
