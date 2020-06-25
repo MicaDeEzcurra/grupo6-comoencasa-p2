@@ -1,43 +1,22 @@
+const { Product } = require('../database/models');
+
+
 const categoriaController = {
-     index: (req, res) =>{
-        let vac = {
-            title: 'Categoría'
-         
-     }
-       return res.render ('categoria', vac); 
-    },
+  index: (req, res) => {
+    const idCategory = req.params.id;
+    Product.findAll({
+      where: {
+        idCategory: idCategory
+      }
+    }).then(data => {
+      let products = data
+      let title = 'dasayuno'
+      return res.render('categoria', { products, title});
+    })
 
-    desayuno: (req, res) => {
-    let vac = {
-      title: 'desayuno'
-
-    }
-    return res.render('desayuno', vac);
-  },
-
-  almuerzo: (req, res) => {
-    let vac = {
-      title: 'almuerzo'
-
-    }
-    return res.render('categoria/almuerzo', vac);
-  },
-
-  merienda: (req, res) => {
-    let vac = {
-      title: 'merienda'
-
-    }
-    return res.render('categoria/merienda', vac);
-  },
-
-  cena: (req, res) => {
-    let vac = {
-      title: 'cena'
-
-    }
-    return res.render('categoria/cena', vac);
   }
+
 };
 
 module.exports = categoriaController;
+
