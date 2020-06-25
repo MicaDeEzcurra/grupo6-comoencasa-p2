@@ -40,9 +40,6 @@ a:hover {
 
 /*HEADER*/
 /* Logo */
-a:hover {
-    color: #FF9F0D;
-}
 #logo {
     width: 40px;
 }
@@ -76,6 +73,10 @@ a:hover {
     margin-left: auto;
 }
 
+a:hover {
+    color: #FF9F0D;
+}
+
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
@@ -84,34 +85,23 @@ a:hover {
     justify-content: center;
 }
 
-img.search-icon {
+
+
+.icons {
     width: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
     height: 20px;
+    color: #3D3D3D;
 }
 
-img.profile-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.guardados-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.notification-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.carrito-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 205px
 }
 
 /*END OF HEADER*/

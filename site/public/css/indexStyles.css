@@ -83,34 +83,22 @@ a:hover {
     justify-content: center;
 }
 
-img.search-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
 
-img.profile-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
 
-img.guardados-icon {
+.icons {
     width: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
     height: 20px;
+    color: #3D3D3D;
 }
-
-img.notification-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.carrito-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top:  20px;
+    right: 205px
 }
 
 /*END OF HEADER*/

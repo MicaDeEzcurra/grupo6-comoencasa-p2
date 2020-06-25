@@ -21,7 +21,7 @@ li {
 
 a,
 a:hover {
-    color: white;
+    color: #000;
     text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ body {
 /*Container del body*/
 a,
 a:hover {
-    color: white;
+    color: #3D3D3D;
     font-weight: 600;
     font-size: 14px;
 }
@@ -72,6 +72,11 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
 }
+
+a:hover {
+    color: #FF9F0D;
+}
+
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
@@ -80,34 +85,23 @@ a:hover {
     justify-content: center;
 }
 
-img.search-icon {
+
+
+.icons {
     width: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
     height: 20px;
+    color: #3D3D3D;
 }
 
-img.profile-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.guardados-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.notification-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
-}
-
-img.carrito-icon {
-    width: 20px;
-    margin-right: 5px;
-    height: 20px;
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 205px
 }
 
 /*END OF HEADER*/
@@ -217,15 +211,18 @@ color: #707070;
 /* Boton finalizar */
 .boton-finalizar {
     background-color: #FF9F0D;
-    color: white;
-    width: 105px;
-    height: 40px;
+    width: 151px;
+    height: 49px;
     border-radius: 50px;
     font-weight: bold;
-    border-color: transparent;
-    font-size: 12px;
-    margin-top: 15px;
+    border: 0px;
+    color: white;
 }
+
+.boton-finalizar:hover {
+    color:white
+}
+
 .costo-envio {
     padding-right: 2%;
     margin-top: 0%; 

@@ -14,28 +14,36 @@
 
         <!-- Icons -->
         <div class="header-icons">
-            <% if (locals.user) { %>
-            <%= locals.user.name  %> 
-            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
-            <a href="" uk-icon="heart"></a>
-            <!-- <a href="guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a> -->
-            <a href="carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
+            <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
+            <% if (locals.user) { %> 
+
+            <a class="icons" href="/buscador" uk-icon="search"></a>
+
+            <a class="icons" href="/guardado" uk-icon="heart"></a>
+
+            <a class="icons" href="/carrito" uk-icon="cart"></a>
+
             <!-- logout -->
+            <li>
+                 <form action="/users/logout" method="POST">
+                    <button id="cerrarSesion" type="submit">
+                        <a href="" uk-icon="close"></a>
+                    </button>
+                    </form>
+            </li>
+            <!-- si no hay un usuario guardado en session, se muestra lo siguiente: -->
             <% }else { %>
-            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
-            <a href="/users/register"><img src="/img/profile.png" alt="" class="profile-icon"></a>
-                
-            <!--<a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
-            
-            
-            <a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
-            
-            <a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a>
+
+            <a class="icons" href="/buscador" uk-icon="search"></a>
+
+            <a class="icons" href="/users/login" uk-icon="user"></a>
+
+            <a class="icons" href="/users/login" uk-icon="heart"></a>
+
+            <a class="icons" href="/users/login" uk-icon="cart"></a>
 
             <% } %>
-            
-            
-        </ul>
+        </div>
         </div>
     </div>
     </header>
