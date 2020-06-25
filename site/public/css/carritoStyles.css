@@ -1,108 +1,109 @@
-/*--- INDEX CSS ---*/
-
-/*--- Seteos básicos ---*/
 * {
     box-sizing: border-box;
 }
+
 *:focus {
     outline: none;
 }
-ul, ol{
+
+body {
+    font-family: 'Gilroy';
+}
+
+ul,
+ol {
     padding: 0;
 }
+
 li {
     list-style-type: none;
 }
-a, a:hover {
+
+a,
+a:hover {
     color: #000;
     text-decoration: none;
 }
 
+body {
 
-/*HEADER*/
-.header-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: flex-start;
+    font-family: 'Roboto'
 }
 
-a, a:hover{
-    color:#3D3D3D;
+/*Container del body*/
+a,
+a:hover {
+    color: #3D3D3D;
     font-weight: 600;
     font-size: 14px;
 }
-/*---------------*/
 
-.row.header-container{
-    max-width: 800px; 
-    margin: 0 auto;
+/*HEADER*/
+/* Logo */
+#logo {
+    width: 40px;
 }
-/* Logo Header */
-.header-logo{
-    width: 29%;
-    margin-top: 40px;
-    margin-left: 10px;
+
+.logo-container {
+    width: 28%;
 }
-.logo {
-    width: 15%;
+
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 84%;
+}
+
+.header-container {
+    display: flex;
+    margin-top: 20px;
 }
 
 /*--- Barra del header ---*/
-.header-home-barra {
-    margin-right: 20px;
-}
-.header-barra {
-    text-align: center;
-    width: 33%;
-    margin-top: 50px;
-}
-.header-barra-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-    
-}
-/* --- Iconos del header ---*/ 
-.header-icons {
-    text-align: center;
-   
+#Home {
+    margin-right: 25px;
 }
 
+.header-barra {
+    width: 28%;
+    color: #3D3D3D;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a:hover {
+    color: #FF9F0D;
+}
+
+/* --- Iconos ---*/
 /* Cada icono en específico (ul) */
-.header-icons-container {
+.header-icons {
+    width: 28%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: flex-end;
+    justify-content: center;
 }
-img.search-icon{
+
+
+
+.icons {
     width: 20px;
-    height: 20px;
     margin-right: 8px;
-}
-img.profile-icon{
-    width: 20px;
     height: 20px;
-    margin-right: 8px;
+    color: #3D3D3D;
 }
-img.guardados-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 205px
 }
-img.notification-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-img.carrito-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
+
 /*END OF HEADER*/
 
 /*--- BODY ---*/
@@ -116,11 +117,16 @@ body{
 /*TITULO*/
 .title-of-cart {
     color: #3D3D3D ;
+    
     position: relative;
     border-bottom: 2px solid #707070; 
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
+    margin: 2% auto;
+    padding: 7px;
+    font-weight: 500;
     }
+
 
 .title-of-cart-container {
     text-align: center;
@@ -139,7 +145,8 @@ img.naranja{
 color: #3D3D3D ;
 width: 90% ;
 justify-content: center;
-margin: 45px auto;
+margin: 0 auto;
+margin: 4% auto;
 }
 /*FOTO BIZCOCHUELO*/
 .img-bizco {
@@ -149,18 +156,23 @@ margin: 45px auto;
 
 .producto {
     width: 40%;
+    margin: 0 auto;
 }
 .cantidad {
     width: 15%;
+    margin: 0 auto;
 }
 .precio {
-    width: 20%
+    width: 20%;
+    margin:  auto;
 }
 .subtotal {
     width: 20%;
+    margin: 0 auto;
 }
 .eliminar {
     width: 5%;
+    margin: 0 auto;
 }
 /*Subtitulos Carrito*/
  
@@ -199,15 +211,18 @@ color: #707070;
 /* Boton finalizar */
 .boton-finalizar {
     background-color: #FF9F0D;
-    color: white;
-    width: 105px;
-    height: 40px;
+    width: 151px;
+    height: 49px;
     border-radius: 50px;
     font-weight: bold;
-    border-color: transparent;
-    font-size: 12px;
-    margin-top: 15px;
+    border: 0px;
+    color: white;
 }
+
+.boton-finalizar:hover {
+    color:white
+}
+
 .costo-envio {
     padding-right: 2%;
     margin-top: 0%; 
@@ -225,25 +240,20 @@ color: #707070;
 }
 /*--- END OF BODY ---*/
 
-
 /*FOOTER*/
-
 /*Main del footer*/
 .all-footer {
-    position: absolute;
-    width: 100%;
+    position: fixed;
     bottom: 0;
-    
+    width: 100%;
 }
+
 .list-main-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-self: flex-end;
-}
-.footer-item{
-    margin-right: 20px;
 }
 
 /*Iconos de redes sociales*/
@@ -252,28 +262,28 @@ color: #707070;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
 }
-.icon-twitter
-{
+
+.icon-twitter {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-instagram {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-facebook {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 /*END OF FOOTER*/
+
 
 /*MEDIA QUERIES*/
 @media (max-width: 480px){

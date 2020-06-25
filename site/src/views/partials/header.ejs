@@ -1,56 +1,50 @@
 <!-- PARTIAL HEADER -->
-<header class="main-header">
+<header">
     <div class="row header-container">
         <!-- Logo -->
-        <div class="header-logo">
-            <a href="/"><img class="logo" src="/img/LogoC.png" alt=""></a>
+        <div class="logo-container">
+            <a href="/"><img id="logo" src="/img/LogoC.png" alt="logo"></a>
         </div>
 
         <!-- Home y Que cocinan cerca -->
         <div class="header-barra">
-            <ul class="header-barra-container">
-                <li class="header-home-barra"><a href="/home">HOME</a></li>
-                <li><a href="/home">QUE COCINAN CERCA</a></li>
-            </ul>
+            <a id="Home" href="/home">HOME</a>
+            <a href="/home">QUIEN COCINA CERCA</a>
         </div>
 
         <!-- Icons -->
-        <div class="header-icons"></div>
-        <ul class="header-icons-container">
-            
+        <div class="header-icons">
             <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
             <% if (locals.user) { %> 
-            
-            <li><a href="/carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
 
-            <li><a href="/guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
+            <a class="icons" href="/buscador" uk-icon="search"></a>
 
-            <li><a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a></li> 
+            <a class="icons" href="/guardado" uk-icon="heart"></a>
+
+            <a class="icons" href="/carrito" uk-icon="cart"></a>
 
             <!-- logout -->
             <li>
                  <form action="/users/logout" method="POST">
-                    <button type="submit">
-                        Cerrar session <i class="fas fa-shopping-basket"></i>
+                    <button id="cerrarSesion" type="submit">
+                        <a href="" uk-icon="close"></a>
                     </button>
                     </form>
             </li>
-            
             <!-- si no hay un usuario guardado en session, se muestra lo siguiente: -->
             <% }else { %>
-            
-            <li><a href="/users/login"><img src="/img/profile.png" alt="" class="profile-icon"></a></li>
-                
-            <!--<li><a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
-            
-            <li><a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
-            
-            <li><a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
 
-            <li><a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a></li>
+            <a class="icons" href="/buscador" uk-icon="search"></a>
+
+            <a class="icons" href="/users/login" uk-icon="user"></a>
+
+            <a class="icons" href="/users/login" uk-icon="heart"></a>
+
+            <a class="icons" href="/users/login" uk-icon="cart"></a>
 
             <% } %>
-        </ul>
+        </div>
+        </div>
     </div>
     </header>
 <!-- END OF PARTIAL HEADER -->

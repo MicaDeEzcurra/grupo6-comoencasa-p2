@@ -1,117 +1,125 @@
 * {
     box-sizing: border-box;
 }
+
 *:focus {
     outline: none;
 }
-ul, ol{
+
+body {
+    font-family: 'Gilroy';
+}
+
+ul,
+ol {
     padding: 0;
 }
+
 li {
     list-style-type: none;
 }
-a, a:hover {
+
+a,
+a:hover {
     color: #000;
     text-decoration: none;
 }
 
-body{
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+body {
+
     font-family: 'Roboto'
 }
 
-.header-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: flex-start;
-}
 /*Container del body*/
-.body-container {
-    max-width: 800px; 
-    margin: 0 auto;
-}
-
-a, a:hover{
-    color:#3D3D3D;
+a,
+a:hover {
+    color: #3D3D3D;
     font-weight: 600;
     font-size: 14px;
 }
+
 /*HEADER*/
 /* Logo */
-.header-logo{
-    width: 29%;
+#logo {
+    width: 40px;
 }
-.logo {
-    width: 20%;
+
+.logo-container {
+    width: 28%;
+}
+
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 84%;
+}
+
+.header-container {
+    display: flex;
+    margin-top: 20px;
 }
 
 /*--- Barra del header ---*/
-.header-home-barra {
-    margin-right: 20px;
-}
-.header-barra {
-    text-align: center;
-    width: 33%;
-}
-.header-barra-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-}
-/* --- Iconos ---*/ 
-.header-icons {
-    text-align: center;
+#Home {
+    margin-right: 25px;
 }
 
+.header-barra {
+    width: 28%;
+    color: #3D3D3D;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a:hover {
+    color: #FF9F0D;
+}
+
+/* --- Iconos ---*/
 /* Cada icono en específico (ul) */
-.header-icons-container {
+.header-icons {
+    width: 28%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: flex-end;
+    justify-content: center;
 }
-img.search-icon{
+
+
+
+.icons {
     width: 20px;
-    height: 20px;
     margin-right: 8px;
-}
-img.profile-icon{
-    width: 20px;
     height: 20px;
-    margin-right: 8px;
+    color: #3D3D3D;
 }
-img.guardados-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 205px
 }
-img.notification-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-img.carrito-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
+
 /*END OF HEADER*/
+
 
 /*Register container*/
 .register-container {
+width: 50%;
  color: #3D3D3D ;
  justify-content: center;
- margin: 38px auto;
+ margin: 3% auto;
  text-align: center;
 }
 
 /*Titulo del Register*/
 .title-of-register {
     color: #5c5c5c;
+    font-size: 40px;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
@@ -168,24 +176,20 @@ img.naranja{
     top: 60%;
     z-index: -1;
 }
-
-
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
-    position: inherit;
+    position: unset;
     bottom: 0;
-
+    width: 100%;
 }
+
 .list-main-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-self: flex-end;
-}
-.footer-item{
-    margin-right: 20px;
 }
 
 /*Iconos de redes sociales*/
@@ -194,28 +198,28 @@ img.naranja{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
 }
-.icon-twitter
-{
+
+.icon-twitter {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-instagram {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-facebook {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 /*END OF FOOTER*/
+
 
 /*MEDIA QUERIES*/
 @media (max-width: 480px){

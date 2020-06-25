@@ -1,7 +1,9 @@
 <!-- El index es la página a donde llegan los usuarios. la que tiene el logo y la frase "comé como en casa" -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="
+    height: 100%;
+">
 
 <!-- PARTIAL HEAD -->
 <%- include('./partials/head', {title: 'Como en Casa', css: 'indexStyles.css'})%>
@@ -10,36 +12,36 @@
 
 <body>
   <div class="body-container">
-<!-- PARTIAL HEADER -->
-<%- include('./partials/header')%>
-<!-- END OF PARTIAL HEADER -->
+    <!-- PARTIAL HEADER -->
+    <%- include('./partials/header')%>
+    <!-- END OF PARTIAL HEADER -->
 
 
     <!-- INDEX BODY -->
     <div class="texto-index">
       <h1>COMÉ<br>COMO EN CASA</h1>
-  </div>
-  <div class="welcome">
-  <h2>Comida casera, rica, a tan <br>solo pasos de tu casa...</h2>
-  </div>
-  
-  <p uk-margin>
-  <button class="uk-button uk-button-default uk-button-large"><a href="/home">Comenzar</a></button> </p>
-  
-  <!-- Hojas decoración -->
-  <img src="/img/hojas.jpg" alt="" class="hojas">
-  
+      <h2 >Comida casera, rica, a tan <br>solo pasos de tu casa...</h2>
+      <a href="/home"><button class="botonComenzar">COMENZAR</button></a>
+    </div>
+
+      <!-- Hojas decoración -->
+      <img src="/img/hojas.jpg" alt="" class="hojas">
+
       <!-- Naranja decoración -->
       <img src="/img/naranja.jpg" alt="" class="naranja">
-  
-     
 
-    <!-- END INDEX BODY -->
 
-<!-- PARTIAL FOOTER -->
-<%- include('./partials/footer')%>
-<!-- END OF PARTIAL FOOTER -->
+      <!-- END INDEX BODY -->
 
+      <!-- PARTIAL FOOTER -->
+      <%- include('./partials/footer')%>
+      <!-- END OF PARTIAL FOOTER -->
+
+<script type='text/javascript' src='https://500px.com/embed.js'></script>
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
     
   </div>
   <script src="js/user.js"></script>

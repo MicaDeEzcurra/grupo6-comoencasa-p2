@@ -43,9 +43,7 @@
 
 
                 <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label for="remember">Recuérdame  </label>
-                    <input class="uk-radio" type="checkbox" name="remember" >
-    
+                    <label id="recuerdame"><input class="uk-checkbox" type="checkbox" checked> Recuérdame</label>
                 </div>
                 
                 <!-- Boton -->
@@ -54,9 +52,11 @@
                 <a href="" class="google hipervinculo">Iniciar sesión con Google</a>-->
                 <br>
                 <!-- Hipervinculos FALTA completar la redireccion con el href -->
-                <a href="" class="forget-pass hipervinculo">Olvidé mi contraseña</a>
+                <a href="" id="noTenesCuenta" class="forget-pass hipervinculo">Olvidé mi contraseña</a>
                 <div class="cuenta">
-                    <p>Si aún no tiene una cuenta,<a href="/users/register" class="hipervinculo"> haga click aquí para registrarse.</a> </p></div>
+                    <p id="noTenesCuenta">Si aún no tiene una cuenta,<a href="/users/register" class="hipervinculo">
+                            haga click aquí para registrarse.</a> </p>
+                    </div>
                  
             </div>
         </form>

@@ -1,107 +1,109 @@
-/*--- INDEX CSS ---*/
-
-/*--- Seteos básicos ---*/
 * {
     box-sizing: border-box;
 }
-ul, ol{
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Gilroy';
+}
+
+ul,
+ol {
     padding: 0;
 }
+
 li {
     list-style-type: none;
 }
-a, a:hover {
+
+a,
+a:hover {
     color: #000;
     text-decoration: none;
 }
 
-.header-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: flex-start;
+body {
+
+    font-family: 'Roboto'
 }
-/*Container del body 
-.body-container {
-    max-width: 800px; 
-    margin: 0 auto;
-}*/
-a, a:hover{
-    color:#3D3D3D;
+
+/*Container del body*/
+a,
+a:hover {
+    color: #3D3D3D;
     font-weight: 600;
     font-size: 14px;
 }
 
 /*HEADER*/
-.row.header-container{
-    max-width: 800px; 
-    margin: 0 auto;
-}
 /* Logo */
-.header-logo{
-    width: 29%;
-    margin-top: 30px;
-    margin-left: 85px;
+#logo {
+    width: 40px;
 }
-.logo {
-    width: 15%;
+
+.logo-container {
+    width: 28%;
+}
+
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 84%;
+}
+
+.header-container {
+    display: flex;
+    margin-top: 20px;
 }
 
 /*--- Barra del header ---*/
-.header-home-barra {
-    margin-right: 20px;
-}
-.header-barra {
-    text-align: center;
-    width: 33%;
-    margin-top: 50px;
-}
-.header-barra-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-    
-}
-/* --- Iconos ---*/ 
-.header-icons {
-    text-align: center;
-   
+#Home {
+    margin-right: 25px;
 }
 
+.header-barra {
+    width: 28%;
+    color: #3D3D3D;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a:hover {
+    color: #FF9F0D;
+}
+
+/* --- Iconos ---*/
 /* Cada icono en específico (ul) */
-.header-icons-container {
+.header-icons {
+    width: 28%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: flex-end;
+    justify-content: center;
 }
-img.search-icon{
+
+
+
+.icons {
     width: 20px;
-    height: 20px;
     margin-right: 8px;
-}
-img.profile-icon{
-    width: 20px;
     height: 20px;
-    margin-right: 8px;
+    color: #3D3D3D;
 }
-img.guardados-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+
+/*CERRAR SESION*/
+#cerrarSesion {
+    border: none;
+    color: #3D3D3D;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 205px
 }
-img.notification-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-img.carrito-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
+
 /*END OF HEADER*/
 
 /*--- BODY ---*/
@@ -110,7 +112,22 @@ body{
     font-family: 'Roboto'
 }
 
-
+.title-of-home {
+    background-color: #FF9F0D;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 3px 10px;
+    width: 100%;
+    height: 43px;
+    margin: 0 auto;
+    margin-top: 3%;
+    opacity: 75%;
+    
+}
 .uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container{
     margin-right: 10%;
     width: 70%;
@@ -128,7 +145,8 @@ body{
 }
 
 .nav-categorias li{
-    background-color: #333333;
+    background-color: #FF9F0D;
+    opacity: 80%;
     width: 150px;
     height: 150px;
     margin-left: 5%;
@@ -170,24 +188,20 @@ img.naranja{
     top: 60%;
 }
 
-
-/*--- Footer ---*/
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
-    /*position: fixed;*/
+    position: unset;
     bottom: 0;
-
+    width: 100%;
 }
+
 .list-main-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-self: flex-end;
-}
-.footer-item{
-    margin-right: 20px;
 }
 
 /*Iconos de redes sociales*/
@@ -196,28 +210,28 @@ img.naranja{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
 }
-.icon-twitter
-{
+
+.icon-twitter {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-instagram {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 .icon-facebook {
     width: 25px;
     height: 25px;
-    margin: 5px;
     padding: 5px;
 }
+
 /*END OF FOOTER*/
+
 
 @media (max-width: 480px){
 
