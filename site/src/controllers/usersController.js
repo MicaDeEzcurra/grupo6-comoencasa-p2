@@ -71,6 +71,7 @@ const controller = {
 
         } else {
           //si la contraseña ingresada no existe, le digo que no existe (el usuario si existe)
+          //acá le tenemos que poner las validaciones
           return res.send('La password no coincide');
         }
       } else {
