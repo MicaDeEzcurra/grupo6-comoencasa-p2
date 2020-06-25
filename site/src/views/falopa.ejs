@@ -1,3 +1,69 @@
+<!-- PARTIAL HEADER -->
+<header">
+    <div class="row header-container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <a href="/"><img id="logo" src="/img/LogoC.png" alt="logo"></a>
+        </div>
+
+        <!-- Home y Que cocinan cerca -->
+        <div class="header-barra">
+            <a id="Home" href="/home">HOME</a>
+            <a href="/home">QUIEN COCINA CERCA</a>
+        </div>
+
+        <!-- Icons -->
+        <div class="header-icons">
+            <% if (locals.user) { %>
+            <%= locals.user.name  %>
+            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
+            <a href="" uk-icon="heart"></a>
+            <!-- <a href="guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a> -->
+            <a href="carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
+            <!-- logout -->
+            <% }else { %>
+            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
+            <a href="/users/register"><img src="/img/profile.png" alt="" class="profile-icon"></a>
+
+            <!--<a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
+
+
+            <a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
+
+            <a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a>
+
+            <% } %>
+
+
+            </ul>
+        </div>
+    </div>
+    </header>
+    <!-- END OF PARTIAL HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- LOGIN DE  USUARIOS -->
 
 <!DOCTYPE html>
@@ -27,11 +93,11 @@
                     <input class="uk-input" id="form-stacked-text-email" placeholder="Email" type="text" name="email"
                         value="<%= typeof old != 'undefined' ? old.email : ''%>">
                     <p><% if(typeof errors != 'undefined'){ %>
-                         <%	if(errors.email){ %>
-                         <%= errors.email.msg %>
-                         <%	} %>
-                         <% } %>
-                    </p>  
+                        <%	if(errors.email){ %>
+                        <%= errors.email.msg %>
+                        <%	} %>
+                        <% } %>
+                    </p>
                 </div>
 
                 <!-- contraseña -->
@@ -43,10 +109,10 @@
 
 
                 <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label id="recuerdame">Recuérdame <input class="uk-radio" type="radio" name="radio2" checked></label>
-    
+                    <label id="recuerdame"><input class="uk-checkbox" type="checkbox" checked> Recuérdame</label>
                 </div>
-                
+
+
                 <!-- Boton -->
                 <button type="submit" class="boton-iniciar">INICIAR</button><br>
                 <!-- Google 
@@ -54,8 +120,9 @@
                 <br>
                 <!-- Hipervinculos FALTA completar la redireccion con el href -->
                 <a id="noTenesCuenta" href="" class="forget-pass hipervinculo">Olvidaste tu contraseña?</a>
-                <p id="noTenesCuenta">No tenes cuenta? <a href="/users/register" class="hipervinculo"> Registrate</a></p>
-                 
+                <p id="noTenesCuenta">No tenes cuenta? <a href="/users/register" class="hipervinculo"> Registrate</a>
+                </p>
+
             </div>
         </form>
 
@@ -76,3 +143,15 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

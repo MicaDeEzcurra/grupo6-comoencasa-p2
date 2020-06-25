@@ -1,41 +1,42 @@
 <!-- PARTIAL HEADER -->
-<header class="main-header">
+<header">
     <div class="row header-container">
         <!-- Logo -->
-        <div class="header-logo">
-            <a href="/"><img class="logo" src="/img/LogoC.png" alt=""></a>
+        <div class="logo-container">
+            <a href="/"><img id="logo" src="/img/LogoC.png" alt="logo"></a>
         </div>
 
         <!-- Home y Que cocinan cerca -->
         <div class="header-barra">
-            <ul class="header-barra-container">
-                <li class="header-home-barra"><a href="/home">HOME</a></li>
-                <li><a href="/home">QUE COCINAN CERCA</a></li>
-            </ul>
+            <a id="Home" href="/home">HOME</a>
+            <a href="/home">QUIEN COCINA CERCA</a>
         </div>
 
         <!-- Icons -->
-        <div class="header-icons"></div>
-        <ul class="header-icons-container">
-            <li><a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a></li>
-            
+        <div class="header-icons">
             <% if (locals.user) { %>
             <%= locals.user.name  %> 
-            <li><a href="carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
-            <li><a href="guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
+            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
+            <a href="" uk-icon="heart"></a>
+            <!-- <a href="guardado"><img src="/img/save.png" alt="" class="guardados-icon"></a> -->
+            <a href="carrito"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
             <!-- logout -->
             <% }else { %>
-            
-            <li><a href="/users/register"><img src="/img/profile.png" alt="" class="profile-icon"></a></li>
+            <a href="/buscador"><img src="/img/search.png" alt="" class="search-icon"></a>
+            <a href="/users/register"><img src="/img/profile.png" alt="" class="profile-icon"></a>
                 
-            <!--<li><a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
+            <!--<a href=""><img src="/img/bell.png" alt="" class="notification-icon"></a></li>-->
             
-            <li><a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a></li>
             
-            <li><a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a></li>
+            <a href="/users/login"><img src="/img/cart.png" alt="" class="carrito-icon"></a>
+            
+            <a href="/users/login"><img src="/img/save.png" alt="" class="guardados-icon"></a>
 
             <% } %>
+            
+            
         </ul>
+        </div>
     </div>
     </header>
 <!-- END OF PARTIAL HEADER -->
