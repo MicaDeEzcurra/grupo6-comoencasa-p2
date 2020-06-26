@@ -10,8 +10,8 @@ const categoriaController = {
       }
     }).then(data => {
       let products = data
-      let title = 'dasayuno'
-      return res.render('categoria', { products, title});
+      //let title = 'dasayuno'
+      return res.render('categoria', { products});
     })
 
   }

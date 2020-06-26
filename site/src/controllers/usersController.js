@@ -66,7 +66,11 @@ const controller = {
                 res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 * 30});
             }
             
+<<<<<<< HEAD
             return res.redirect('home');
+=======
+            return res.redirect('/home');
+>>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
             
 
         } else {

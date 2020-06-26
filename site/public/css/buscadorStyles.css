@@ -102,11 +102,16 @@ a:hover {
     color: #3D3D3D;
     background-color: transparent;
     position: absolute;
+<<<<<<< HEAD
     top: 22px;
 }
 
 svg {
     max-width: none;
+=======
+    top: 20px;
+    right: 170px
+>>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
 }
 
 /*END OF HEADER*/
@@ -168,6 +173,10 @@ img.naranja{
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
+<<<<<<< HEAD
+=======
+    position: unset;
+>>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
     bottom: 0;
     width: 100%;
 }
@@ -300,6 +309,11 @@ img.naranja{
 
 
     .all-footer {
+<<<<<<< HEAD
+=======
+        width: 100%;
+        position: unset;
+>>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
         bottom: 0;
     }
 }
