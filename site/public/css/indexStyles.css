@@ -8,6 +8,8 @@
 
 body {
     font-family: 'Gilroy';
+    /*background-image: url('/site/public/img/instagram.png');
+    background-repeat: repeat-x;*/
 }
 
 ul,
@@ -24,7 +26,6 @@ a:hover {
     color: #000;
     text-decoration: none;
 }
-
 body {
 
     font-family: 'Roboto'
@@ -144,13 +145,13 @@ p{
     text-align: center;
 }
     /*--- Hojas deco ---*/
-    img.hojas{
-        position: absolute;
-        width: 25%;
-        right: 7%;
-        top: 24%;
-        opacity: 95%;
-        display: inline-block
+   .reemplazo{
+    position: absolute;
+    width: 22%;
+    right: 23%;
+    top: 22.5%;
+    opacity: 95%;
+    display: inline-block;
     }
     
 
@@ -164,7 +165,17 @@ p{
         top: 22%;
         opacity: 88%;
         display:block
-    }   
+    } 
+    
+    .naranjax{
+        width: 7%;
+        position: absolute;
+        right: 0;
+        top: 15%;
+        opacity: 88%;
+        display:block
+    } 
+    
  /*--- Footer ---*/
 /*FOOTER*/
 /*Main del footer*/
