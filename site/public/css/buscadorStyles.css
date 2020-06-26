@@ -101,7 +101,7 @@ a:hover {
     background-color: transparent;
     position: absolute;
     top: 20px;
-    right: 205px
+    right: 170px
 }
 
 /*END OF HEADER*/
@@ -162,7 +162,7 @@ img.naranja{
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
-    position: fixed;
+    position: unset;
     bottom: 0;
     width: 100%;
 }
@@ -258,7 +258,7 @@ img.naranja{
 
     .all-footer {
         width: 100%;
-        position: inherit;
+        position: unset;
         bottom: 0;
     
     }
