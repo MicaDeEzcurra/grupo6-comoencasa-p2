@@ -101,7 +101,7 @@ a:hover {
     background-color: transparent;
     position: absolute;
     top: 20px;
-    right: 205px
+    right: 170px
 }
 
 /*END OF HEADER*/
@@ -126,7 +126,7 @@ body{
     margin: 0 auto;
     margin-top: 3%;
     opacity: 75%;
-    
+    text-transform: uppercase;
 }
 .uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container{
     margin-right: 10%;
