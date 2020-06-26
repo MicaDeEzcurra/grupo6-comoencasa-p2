@@ -170,12 +170,23 @@ width: 50%;
 /*--- Naranja deco ---*/
     
 img.naranja{
+    width: 12%;
+    position: absolute;
+    left: 0;
+    transform: rotate(179deg);
+    top: 40%;
+    opacity: 88%;
+    display:block
+} 
+
+.naranjax{
     width: 7%;
     position: absolute;
-    left: 93.5%;
-    top: 60%;
-    z-index: -1;
-}
+    right: 0;
+    top: 25%;
+    opacity: 88%;
+    display:block
+} 
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {

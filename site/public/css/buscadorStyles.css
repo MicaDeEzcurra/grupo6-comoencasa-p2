@@ -137,12 +137,25 @@ body{
 
 
 /*--- Naranja deco ---*/
+    
 img.naranja{
+    width: 12%;
+    position: absolute;
+    left: 0;
+    transform: rotate(179deg);
+    top: 40%;
+    opacity: 88%;
+    display:block
+} 
+
+.naranjax{
     width: 7%;
     position: absolute;
-    left: 93.5%;
-    top: 60%;
-}
+    right: 0;
+    top: 25%;
+    opacity: 88%;
+    display:block
+} 
 
 /*--- END OF BODY ---*/
 
