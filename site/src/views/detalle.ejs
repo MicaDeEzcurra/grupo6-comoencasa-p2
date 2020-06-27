@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head', {title: product.name, css: 'productoStyles.css'})%>
+
+<!-- END OF PARTIAL HEAD -->
+
 <body>
-    <h1>DETALLE DEL PRODUCTO</h1>
-    
+    <div class="body-container">
+        <!-- PARTIAL HEADER -->
+        <%- include('./partials/header')%>
+        <!-- /PARTIAL HEADER -->
+
+        <!--BODY HOME -->
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Detalle del producto: <%= product.name %> </h2>
+                </div>
+            </div>
+            <div class="product-detail">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <img src="/img/<%= product.img %>" alt="product image" class="product-detail-img">
+                        <p class="product-detail-description">
+                            <%= product.description %>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <article class="product-detail-info">
+                            <h2 class="product-detail-title"><%= product.name %></h2>
+
+                            <p class="product-detail-price">
+                                $<%= product.price %>
+                            </p>
+                            <p class="product-detail-price">
+                                <%= product.category.name %>
+                            </p>
+                            <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+                            <hr>
+
+                            <a href="/producto/edit/<%= product.id %> " class="action-button edit">EDITAR PRODUCTO</a>
+                            <form action="/producto/delete/<%= product.id %>?_method=DELETE " method="POST"
+                                style="display: inline-flex">
+                                <button type="submit" class="action-button delete">ELIMINAR</button>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /product detail -->
+
+
+        <!-- FIN DE LOS COMENTARIOS -->
+        <!-- Naranja decoración -->
+        <img src="/img/naranja.jpg" alt="" class="naranja">
+
+
+        <!-- END INDEX BODY -->
+
+        <!-- PARTIAL FOOTER -->
+        <%- include('./partials/footer')%>
+        <!-- END OF PARTIAL FOOTER -->
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
 </body>
+
 </html>

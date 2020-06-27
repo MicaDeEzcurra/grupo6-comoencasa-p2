@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creación del producto</title>
 </head>
+
 <body>
     <h1>CREACION DE PRODUCTO</h1>
     <form class="uk-grid-small" uk-grid action="/producto/create/" method="POST" enctype="multipart/form-data">
         <div>
             <div class="uk-width-1-1">
-                <input class="uk-input" type="text" placeholder="Producto">
+                <label for="name">Nombre del Producto</label>
+                <input class="uk-input" type="text" name="name" placeholder="Producto">
             </div>
             <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="Descripción"></textarea>
+                <label for="description">Descripción</label>
+                <textarea class="uk-textarea" name="description" rows="5" placeholder="Descripción"></textarea>
             </div>
             <div class="uk-width-1-4@s">
-                <input class="uk-input" type="number" placeholder="Precio">
+                <label for="price">Precio del producto</label>
+                <input class="uk-input" type="text" name="price" placeholder="Precio">
             </div>
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-horizontal-select">Select</label>
@@ -30,15 +35,16 @@
                     </select>
                 </div>
             </div>
-            <!-- <div>
+            <div>
                 <label for="image">Imagen:</label>
                 <input type="file" name="img" id="">
-            </div> -->
+            </div>
             <div>
                 <button type="submit">CREAR</button>
             </div>
         </div>
     </form>
-    
+
 </body>
+
 </html>
