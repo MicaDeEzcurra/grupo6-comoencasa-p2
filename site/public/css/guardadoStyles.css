@@ -103,12 +103,7 @@ a:hover {
     color: #3D3D3D;
     background-color: transparent;
     position: absolute;
-<<<<<<< HEAD
     top: 22px;
-=======
-    top: 20px;
-    right: 170px
->>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
 }
 
 svg {

@@ -65,14 +65,8 @@ const controller = {
             if (req.body.remember) {
                 res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 * 30});
             }
-            
-<<<<<<< HEAD
-            return res.redirect('home');
-=======
-            return res.redirect('/home');
->>>>>>> 276acbaabb1609f9e20237102582f5e3ab7f917b
-            
 
+           return res.redirect('/home');
         } else {
           //si la contraseña ingresada no existe, le digo que no existe (el usuario si existe)
           //acá le tenemos que poner las validaciones
