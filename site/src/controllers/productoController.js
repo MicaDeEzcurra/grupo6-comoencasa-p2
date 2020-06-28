@@ -15,19 +15,11 @@ const controller = {
 
         Product.findByPk(req.params.productId, {
             include: ['category', 'user']
-
-            // include: [
-            // 	{association: 'category'},
-            // 	{ association: 'user' }
-            // ],
-
-            // include: {
-            // 	all: true,
-            // 	nested: true
-            // }
-
-        })
-            .then(product => res.render('detalle', { product }))
+            })
+            .then(product => {
+                return res.render('detalle', { product })
+            })
+            .catch(error => console.log(error))
 
     },
 
@@ -36,6 +28,7 @@ const controller = {
             .then(categories => {
                 return res.render('creacionProducto', { categories });
             })
+            .catch(error => console.log(error))
     },
 
     store: (req, res) => {
@@ -47,6 +40,7 @@ const controller = {
             .then(product => {
                 return res.redirect('/producto/detail/' + product.id)
             })
+            .catch(error => console.log(error))
 
     },
 
@@ -60,6 +54,7 @@ const controller = {
              .then(([product, categories]) => {
                  return res.render('edicionProducto', { product, categories })
              })
+             .catch(error => console.log(error))
      },
 
     update: (req, res) => {
@@ -88,20 +83,7 @@ const controller = {
     //         .then(() => {
     //             return res.redirect(home)
     //         })
-
-    // }
-
-    // filtrar: (req, res) => {
-    //     const idCategory = req.params.id;
-
-    //     Category.findByPK(idCategory, {
-    //         include: ['products']
-    //     })
-    //         .then(category => {
-    //             const products = category.products;
-
-    //             return res.render('categoria', { products })
-    //         })
+    //       .catch(error => console.log(error))
     // }
 
 }
