@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creación del producto</title>
-</head>
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head', {title: 'Vender', css: 'creacionProductoStyles.css'})%>
+
+<!-- END OF PARTIAL HEAD -->
 
 <body>
-    <h1>CREACION DE PRODUCTO</h1>
-    <form class="uk-grid-small" uk-grid action="/producto/create/" method="POST" enctype="multipart/form-data">
-        <div>
-            <div class="uk-width-1-1">
-                <label for="name">Nombre del Producto</label>
-                <input class="uk-input" type="text" name="name" placeholder="Producto">
-            </div>
-            <div class="uk-margin">
-                <label for="description">Descripción</label>
-                <textarea class="uk-textarea" name="description" rows="5" placeholder="Descripción"></textarea>
-            </div>
-            <div class="uk-width-1-4@s">
-                <label for="price">Precio del producto</label>
-                <input class="uk-input" type="text" name="price" placeholder="Precio">
-            </div>
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-select">Select</label>
-                <div class="col-12 col-md-6">
-                    <label for="idCategory" class="form-label">Categoría:</label>
-                    <select name="idCategory" id="idCategory" class="form-input">
-                        <option value="" disabled>Elegí</option>
-                        <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%= category.name %></option>
-                        <% }) %>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <label for="image">Imagen:</label>
-                <input type="file" name="img" id="">
-            </div>
-            <div>
-                <button type="submit">CREAR</button>
-            </div>
-        </div>
-    </form>
+    <div class="body-container">
+        <!-- PARTIAL HEADER -->
+        <%- include('./partials/header')%>
+        <!-- /PARTIAL HEADER -->
+        <div class="creacionContainer">
+            <h1 id="titulo">CREACION DE PRODUCTO</h1>
+            <form class="uk-grid-small" uk-grid action="/producto/create/" method="POST" enctype="multipart/form-data">
+                <div>
+                    <div>
+                        <input class="uk-input" type="text" name="name" placeholder="Producto">
+                    </div>
+                    <div>
+                        <label for="price"></label> <br>
+                        <input class="uk-input" type="number" name="price" placeholder="Precio">
+                    </div> <br>
+                    <div>
+                        <label for="idCategory" class="form-label"></label>
+                        <select name="idCategory" id="idCategory" class="caja">
+                            <option value="">Elegí</option>
+                            <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                            <% }) %>
+                        </select>
+                    </div> <br>
+                    <div>
+                        <label id="seleccionarImagen" for="image" type="file"></label>
+                        <input id="nuestroinput" type="file" name="img">
+                    </div>
+                    <div class="uk-margin">
+                        <label for="description"></label>
+                        <textarea class="uk-textarea" name="description" rows="5" placeholder="Descripción"></textarea>
+                    </div>
 
+
+                    <div>
+                        <button id="crear" type="submit">VENDER</button>
+                    </div> <br>
+                </div>
+            </form>
+
+            <!-- Naranja decoración -->
+            <img src="img/naranja.jpg" alt="" class="naranja">
+            <img src="/img/naranja.jpg" alt="" class="naranjax">
+        </div>
+        <!-- PARTIAL FOOTER -->
+        <%- include('./partials/footer')%>
+        <!-- END OF PARTIAL FOOTER -->
+    </div>
 </body>
 
 </html>

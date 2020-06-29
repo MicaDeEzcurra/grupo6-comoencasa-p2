@@ -13,60 +13,76 @@
         <!-- /PARTIAL HEADER -->
 
         <!--BODY HOME -->
-        <div class="container products-wrapper">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="products-title">Detalle del producto: <%= product.name %> </h2>
+        <div id="tituloContainer">
+            <h1 id="titulo">DETALLE DE PRODUCTO:</h1>
+        </div>
+        <div class="uk-card uk-card-default uk-width-1-2@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="40" height="40" src="/img/perfil.jpg">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom"><%= product.name %></h3>
+                        <a class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">by @usuario
+                            </time></a>
+                        <div class="iconos">
+                            <a href="/" uk-icon="location"></a>
+                            <a href="/guardado" uk-icon="heart"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="product-detail">
                 <div class="row">
                     <div class="col-12 col-lg-8">
-                        <img src="/img/<%= product.img %>" alt="product image" class="product-detail-img">
+                        <img id="imgDetail" src="/img/<%= product.img %>" alt="product image" class="product-detail-img">
                         <p class="product-detail-description">
                             <%= product.description %>
                         </p>
                     </div>
                     <div class="col-12 col-lg-4">
                         <article class="product-detail-info">
-                            <h2 class="product-detail-title"><%= product.name %></h2>
-
-                            <p class="product-detail-price">
-                                $<%= product.price %>
-                            </p>
+                            <div class="precioDetalle">
+                                <p>$<%= product.price %></p>
+                            </div>
                             <p class="product-detail-price">
                                 <%= product.category.name %>
                             </p>
-                            <a href="#" class="buy-now-button">COMPRAR AHORA</a>
                             <hr>
-
-                            <a href="/producto/edit/<%= product.id %> " class="action-button edit">EDITAR PRODUCTO</a>
-                            <form action="/producto/delete/<%= product.id %>?_method=DELETE " method="POST"
-                                style="display: inline-flex">
-                                <button type="submit" class="action-button delete">ELIMINAR</button>
-                            </form>
+                            <div class="buttonsContainer">
+                                <button class="uk-button uk-button-default uk-button-detail" id="editar"> <a
+                                        href="/producto/edit/<%= product.id %>" class="action-button edit">EDITAR</a> </button>
+                                <form action="/producto/delete/<%= product.id %>?_method=DELETE " method="POST"
+                                    style="display: inline-flex">
+                                    <button type="submit" id="eliminar"
+                                        class="uk-button uk-button-default uk-button-detail">ELIMINAR</button>
+                                </form>
+                            </div>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /product detail -->
+    </div>
+    <!-- /product detail -->
 
 
-        <!-- FIN DE LOS COMENTARIOS -->
-        <!-- Naranja decoración -->
-        <img src="/img/naranja.jpg" alt="" class="naranja">
+
+    <!-- FIN DE LOS COMENTARIOS -->
+    <!-- Naranja decoración -->
+    <img src="/img/naranja.jpg" alt="" class="naranja">
 
 
-        <!-- END INDEX BODY -->
+    <!-- END INDEX BODY -->
 
-        <!-- PARTIAL FOOTER -->
-        <%- include('./partials/footer')%>
-        <!-- END OF PARTIAL FOOTER -->
+    <!-- PARTIAL FOOTER -->
+    <%- include('./partials/footer')%>
+    <!-- END OF PARTIAL FOOTER -->
 
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
 </body>
 
 </html>
