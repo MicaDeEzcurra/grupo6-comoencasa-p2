@@ -53,8 +53,9 @@
                             <div class="buttonsContainer">
                                 <button class="uk-button uk-button-default uk-button-detail" id="editar"> <a
                                         href="/producto/edit/<%= product.id %>" class="action-button edit">EDITAR</a> </button>
-                                <form action="/producto/delete/<%= product.id %>?_method=DELETE " method="POST"
+                                <form action="/producto/delete/" method="POST"
                                     style="display: inline-flex">
+                                    <input type="hidden" name="id" id="" value="<%= product.id %>">
                                     <button type="submit" id="eliminar"
                                         class="uk-button uk-button-default uk-button-detail">ELIMINAR</button>
                                 </form>

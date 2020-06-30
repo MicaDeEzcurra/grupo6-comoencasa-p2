@@ -18,5 +18,7 @@ router.post('/login', guestMiddleware, usersController.processLogin); //aca tene
 //logout
 router.post('/logout', authtMiddleware, usersController.logout);
 
+router.get('/perfil', usersController.profile);
+
 //EXPORTS
 module.exports = router;

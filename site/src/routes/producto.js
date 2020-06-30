@@ -36,7 +36,10 @@ router.post('/create/', upload.single('img'), productoController.store);
 router.get('/edit/:productId', productoController.edit);
 router.post('/edit/:productId', upload.single('img'), productoController.update); /* PUT - Update in DB */
 
-//router.delete('/delete/:id', productoController.destroy); 
+router.post('/delete/', productoController.destroy); 
+
+
+
 
 module.exports = router;
 

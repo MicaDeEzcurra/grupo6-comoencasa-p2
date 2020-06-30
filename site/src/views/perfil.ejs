@@ -1,0 +1,50 @@
+<!-- PERFIL DE  USUARIO -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head', {title: 'Perfil', css: 'loginStyles.css'})%>
+
+<!-- END OF PARTIAL HEAD -->
+
+<body>
+    <div class="body-container">
+        <!-- PARTIAL HEADER -->
+        <%- include('./partials/header')%>
+        <!-- /PARTIAL HEADER -->
+
+
+        <div class="container products-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2 class="products-title"><%= locals.user.email %> </h2>
+                </div>
+                <!-- <div class="col-8">
+                     <div class="row product-detail justify-content-center">
+                         <div class="col-8 my-3">
+                            <img src="/images/users/<%= locals.user.image %>" alt="<%= locals.user.email %>">
+                        </div>
+                    </div> 
+                </div>  -->
+            </div>
+           
+
+        <!-- Naranja decoración -->
+        <img src="img/naranja.jpg" alt="" class="naranja">
+        <img src="/img/naranja.jpg" alt="" class="naranjax">
+        <!-- LOGIN BODY -->
+
+        <!-- PARTIAL JAVASCRIPT -->
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+        <!-- /PARTIAL JAVASCRIPT -->
+
+        <!-- FOOTER -->
+        <%- include('./partials/footer')%>
+        <!-- /FOOTER -->
+    </div>
+</body>
+
+</html>

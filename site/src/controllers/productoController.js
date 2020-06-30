@@ -73,18 +73,18 @@ const controller = {
 
     },
 
-     //destroy: (req, res) => {
+     destroy: (req, res) => {
 
-    //     Product.destroy({
-    //         where: {
-    //             id: req.params.id
-    //         }
-    //     })
-    //         .then(() => {
-    //             return res.redirect(home)
-    //         })
-    //       .catch(error => console.log(error))
-    // }
+         Product.destroy({
+             where: {
+                 id: req.body.id
+             }
+         })
+             .then(() => {
+                 return res.redirect('/')
+             })
+           .catch(error => console.log(error))
+     }
 
 }
 
