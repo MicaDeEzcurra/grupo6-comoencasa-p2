@@ -18,18 +18,24 @@
         <div class="container products-wrapper">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h2 class="products-title"><%= locals.user.email %> </h2>
+                    <h2 class="products-title"><%= user.name %> </h2>
                 </div>
-                <!-- <div class="col-8">
-                     <div class="row product-detail justify-content-center">
-                         <div class="col-8 my-3">
-                            <img src="/images/users/<%= locals.user.image %>" alt="<%= locals.user.email %>">
+                <% user.products.forEach(function(product){ %>
+                <div>
+                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                        <div style="height: 300px">
+                            <a href="/producto/detail/<%=product.id%>">
+                                <img src="/img/<%=product.img%>" style="height: 50%; margin-top:40%" alt="" class="imagen-producto">
+                            </a>
                         </div>
-                    </div> 
-                </div>  -->
+                    </div>
+                    <p><%= product.name %> </p>
+                    <p>$<%= product.price %> </p>
+                </div>
+                
+                <% })%>
             </div>
            
-
         <!-- Naranja decoración -->
         <img src="img/naranja.jpg" alt="" class="naranja">
         <img src="/img/naranja.jpg" alt="" class="naranjax">

@@ -81,10 +81,24 @@ const controller = {
              }
          })
              .then(() => {
-                 return res.redirect('/')
+                 return res.redirect('perfil')
              })
            .catch(error => console.log(error))
-     }
+     },
+
+      show: (req, res) => {
+
+        Product.findByPk(req.params.productId, {
+            include: {
+                all: true
+            }
+        })
+            .then(producto => {
+                
+                return res.render('producto', {producto})
+            })
+            .catch(error => console.log(error))
+    }
 
 }
 

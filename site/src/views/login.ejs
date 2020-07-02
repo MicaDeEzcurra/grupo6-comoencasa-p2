@@ -39,6 +39,12 @@
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Contraseña" type="password"
                         name="password">
+                    <p> <% if(typeof errors != 'undefined'){ %>
+                        <%	if(errors.password){ %>
+                        <%= errors.password.msg %>
+                        <%	} %>
+                        <% } %>
+                    </p>
                 </div>
 
 

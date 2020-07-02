@@ -38,6 +38,8 @@ router.post('/edit/:productId', upload.single('img'), productoController.update)
 
 router.post('/delete/', productoController.destroy); 
 
+router.get('/:productId', productoController.show);
+
 
 
 

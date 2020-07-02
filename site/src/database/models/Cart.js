@@ -4,12 +4,14 @@ module.exports = (sequelize, DataTypes) => {
         total: DataTypes.DECIMAL,
         idUser: DataTypes.INTEGER,
 
-    }, {});
-    // Cart.associate = function (models) {
-    //     Cart.belongsTo(models.User, {
-    //         as: 'user',
-    //         foreignKey: 'idUser'
-    //     })
-    // };
+    }, {
+        tableName: 'cart'
+    });
+    Cart.associate = function (models) {
+        Cart.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'idUser'
+        })
+    };
     return Cart;
 };

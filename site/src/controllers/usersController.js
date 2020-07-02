@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 //const jsonModel = require('../models/jsonModels');
 //const userModel = jsonModel('users');
 const { validationResult } = require('express-validator');
-const { User } = require('../database/models');
+const { User, Product } = require('../database/models');
 
 const controller = {
   register: function (req, res) {
@@ -39,7 +39,7 @@ const controller = {
   },
 
   processLogin: function (req, res) {
-    //const errors = validationResult(req);
+    const errors = validationResult(req);
 
     //if (errors.isEmpty()){
     //esto funciona como un find. elemento representa a un usuario dentro del array de usuarios en data.
@@ -55,43 +55,64 @@ const controller = {
       if (usuarioEncontrado) {
         //verifico la contraseña..
         if (bcrypt.compareSync(req.body.password, usuarioEncontrado.password)) {
-            let user = usuarioEncontrado
-            //guardo el usuario en session
-                //borro la contraseña pq es info sensible y no se guarda en session
-            delete user.password;
-            req.session.user = user; //aca guardamos el usuario a loguearse
-            // return res.send(user)
+          let user = usuarioEncontrado
+          //     //guardo el usuario en session
+          //         //borro la contraseña pq es info sensible y no se guarda en session
+          //    delete user.password;
+          req.session.user = user; //aca guardamos el usuario a loguearse
+          //     // return res.send(user)
 
-            if (req.body.remember) {
-                res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 * 30});
-            }
-
-           return res.redirect('/home');
-        } else {
+          if (req.body.remember) {
+            res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
+          }
+          return res.redirect('/home');
+      } else {
           //si la contraseña ingresada no existe, le digo que no existe (el usuario si existe)
           //acá le tenemos que poner las validaciones
-          return res.send('La password no coincide');
+          return res.render('login', { errors: errors.mapped(), old: req.body });
         }
       } else {
         //si el usuario no existe, por que el mail no está en la DB, lo mando al register
-        return res.render('register');
-      }
-    });
-    // return res.render('login', { errors: errors.mapped(), old: req.body })
+        // return res.render('register');
+        return res.render('login', { errors: errors.mapped(), old: req.body })
+      } 
+});
+
     //}
   },
-  logout: function (req, res) {
-    req.session.destroy();
+logout: function (req, res) {
+  req.session.destroy();
 
-    if (req.cookies.email) {
-      res.clearCookie('email');
-    }
-
-    return res.redirect('/');
-  },
-
-   profile: function (req, res) {
-      return res.render('perfil')
+  if (req.cookies.email) {
+    res.clearCookie('email');
   }
+
+  return res.redirect('/');
+},
+
+profile: function (req, res) {
+  //       const idPerfil = req.params.id;
+  //       Product.findAll({
+  //         where: {
+  //           idCategory: idPerfil
+  //         }
+  //       }).then(data => {
+  //         let products = data
+  //         //let title = 'dasayuno'
+  //         return res.render('perfil', { products });
+  //       })
+  // return res.render('perfil');
+
+  User.findByPk(req.params.id, {
+    include: {
+      all: true
+    }
+  })
+    .then(user => {
+      return res.render('perfil', { user });
+    })
+
+}
+       
 };
 module.exports = controller;
