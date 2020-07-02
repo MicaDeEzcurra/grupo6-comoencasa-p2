@@ -81,7 +81,7 @@ const controller = {
              }
          })
              .then(() => {
-                 return res.redirect('perfil')
+                 return res.redirect('/users/perfil/' + req.session.user.id)
              })
            .catch(error => console.log(error))
      },
