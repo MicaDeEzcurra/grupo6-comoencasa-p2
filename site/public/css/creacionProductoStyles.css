@@ -126,6 +126,11 @@ svg {
     margin-top: 3%;
 }
 
+.uk-first-column {
+    /* padding-left: 15px; */
+    margin: 0 auto;
+}
+
 #titulo {
     color: #5c5c5c;
     position: relative;

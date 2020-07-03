@@ -50,6 +50,7 @@
                                 <%= product.category.name %>
                             </p>
                             <hr>
+                            <% if (locals.user.id == product.user.id) { %> 
                             <div class="buttonsContainer">
                                 <button class="uk-button uk-button-default uk-button-detail" id="editar"> <a
                                         href="/producto/edit/<%= product.id %>" class="action-button edit">EDITAR</a> </button>
@@ -60,6 +61,10 @@
                                         class="uk-button uk-button-default uk-button-detail">ELIMINAR</button>
                                 </form>
                             </div>
+                        <% } else { %> 
+                                <a class="uk-button uk-button-default" href="/carrito">Comprar ahora</a>
+                        <% } %> 
+
                         </article>
                     </div>
                 </div>

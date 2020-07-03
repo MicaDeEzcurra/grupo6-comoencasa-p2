@@ -2,7 +2,7 @@ const {body} = require('express-validator');
 //const jsonModel = require('../models/jsonModels');
 //const userModel = jsonModel('users')
 const bcrypt = require('bcryptjs');
-const { User } = require('../database/models');
+const { User, Product } = require('../database/models');
 
 
  module.exports = {
@@ -94,7 +94,58 @@ const { User } = require('../database/models');
                     }
                 })
         }),
-    ]
+    ],
 
+     creacion: [
+
+         //nombre
+         body('name')
+             .notEmpty().withMessage('El campo nombre es obligatorio'),
+
+         // price
+         body('price')
+             .notEmpty().withMessage('El campo precio es obligatorio').bail()
+             .isInt().withMessage('Debes colocar un número valido'),
+
+         // category
+         body('category')
+             .notEmpty().withMessage('El campo categoria es obligatorio'),
+
+
+         // image
+         body('image')
+             .custom((value, { req }) => req.file).withMessage('Debes ingresar una imagen').bail()
+             .custom((value, { req }) => {
+                 const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+                 const ext = path.extname(req.file.originalname);
+                 return acceptedExtensions.includes(ext);
+             }).withMessage('Debe tener una extensión valida.')
+     ],
+
+     edicion: [
+
+         //nombre
+         body('name')
+             .notEmpty().withMessage('El campo nombre es obligatorio'),
+
+         // price
+         body('price')
+             .notEmpty().withMessage('El campo precio es obligatorio').bail()
+             .isInt().withMessage('Debes colocar un número valido'),
+
+         // category
+         body('category')
+             .notEmpty().withMessage('El campo categoria es obligatorio'),
+
+
+         // image
+         body('image')
+             .custom((value, { req }) => req.file).withMessage('Debes ingresar una imagen').bail()
+             .custom((value, { req }) => {
+                 const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+                 const ext = path.extname(req.file.originalname);
+                 return acceptedExtensions.includes(ext);
+             }).withMessage('Debe tener una extensión valida.')
+     ]
 }
 

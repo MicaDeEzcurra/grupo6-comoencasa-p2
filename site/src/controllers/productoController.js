@@ -41,16 +41,24 @@ const controller = {
     },
 
     store: (req, res) => {
-        let product = req.body
-        product.img = req.file.filename;
-        product.idSeller = req.session.user.id;
 
-        Product.create(product)
-            .then(product => {
-                return res.redirect('/producto/detail/' + product.id)
-            })
-            .catch(error => console.log(error))
+        const errors = validationResult(req)
+        if (errors.isEmpty()) {
+            let product = req.body
+            product.img = req.file.filename;
+            product.idSeller = req.session.user.id;
 
+            Product.create(product)
+                .then(product => {
+                    return res.redirect('/producto/detail/' + product.id)
+                })
+                .catch(error => console.log(error))
+        } else {
+            // Mostrar los errores
+
+            //return res.send(errors.mapped())
+            return res.render('creacionProducto', { errors: errors.mapped(), old: req.body });
+        }
     },
 
     edit: (req, res) => {
@@ -70,18 +78,25 @@ const controller = {
     },
 
     update: (req, res) => {
-        let product = req.body;
-        product.idUser = req.session.user.id
-        product.img = req.file.filename
-        Product.update(product, {
+        const errors = validationResult(req)
+        if (errors.isEmpty()) {
+            let product = req.body;
+            product.idUser = req.session.user.id
+            product.img = req.file.filename
+            Product.update(product, {
                 where: {
                     id: req.params.productId
                 }
             })
-            .then(() => {
-                return res.redirect('/producto/detail/' + req.params.productId)
-            })
-            .catch(error => console.log(error))
+                .then(confirm => {
+                    return res.redirect('/producto/detail/' + req.params.productId)
+                })
+                .catch(error => console.log(error))
+        } else {
+
+            //return res.send(errors.mapped())
+            return res.render('edicionProducto', { errors: errors.mapped(), old: req.body });
+        }
     },
 
     destroy: (req, res) => {

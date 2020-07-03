@@ -16,25 +16,48 @@
             <form class="uk-grid-small" uk-grid action="/producto/create/" method="POST" enctype="multipart/form-data">
                 <div>
                     <div>
-                        <input class="uk-input" type="text" name="name" placeholder="Producto">
+                        <input class="uk-input" type="text" name="name" placeholder="Producto"   value="<%= typeof old != 'undefined' ? old.name : ''%>">
+                        <p><% if(typeof errors != 'undefined'){ %>
+                            <%	if(errors.name){ %>
+                            <%= errors.name.msg %>
+                            <%	} %>
+                            <% } %>
+                        </p>
                     </div>
                     <div>
                         <label for="price"></label> <br>
-                        <input class="uk-input" type="number" name="price" placeholder="Precio">
+                        <input class="uk-input" type="text" name="price" placeholder="Precio"   value="<%= typeof old != 'undefined' ? old.price : ''%>">
+                        <p><% if(typeof errors != 'undefined'){ %>
+                            <%	if(errors.price){ %>
+                            <%= errors.price.msg %>
+                            <%	} %>
+                            <% } %>
+                        </p>
                     </div> <br>
                     <div>
                         <label for="idCategory" class="form-label"></label>
                         <select name="idCategory" id="idCategory" class="caja">
-                            <option value="">Elegí</option>
                             <% categories.forEach(category => { %>
+                            <option value="">Elegí</option>
                             <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
                         </select>
+                        <p><% if(typeof errors != 'undefined'){ %>
+                            <%	if(errors.category){ %>
+                            <%= errors.category.msg %>
+                            <%	} %>
+                            <% } %>
+                        </p>
                     </div> <br>
                     <div>
                         <label id="seleccionarImagen" for="image" type="file"></label>
-                        <input id="nuestroinput" type="file" name="img">
-                        <!-- src="../../img/hojas.jpg" -->
+                        <input id="nuestroinput" type="file" name="img"   value="<%= typeof old != 'undefined' ? old.img : ''%>">
+                        <p><% if(typeof errors != 'undefined'){ %>
+                            <%	if(errors.img){ %>
+                            <%= errors.img.msg %>
+                            <%	} %>
+                            <% } %>
+                        </p>
                     </div>
                     <div class="uk-margin">
                         <label for="description"></label>
@@ -43,7 +66,7 @@
 
 
                     <div>
-                        <button id="crear" type="submit">VENDER</button>
+                        <button id="crear" type="submit">CREAR</button>
                     </div> <br>
                 </div>
             </form>
