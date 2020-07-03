@@ -8,6 +8,8 @@
 
 body {
     font-family: 'Gilroy';
+    /*background-image: url('/site/public/img/instagram.png');
+    background-repeat: repeat-x;*/
 }
 
 ul,
@@ -48,7 +50,6 @@ a:hover {
     width: 28%;
 }
 
-
 .row {
     margin-right: auto;
     margin-left: auto;
@@ -85,6 +86,7 @@ a:hover {
     justify-content: center;
 }
 
+/*aca*/
 .header-icons ul {
     display: flex;
 }
@@ -109,11 +111,29 @@ svg {
     max-width: none;
 }
 
+img.naranja {
+    width: 12%;
+    position: absolute;
+    left: 0;
+    transform: rotate(179deg);
+    top: 40%;
+    opacity: 88%;
+    display: block
+}
+
+.naranjax {
+    width: 7%;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    opacity: 88%;
+    display: block
+}
 
 /*hasta aca*/
 /*END OF HEADER*/
 
-.creacionContainer {
+.perfilContainer {
     color: #3D3D3D;
     width: 50%;
     height: 100%;
@@ -123,63 +143,58 @@ svg {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 3%;
+    padding-bottom: 400px;
+    margin-top: 2%;
 }
 
-#titulo {
-    color: #5c5c5c;
-    position: relative;
-    text-align: center;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
-    padding: 7px;
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.uk-input {
-    width: 260px;
-    border: #FF9F0D 2px solid;
-    border-radius: 50px;
-    margin: 5px 0;
-    padding: 21px;
-}
-
-.uk-input:focus {
-    border-color: #FF9F0D;
-}
-
-.uk-textarea {
-    border: #FF9F0D 2px solid;
-    border-radius: 50px;
-    margin: 5px 0px;
-    width: 400px;
-    height: 80px;
-    padding: 21px;
-}
-
-#idCategory {
- height: 41px;
- width: 162px;
- border: #FF9F0D 2px solid;
- border-radius: 50px;
- margin: 5px 0;
- color: #707070;
- font-size: 15px;
- /* padding: 13px; */
- padding-left: 10px;
- transition: all .5s;
-}
-
-#crear {
-    background-color: #FF9F0D;
-    width: 151px;
-    height: 49px;
-    border-radius: 50px;
-    font-weight: bold;
-    border: 0px;
+#title {
     color: white;
+    flex-wrap: wrap;
+    font-size: 32px;
+    font-weight: 500;
+    background-color: #FF9F0D;
+    width: 80%;
+    margin: 10px auto;
+    height: 43px;
+    opacity: 75%;
+    text-transform: uppercase;
 }
+
+#titleProducts {
+    font-size: 29px;
+    font-weight: 500;
+    color: #666;
+    width: 80%;
+    margin: 15px auto;
+}
+
+p {
+    margin: 0;
+}
+
+#name  {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#name:hover {
+    color: #FF9F0D;
+}
+
+#price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
 
 /*--- Footer ---*/
 /*FOOTER*/
@@ -187,6 +202,7 @@ svg {
 .all-footer {
     bottom: 0;
     width: 100%;
+    height: 100px;
 }
 
 .list-main-container {
@@ -221,16 +237,6 @@ svg {
     width: 25px;
     height: 25px;
     padding: 5px;
-}
-/*--- Naranja deco ---*/
-
-.naranjax {
-    width: 7%;
-    position: absolute;
-    right: 0;
-    top: 25%;
-    opacity: 88%;
-    display: block
 }
 
 /*END OF FOOTER*/

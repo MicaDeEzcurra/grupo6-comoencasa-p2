@@ -1,5 +1,10 @@
-const { validationResult } = require('express-validator');
-const { Product, Category } = require('../database/models');
+const {
+    validationResult
+} = require('express-validator');
+const {
+    Product,
+    Category
+} = require('../database/models');
 
 
 const controller = {
@@ -14,10 +19,12 @@ const controller = {
     detail: (req, res) => {
 
         Product.findByPk(req.params.productId, {
-            include: ['category', 'user']
+                include: ['category', 'user']
             })
             .then(product => {
-                return res.render('detalle', { product })
+                return res.render('detalle', {
+                    product
+                })
             })
             .catch(error => console.log(error))
 
@@ -26,7 +33,9 @@ const controller = {
     create: (req, res) => {
         Category.findAll()
             .then(categories => {
-                return res.render('creacionProducto', { categories });
+                return res.render('creacionProducto', {
+                    categories
+                });
             })
             .catch(error => console.log(error))
     },
@@ -44,58 +53,62 @@ const controller = {
 
     },
 
-     edit: (req, res) => {
+    edit: (req, res) => {
 
-         const product = Product.findByPk(req.params.productId);
+        const product = Product.findByPk(req.params.productId);
 
         const categories = Category.findAll();
 
-         Promise.all([product, categories])
-             .then(([product, categories]) => {
-                 return res.render('edicionProducto', { product, categories })
-             })
-             .catch(error => console.log(error))
-     },
+        Promise.all([product, categories])
+            .then(([product, categories]) => {
+                return res.render('edicionProducto', {
+                    product,
+                    categories
+                })
+            })
+            .catch(error => console.log(error))
+    },
 
     update: (req, res) => {
         let product = req.body;
         product.idUser = req.session.user.id
         product.img = req.file.filename
         Product.update(product, {
-            where: {
-                id: req.params.productId
-            }
-        })
-            .then(confirm => {
+                where: {
+                    id: req.params.productId
+                }
+            })
+            .then(() => {
                 return res.redirect('/producto/detail/' + req.params.productId)
             })
             .catch(error => console.log(error))
-
     },
 
-     destroy: (req, res) => {
+    destroy: (req, res) => {
 
-         Product.destroy({
-             where: {
-                 id: req.body.id
-             }
-         })
-             .then(() => {
-                 return res.redirect('/users/perfil/' + req.session.user.id)
-             })
-           .catch(error => console.log(error))
-     },
+        Product.destroy({
+                where: {
+                    id: req.body.id
+                }
+            })
+            .then(() => {
+                return res.redirect('/users/perfil/' + req.session.user.id)
+            })
+            .catch(error => console.log(error))
+    },
 
-      show: (req, res) => {
+    show: (req, res) => {
 
         Product.findByPk(req.params.productId, {
-            include: {
-                all: true
-            }
-        })
+                include: {
+                    all: true
+                }
+            })
             .then(producto => {
-                
-                return res.render('producto', {producto})
+
+                return res.render('producto', {
+                    producto
+                })
             })
             .catch(error => console.log(error))
     }
