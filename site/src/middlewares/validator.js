@@ -113,13 +113,13 @@ const { User, Product } = require('../database/models');
 
 
          // image
-         body('image')
+         body('img')
              .custom((value, { req }) => req.file).withMessage('Debes ingresar una imagen').bail()
              .custom((value, { req }) => {
                  const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
                  const ext = path.extname(req.file.originalname);
                  return acceptedExtensions.includes(ext);
-             }).withMessage('Debe tener una extensión valida.')
+             }).withMessage('Debe tener una extensión válida.')
      ],
 
      edicion: [
@@ -139,13 +139,13 @@ const { User, Product } = require('../database/models');
 
 
          // image
-         body('image')
+         body('img')
              .custom((value, { req }) => req.file).withMessage('Debes ingresar una imagen').bail()
              .custom((value, { req }) => {
                  const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
                  const ext = path.extname(req.file.originalname);
                  return acceptedExtensions.includes(ext);
-             }).withMessage('Debe tener una extensión valida.')
+             }).withMessage('Debe tener una extensión válida.')
      ]
 }
 

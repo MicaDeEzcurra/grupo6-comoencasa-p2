@@ -25,7 +25,7 @@
                         </p>
                     </div>
                     <div>
-                        <label for="price"></label> <br>
+                        <label for="price"></label>
                         <input class="uk-input" type="text" name="price" placeholder="Precio"   value="<%= typeof old != 'undefined' ? old.price : ''%>">
                         <p><% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.price){ %>
@@ -33,7 +33,7 @@
                             <%	} %>
                             <% } %>
                         </p>
-                    </div> <br>
+                    </div>
                     <div>
                         <label for="idCategory" class="form-label"></label>
                         <select name="idCategory" id="idCategory" class="caja">
@@ -48,7 +48,7 @@
                             <%	} %>
                             <% } %>
                         </p>
-                    </div> <br>
+                    </div>
                     <div>
                         <label id="seleccionarImagen" for="image" type="file"></label>
                         <input id="nuestroinput" type="file" name="img"   value="<%= typeof old != 'undefined' ? old.img : ''%>">
