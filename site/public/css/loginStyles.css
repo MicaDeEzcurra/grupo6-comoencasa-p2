@@ -97,15 +97,17 @@ a:hover {
     color: #3D3D3D;
 }
 
-/*CERRAR SESION*/
+/*Icono perfil*/
 #cerrarSesion {
+    left: 19px;
     border: none;
-    color: #3D3D3D;
+    color: grey;
+    font-weight: 500;
     background-color: transparent;
     position: absolute;
-    top: 20px;
-   right: 170px
+    top: 10px;
 }
+
 
 /*END OF HEADER*/
 
