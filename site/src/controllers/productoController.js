@@ -28,9 +28,8 @@ const controller = {
     create: (req, res) => {
         Category.findAll()
             .then(categories => {
-                return res.render('creacionProducto', {
-                    categories
-                });
+                console.log(categories)
+                return res.render('creacionProducto', { categories });
             })
             .catch(error => console.log(error))
     },
@@ -39,9 +38,10 @@ const controller = {
 
         const errors = validationResult(req)
         if (errors.isEmpty()) {
-            let product = req.body
+            let product = req.body;
             product.img = req.file.filename;
             product.idSeller = req.session.user.id;
+            product.idCategory = req.body.idCategory
 
             Product.create(product)
                 .then(product => {

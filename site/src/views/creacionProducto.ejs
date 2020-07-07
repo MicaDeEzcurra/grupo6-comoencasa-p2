@@ -13,7 +13,7 @@
         <!-- /PARTIAL HEADER -->
         <div class="creacionContainer">
             <h1 id="titulo">CREACION DE PRODUCTO</h1>
-            <form class="uk-grid-small" uk-grid action="/producto/create/" method="POST" enctype="multipart/form-data">
+            <form class="uk-grid-small" action="/producto/create" method="POST" enctype="multipart/form-data">
                 <div>
                     <div>
                         <input class="uk-input" type="text" name="name" placeholder="Producto"   value="<%= typeof old != 'undefined' ? old.name : ''%>">
@@ -37,9 +37,14 @@
                     <div>
                         <label for="idCategory" class="form-label"></label>
                         <select name="idCategory" id="idCategory" class="caja">
+                            <option value="0">Elegí</option>
                             <% categories.forEach(category => { %>
+<<<<<<< HEAD
                             <!-- <option value="">Elegí</option> -->
                             <option value="<%= category.id %>"><%= category.name %></option>
+=======
+                            <option name="<%= category.name %>" value="<%= category.id %>" ><%= category.name %></option>
+>>>>>>> 3c9072ce2c804b9cf20e647cf51d547f0cc031fa
                             <% }) %>
                         </select>
                         <p><% if(typeof errors != 'undefined'){ %>
