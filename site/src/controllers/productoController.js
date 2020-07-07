@@ -1,10 +1,5 @@
-const {
-    validationResult
-} = require('express-validator');
-const {
-    Product,
-    Category
-} = require('../database/models');
+const {validationResult} = require('express-validator');
+const { Product,Category} = require('../database/models');
 
 
 const controller = {
@@ -55,10 +50,14 @@ const controller = {
                 .catch(error => console.log(error))
         } else {
             // Mostrar los errores
-
+              Category.findAll()
+                  .then(categories =>{
+              
             //return res.send(errors.mapped())
-            return res.render('creacionProducto', { errors: errors.mapped(), old: req.body });
-        }
+            return res.render('creacionProducto', { categories,  errors: errors.mapped(), old: req.body });
+        })
+                  .catch(error => console.log(error))
+    }
     },
 
     edit: (req, res) => {
@@ -93,10 +92,23 @@ const controller = {
                 })
                 .catch(error => console.log(error))
         } else {
+            const product = Product.findByPk(req.params.productId);
 
-            //return res.send(errors.mapped())
-            return res.render('edicionProducto', { errors: errors.mapped(), old: req.body });
-        }
+            const categories = Category.findAll();
+
+            Promise.all([product, categories])
+                .then(([product, categories]) => {
+                        let objeto = {
+                        product,
+                        categories,
+                        errors: errors.mapped(),
+                        old: req.body
+                    }
+             //return res.send(errors.mapped())
+            return res.render('edicionProducto', objeto)
+                 } )
+             .catch(error => console.log(error))
+       }
     },
 
     destroy: (req, res) => {

@@ -3,7 +3,7 @@ const {body} = require('express-validator');
 //const userModel = jsonModel('users')
 const bcrypt = require('bcryptjs');
 const { User, Product } = require('../database/models');
-
+const path = require('path');
 
  module.exports = {
     register:[
@@ -109,7 +109,7 @@ const { User, Product } = require('../database/models');
 
          // category
          body('category')
-             .notEmpty().withMessage('El campo categoria es obligatorio'),
+             .notEmpty().withMessage('Debes elegir una categoría'),
 
 
          // image
@@ -135,7 +135,7 @@ const { User, Product } = require('../database/models');
 
          // category
          body('category')
-             .notEmpty().withMessage('El campo categoria es obligatorio'),
+             .notEmpty().withMessage('Debes elegir una categoría'),
 
 
          // image

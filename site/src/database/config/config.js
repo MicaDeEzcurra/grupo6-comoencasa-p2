@@ -1,12 +1,11 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "comoencasa",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": 0,
-    "port": 8889,
       "define": {
       "paranoid": true
     }
