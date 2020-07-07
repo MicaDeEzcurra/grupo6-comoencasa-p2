@@ -39,12 +39,8 @@
                         <select name="idCategory" id="idCategory" class="caja">
                             <option value="0">Elegí</option>
                             <% categories.forEach(category => { %>
-<<<<<<< HEAD
                             <!-- <option value="">Elegí</option> -->
                             <option value="<%= category.id %>"><%= category.name %></option>
-=======
-                            <option name="<%= category.name %>" value="<%= category.id %>" ><%= category.name %></option>
->>>>>>> 3c9072ce2c804b9cf20e647cf51d547f0cc031fa
                             <% }) %>
                         </select>
                         <p><% if(typeof errors != 'undefined'){ %>
