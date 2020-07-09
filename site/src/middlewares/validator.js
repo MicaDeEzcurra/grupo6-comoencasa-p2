@@ -1,6 +1,4 @@
 const {body} = require('express-validator');
-//const jsonModel = require('../models/jsonModels');
-//const userModel = jsonModel('users')
 const bcrypt = require('bcryptjs');
 const { User, Product } = require('../database/models');
 const path = require('path');

@@ -40,7 +40,7 @@
                             <option value="0">Elegí</option>
                             <% categories.forEach(category => { %>
                             <!-- <option value="">Elegí</option> -->
-                            <option value="<%= category.id %>"><%= category.name %></option>
+                            <option value="<%= category.idCategory %>" ><%= category.name %></option>
                             <% }) %>
                         </select>
                         <p><% if(typeof errors != 'undefined'){ %>

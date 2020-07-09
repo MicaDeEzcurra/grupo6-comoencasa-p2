@@ -53,8 +53,8 @@ const controller = {
               Category.findAll()
                   .then(categories =>{
               
-            return res.render('creacionProducto', { categories,  errors: errors.mapped(), old: req.body });
-        })
+                    return res.render('creacionProducto', { categories,  errors: errors.mapped(), old: req.body });
+                    })
                   .catch(error => console.log(error))
     }
     },
