@@ -28,7 +28,6 @@ const controller = {
     create: (req, res) => {
         Category.findAll()
             .then(categories => {
-                console.log(categories)
                 return res.render('creacionProducto', { categories });
             })
             .catch(error => console.log(error))
@@ -36,12 +35,12 @@ const controller = {
 
     store: (req, res) => {
         const errors = validationResult(req)
-        // return res.send(req.body.idCategory);
+         //return res.send(req.body);
                 if (errors.isEmpty()) {
-            let product = req.body;
+            let product = req.body
             product.img = req.file.filename;
             product.idSeller = req.session.user.id;
-            product.idCategory = req.body.idCategory
+             product.idCategory = req.body.idCategory
     
             Product.create(product)
                 .then(product => {

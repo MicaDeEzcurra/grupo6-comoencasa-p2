@@ -36,11 +36,11 @@
                     </div>
                     <div>
                         <label for="idCategory" class="form-label"></label>
-                        <select name="idCategory" id="idCategory" class="caja">
+                        <select name="idCategory" id="idCategory" class="form-input">
                             <option value="">Elegí</option>
                             <% categories.forEach(category => { %>
                             <!-- <option value="">Elegí</option> -->
-                            <option value="<%= category.idCategory %>" ><%= category.name %></option>
+                            <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
                         </select>
                         <p><% if(typeof errors != 'undefined'){ %>
