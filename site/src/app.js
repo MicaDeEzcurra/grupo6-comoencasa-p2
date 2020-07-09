@@ -43,6 +43,11 @@ const productoRouter = require('./routes/producto');
 const guardadoRouter = require('./routes/guardado');
 const carritoRouter = require('./routes/carrito');
 
+//API require route system
+const categoriesApiRouter = require('./routes/apis/categoriesApiRouter');
+const productsApiRouter = require('./routes/apis/productsApiRouter');
+
+
 app.use('/', indexRouter);
 app.use('/home', homeRouter);
 app.use('/users', usersRouter);
@@ -53,7 +58,10 @@ app.use('/guardado', guardadoRouter);
 app.use('/carrito', carritoRouter);
 
 
+// API routes
 
+app.use('/api/categories', categoriesApiRouter);
+app.use('/api/products', productsApiRouter);
 
 
 // ************ DON'T TOUCH FROM HERE ************
