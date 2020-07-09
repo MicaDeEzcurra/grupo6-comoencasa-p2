@@ -108,9 +108,9 @@ const path = require('path');
              .isInt().withMessage('Debes colocar un número valido'),
 
          // category
-         body('category')
-             .notEmpty().withMessage('Debes elegir una categoría'),
-
+           body('category')
+            //   .notEmpty().withMessage('Debes elegir una categoría'),
+                 .custom((value, { req }) => req.body.idCategory).withMessage('Debes ingresar una categoría'),
 
          // image
          body('img')
@@ -135,16 +135,18 @@ const path = require('path');
 
          // category
          body('category')
-             .notEmpty().withMessage('Debes elegir una categoría'),
-
+            //  .notEmpty().withMessage('Debes elegir una categoría'),
+             .custom((value, { req }) => req.body.idCategory).withMessage('Debes ingresar una categoría'),
 
          // image
          body('img')
-             .custom((value, { req }) => req.file).withMessage('Debes ingresar una imagen').bail()
              .custom((value, { req }) => {
-                 const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
-                 const ext = path.extname(req.file.originalname);
-                 return acceptedExtensions.includes(ext);
+                 if(req.file){
+                     const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+                     const ext = path.extname(req.file.originalname);
+                     return acceptedExtensions.includes(ext);
+                 }
+                 return true;
              }).withMessage('Debe tener una extensión válida.')
      ]
 }

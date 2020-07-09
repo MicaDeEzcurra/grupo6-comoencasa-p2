@@ -35,19 +35,19 @@ const controller = {
     },
 
     store: (req, res) => {
-
         const errors = validationResult(req)
-        if (errors.isEmpty()) {
+        // return res.send(req.body.idCategory);
+                if (errors.isEmpty()) {
             let product = req.body;
             product.img = req.file.filename;
             product.idSeller = req.session.user.id;
             product.idCategory = req.body.idCategory
-
+    
             Product.create(product)
                 .then(product => {
                     return res.redirect('/producto/detail/' + product.id)
                 })
-                .catch(error => console.log(error))
+                 .catch(error => console.log(error))
         } else {
             // Mostrar los errores
               Category.findAll()
@@ -62,7 +62,7 @@ const controller = {
 
     edit: (req, res) => {
 
-        const product = Product.findByPk(req.params.productId);
+        let product = Product.findByPk(req.params.productId);
 
         const categories = Category.findAll();
 
@@ -79,18 +79,22 @@ const controller = {
     update: (req, res) => {
         const errors = validationResult(req)
         if (errors.isEmpty()) {
-            let product = req.body;
-            product.idUser = req.session.user.id
-            product.img = req.file.filename
-            Product.update(product, {
-                where: {
-                    id: req.params.productId
-                }
-            })
-                .then(confirm => {
-                    return res.redirect('/producto/detail/' + req.params.productId)
+            Product.findByPk(req.params.productId)
+                .then(productoEncontrado => {
+                    let product = req.body;
+                    product.idUser = req.session.user.id
+                    product.img = req.file ? req.file.filename : productoEncontrado.img
+                    
+                    Product.update(product, {
+                        where: {
+                            id: req.params.productId
+                        }
+                    })
+                        .then(confirm => {
+                            return res.redirect('/producto/detail/' + req.params.productId)
+                        })
+                        .catch(error => console.log(error))
                 })
-                .catch(error => console.log(error))
         } else {
             const product = Product.findByPk(req.params.productId);
 

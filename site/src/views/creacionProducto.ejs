@@ -37,7 +37,7 @@
                     <div>
                         <label for="idCategory" class="form-label"></label>
                         <select name="idCategory" id="idCategory" class="caja">
-                            <option value="0">Elegí</option>
+                            <option value="">Elegí</option>
                             <% categories.forEach(category => { %>
                             <!-- <option value="">Elegí</option> -->
                             <option value="<%= category.id %>"><%= category.name %></option>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="uk-margin">
                         <label for="description"></label>
-                        <textarea class="uk-textarea" name="description" rows="5" placeholder="Descripción"></textarea>
+                        <textarea class="uk-textarea" name="description" rows="5" placeholder="Descripción" ><%= typeof old != 'undefined' ? old.description : ''%></textarea >
                     </div>
 
 
