@@ -6,4 +6,13 @@ npm install
 
 
 
+To do:
+- /recomendados==> traer 5 productos random para recomendados
+- /recomendados==> search formulario por get: product where: {name = req...} 
+where: {
+				name: {
+					[Op.substring]: req.query.search
+					// [Op.like]: `%${req.query.search}%`
+				}
+			}
 
