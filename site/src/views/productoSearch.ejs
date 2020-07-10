@@ -10,19 +10,29 @@
         <%- include('./partials/header')%>
         <!-- /PARTIAL HEADER -->
 
-        <h1>RESULTADOS DE TU BUSQUEDA</h1>
-         <% if (result.length == 0) { %>
-            <p>No se encontraron resultados</p>
-         <% } else { %>
+        <h1 id="titleProducts" style="text-align: center;">RESULTADOS DE TU BUSQUEDA</h1>
+        <% if (result.length == 0) { %>
+        <p>No se encontraron resultados</p>
+        <% } else { %>
 
-            <% for( let i = 0; i < result.length; i++ ) { %>
-                <div>
-                    <p> <%= result[i].img %> </p>
-                    <p> <%= result[i].name %> </p>
-                    <p> <%= result[i].price %> </p>
+        <% for( let i = 0; i < result.length; i++ ) { %>
+        <div class="row justify-content-center">
+
+            <div id=productContainer class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid="masonry: true"
+                style="height: 960px;">
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                    
+                    <div style="height: 300px; width: 550px;">
+                        <img src="/img/<%= result[i].img %>" style="height: 75%; width: 100%; margin-bottom:3%" alt=""
+                            class="imagen-producto">
+                        <p id="name"><%= result[i].name %> </p>
+                        <p id="price">$<%= result[i].price %> </p>
+                    </div>
                 </div>
-            <% } %>
-            
+            </div>
+        </div>
+        <% } %>
+
         <% } %>
 
 

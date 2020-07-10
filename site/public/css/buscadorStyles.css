@@ -314,3 +314,67 @@ img.naranja{
         bottom: 0;
     }
 }
+
+
+
+/*RESULTADOS DE BUSQUEDA*/
+
+.perfilContainer {
+    color: #3D3D3D;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 400px;
+    margin-top: 2%;
+}
+
+
+#title {
+    color: white;
+    flex-wrap: wrap;
+    font-size: 32px;
+    font-weight: 500;
+    background-color: #FF9F0D;
+    width: 80%;
+    margin: 10px auto;
+    height: 43px;
+    opacity: 75%;
+    text-transform: uppercase;
+}
+
+
+#titleProducts {
+    font-size: 29px;
+    font-weight: 500;
+    color: #666;
+    width: 80%;
+    margin: 15px auto;
+}
+
+p {
+    margin: 0;
+}
+
+#name {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#name:hover {
+    color: #FF9F0D;
+}
+
+#price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.uk-card {
+    padding-left: 0;
+}
