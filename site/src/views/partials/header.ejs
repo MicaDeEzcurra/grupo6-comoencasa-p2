@@ -24,14 +24,16 @@
 
         <!-- Icons-->
         <div class="header-icons">
-            <% if (locals.user) { %>    <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
-                <ul>
-                    <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
-                    <div class="uk-inline">
+            <% if (locals.user) { %>
+            <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
+            <ul>
+                <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+                <div class="uk-inline">
                     <li><a class="icons" href="/users/perfil/<%= locals.user.id %>" uk-icon="user"></a></li>
                     <div uk-dropdown="pos: top-right">
                         <ul class="uk-nav uk-dropdown-nav">
-                            <li  id="creation"><a class="icons" href="/producto/create" uk-icon="plus-circle">Crear producto  </a></li>
+                            <li id="creation"><a class="icons" href="/producto/create" uk-icon="plus-circle">Crear
+                                    producto </a></li>
                             <li>
                                 <form action="/users/logout" method="POST">
                                     <button id="cerrarSesion" type="submit">
@@ -40,26 +42,26 @@
                                 </form>
                             </li>
                         </ul>
-                    </ul>
-                    <li><a class="icons" href="/guardado" uk-icon="heart"></a></li>
-                        <li><a class="icons" href="/carrito" uk-icon="cart"></a></li>
-                    </div>
-                </div>
-        
-                <% }else { %>
-                    <ul>
-                        <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
-        
-                        <li><a class="icons" href="/users/login" uk-icon="user"></a></li>
-        
-                        <li><a class="icons" href="/users/login" uk-icon="heart"></a></li>
-        
-                        <li><a class="icons" href="/users/login" uk-icon="cart"></a></li>
-                    </ul>
-                    <% } %>
-        
-                </div>
-            </div>
-            </div>
+            </ul>
+            <li><a class="icons" href="/guardado" uk-icon="heart"></a></li>
+            <li><a class="icons" href="/carrito" uk-icon="cart"></a></li>
+        </div>
+    </div>
+
+    <% }else { %>
+    <ul>
+        <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+
+        <li><a class="icons" href="/users/login" uk-icon="user"></a></li>
+
+        <li><a class="icons" href="/users/login" uk-icon="heart"></a></li>
+
+        <li><a class="icons" href="/users/login" uk-icon="cart"></a></li>
+    </ul>
+    <% } %>
+
+    </div>
+    </div>
+    </div>
     </header>
     <!-- END OF PARTIAL HEADER -->

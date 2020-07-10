@@ -195,19 +195,34 @@ body{
     position: absolute;
     left: 0;
     transform: rotate(179deg);
-    top: 40%;
+    top: 95%;
     opacity: 88%;
-    display:block
+    display:block;
+    z-index: -1
 } 
 
 .naranjax{
     width: 7%;
     position: absolute;
     right: 0;
-    top: 25%;
+    top: 110%;
     opacity: 88%;
-    display:block
+    display:block;
+    z-index: -1
 } 
+
+li img {
+    height: 330px;
+    width: 600px;
+}
+
+#carrusel {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 5%
+}
+
 
 /*FOOTER*/
 /*Main del footer*/

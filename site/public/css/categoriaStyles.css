@@ -132,12 +132,12 @@ body{
 }
 
 .uk-margin {
-        margin-bottom: 20px;
-        margin-left: 25%;
-        margin-right: 20%;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .uk-tab {
@@ -149,6 +149,21 @@ body{
     position: relative;
     width: 450px;
     margin: 0 auto;
+}
+
+#name {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#name:hover {
+    color: #FF9F0D;
+}
+
+#price {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /*Titulo categorias*/
