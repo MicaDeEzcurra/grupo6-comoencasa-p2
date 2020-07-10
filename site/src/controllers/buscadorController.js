@@ -15,7 +15,7 @@ const buscadorController = {
       search : (req, res) => {
         Product.findAll({
           where: {
-            name:{[db.Sequelize.Op.like]:req.query.search+"%"} 
+            name:{[db.Sequelize.Op.like]:req.body.search+"%"} 
           }
         })
         .then(function(result){

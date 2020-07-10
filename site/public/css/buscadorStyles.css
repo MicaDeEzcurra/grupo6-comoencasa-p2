@@ -171,6 +171,7 @@ img.naranja{
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
 }

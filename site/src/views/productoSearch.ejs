@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados</title>
-</head>
+<!-- PARTIAL HEAD -->
+<%- include('./partials/head', {title: 'Buscador', css: 'buscadorStyles.css'})%>
+<!-- END OF PARTIAL HEAD -->
+
 <body>
-    <% for( let i = 0; i < result.length; i++ ) { %>
-       <p> <%= result.name %> </p>
-    <% } %> 
+    <div class="body-container">
+        <!-- PARTIAL HEADER -->
+        <%- include('./partials/header')%>
+        <!-- /PARTIAL HEADER -->
+
+        <h1>RESULTADOS DE TU BUSQUEDA</h1>
+         <% if (result.length == 0) { %>
+            <p>No se encontraron resultados</p>
+         <% } else { %>
+
+            <% for( let i = 0; i < result.length; i++ ) { %>
+                <div>
+                    <p> <%= result[i].img %> </p>
+                    <p> <%= result[i].name %> </p>
+                    <p> <%= result[i].price %> </p>
+                </div>
+            <% } %>
+            
+        <% } %>
+
+
+
+
+        <!-- END INDEX BODY -->
+
+        <!-- PARTIAL FOOTER -->
+        <%- include('./partials/footer')%>
+        <!-- END OF PARTIAL FOOTER -->
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+    </div>
 </body>
+
 </html>
