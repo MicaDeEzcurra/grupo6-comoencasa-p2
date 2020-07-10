@@ -171,7 +171,6 @@ img.naranja{
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -376,5 +375,5 @@ p {
 }
 
 .uk-card {
-    padding-left: 0;
+    padding: 0;
 }

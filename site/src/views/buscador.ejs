@@ -22,33 +22,25 @@
         <h1 class="uk-heading-line uk-text-center"><span>Recomendados</span></h1>
 
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
-            <div>
-                <a href="">
-                    <div class="uk-card uk-card-default uk-card-body">Torta de chocolate</div>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <div class="uk-card uk-card-default uk-card-body">Scons de Queso</div>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <div class="uk-card uk-card-default uk-card-body">Medialunas de J&Q</div>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <div class="uk-card uk-card-default uk-card-body">Sandwiches de miga</div>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <div class="uk-card uk-card-default uk-card-body">Frutos Secos</div>
-                </a>
 
-            </div>
+            <% products.forEach(product => { %>
+             <div>
+                 <a href="/producto/detail/<%= product.id %>">
+                     <div class="uk-card uk-card-default uk-card-body">
+                         <img src="/img/<%= product.img %>" style="height: 100px; width: 130px; margin:3% 0"
+                             alt="<%= product.name %>"
+                             class="imagen-producto">
+                         <p id="name"><%= product.name %></p>
+                     </div>
+                 </a>
+             </div>
+            <% }) %>
+
+            
+        
         </div>
+
+        
 
 
         <!-- Naranja decoración -->

@@ -6,12 +6,13 @@
     outline: none;
 }
 
+
+
 body {
     font-family: 'Gilroy';
     /*background-image: url('/site/public/img/instagram.png');
     background-repeat: repeat-x;*/
 }
-
 ul,
 ol {
     padding: 0;
@@ -27,7 +28,6 @@ a:hover {
     text-decoration: none;
 }
 body {
-
     font-family: 'Roboto'
 }
 
@@ -76,6 +76,7 @@ a:hover {
 a:hover {
     color: #FF9F0D;
 }
+
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
@@ -102,6 +103,10 @@ a:hover {
     background-color: transparent;
     position: absolute;
     top: 10px;
+}
+
+#cerrarSesion svg {
+    width: 17%;
 }
 
 svg {
