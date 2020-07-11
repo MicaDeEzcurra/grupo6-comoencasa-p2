@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Gilroy';
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a,
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+
+    font-family: 'Roboto'
+}
+
+/*Container del body*/
+a,
+a:hover {
+    color: #3D3D3D;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*HEADER*/
+/* Logo */
+#logo {
+    width: 40px;
+}
+
+.logo-container {
+    width: 28%;
+}
+
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 84%;
+}
+
+.header-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+/*--- Barra del header ---*/
+#Home {
+    margin-right: 25px;
+}
+
+.header-barra {
+    width: 28%;
+    color: #3D3D3D;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a:hover {
+    color: #FF9F0D;
+}
+
+/* --- Iconos ---*/
+/* Cada icono en específico (ul) */
+.header-icons {
+    width: 28%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.header-icons ul {
+    display: flex;
+}
+
+.icons {
+    width: 20px;
+    margin-right: 8px;
+    height: 20px;
+    color: #3D3D3D;
+}
+
+/*Icono perfil*/
+#cerrarSesion {
+    left: 19px;
+    border: none;
+    color: grey;
+    font-weight: 500;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+}
+
+svg {
+    max-width: none;
+}
+
+/*END OF HEADER*/
+
+/* BODY */
+.uk-heading-bullet {
+    margin-top: 3px;
+    color: #3D3D3D;
+    font-size: larger;
+}
+.uk-article-meta{
+font-weight: 300;
+}
+.uk-text-lead{
+    color: #5c5c5c;
+    font-size: large;
+    font-weight: 400;
+    text-decoration: underline;
+    
+}
+.minip{
+    font-weight: 300;
+}
+
+/*END of BODY*/
+
+
+
+
+
+
+
+/*FOOTER*/
+/*Main del footer*/
+.all-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.list-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+/*Iconos de redes sociales*/
+.list-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon-twitter {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+.icon-instagram {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+.icon-facebook {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+/*END OF FOOTER*/
