@@ -151,10 +151,21 @@ body{
     margin: 0 auto;
 }
 
+p {
+    margin: 0;
+}
+
+#image {
+    height: 75%; 
+    width: 100%; 
+    margin-bottom:3%;
+}
+
 #name {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
+    text-align: center;
 }
 
 #name:hover {
@@ -164,6 +175,11 @@ body{
 #price {
     font-weight: bold;
     font-size: 16px;
+    text-align: center;
+}
+
+.uk-card {
+    padding: 0;
 }
 
 /*Titulo categorias*/
@@ -195,10 +211,14 @@ img.naranja{
 
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
+footer {
     position: unset;
     bottom: 0;
     width: 100%;
+}
+
+.body-container {
+    height: 100%;
 }
 
 .list-main-container {
