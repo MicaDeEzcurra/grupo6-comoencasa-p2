@@ -122,18 +122,6 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `img`, `idSeller`, `idCategory`, `deletedAt`, `createdAt`, `updatedAt`) VALUES
-(1, 'Floyd', '5 Kings Lane', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 4, NULL, '2020-06-26 16:25:34', NULL),
-(2, 'Rozele', '6 American Lane', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 4, NULL, '2020-06-26 16:25:34', NULL),
-(3, 'Herbert', '5 Morning Center', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 1, NULL, '2020-06-26 16:25:34', NULL),
-(4, 'Tina', '2 Eastlawn Way', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 3, NULL, '2020-06-26 16:25:34', NULL),
-(5, 'Marchelle', '9 Ludington Lane', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 3, NULL, '2020-06-26 16:25:34', NULL),
-(6, 'Demetris', '52 Mifflin Avenue', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 2, NULL, '2020-06-26 16:25:34', NULL),
-(7, 'Thorndike', '06 Mayfield Hill', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 3, NULL, '2020-06-26 16:25:34', NULL),
-(8, 'Elyssa', '3230 Armistice Avenue', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 4, NULL, '2020-06-26 16:25:34', NULL),
-(9, 'Rica', '4590 Killdeer Center', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 2, NULL, '2020-06-26 16:25:34', NULL),
-(10, 'Salome', '248 Carpenter Court', '0', 'https://chequeado.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png', 1, 2, NULL, '2020-06-26 16:25:34', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -154,16 +142,6 @@ CREATE TABLE `users` (
 --
 -- Volcado de datos para la tabla `users`
 --
-
-INSERT INTO `users` (`id`, `email`, `password`, `rol`, `deletedAt`, `createdAt`, `updatedAt`, `name`) VALUES
-(1, 'jere@gmail.com', '$2a$10$GUKtoj6a8YpuYAD6k5ba5uM3r6pTRIw0zAJs.BuV0FCZ7BF6DIts.', 0, NULL, '2020-06-24 00:59:06', '2020-06-24 00:59:06', 'Jeremias'),
-(2, 'lmarelli17@gmail.com', '$2a$10$RqfKPq9GC4Untf37LFgPRuUg114WZL07njQjht0MQETzbkPrcySDK', 0, NULL, '2020-06-24 17:40:15', '2020-06-24 17:40:15', 'Leandro'),
-(3, 'mili@gmail.com', '$2a$10$os5qw02Z09yzaHE4EW.MPu7vYokoLw5dDchnGS77e6ZatH4HIwQ9C', 0, NULL, '2020-06-24 19:59:22', '2020-06-24 19:59:22', 'Milagros'),
-(4, 'lma@gmail.com', '$2a$10$1JJ72i.ybyjuo6fgcW2eE.iorfeU8akDgXkIUxSylRA2CMFFdc2sm', 0, NULL, '2020-06-25 02:58:29', '2020-06-25 02:58:29', 'Leandro'),
-(5, 'lmaasdf@gmail.com', '$2a$10$aRKOfJRH/4DvvowExc/R3uJ16yhr2KvDgo9Fvy6HmWo8AObhNidGu', 0, NULL, '2020-06-25 04:22:27', '2020-06-25 04:22:27', 'Leandro'),
-(6, 'juli@gmail.com', '$2a$10$3wlHV3Rvw7jPDhHAm4i70Olvhl4dxa9lRhBzj7tCueZoFQsMb49cC', 0, NULL, '2020-06-26 02:20:31', '2020-06-26 02:20:31', 'Julian'),
-(8, 'micho@gmail.com', '$2a$10$CR2Za.WHD7KbYYWwTWZmHuuBlhE.N906CAVKFxK//VZKGWYkCaAo2', 0, NULL, '2020-06-26 22:55:56', '2020-06-26 22:55:56', 'Leandro');
-
 --
 -- Índices para tablas volcadas
 --

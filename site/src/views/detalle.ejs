@@ -62,7 +62,12 @@
                                 </form>
                             </div>
                         <% } else { %> 
-                                <a class="uk-button uk-button-default" href="/carrito">Comprar ahora</a>
+                            
+                            <form method="POST" action="/carrito/addToCart">
+                                    
+                                    <input type="hidden" value="<%= product.id %>" name="id">
+                                    <button class="uk-button uk-button-default">Agregar al carrito</button>
+                            </form>
                         <% } %> 
 
                         </article>

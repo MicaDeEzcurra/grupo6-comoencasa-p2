@@ -168,10 +168,7 @@ margin: 4% auto;
     width: 40%;
     margin: 0 auto;
 }
-.cantidad {
-    width: 15%;
-    margin: 0 auto;
-}
+
 .precio {
     width: 20%;
     margin:  auto;
@@ -202,15 +199,7 @@ font-size: 14px;
 }
 /*Botones*/
 /* Boton seleccionar*/
-.boton-seleccionar {
-    background-color: white;
-    border: 2px #FF9F0D solid;
-    color: #3D3D3D;
-    border-radius: 50px;
-    font-family: none;
-    margin-left: 10%;
-    font-size: 12px;
-}
+
 /*Boton eliminar*/
 .boton-eliminar {
 color: #707070;

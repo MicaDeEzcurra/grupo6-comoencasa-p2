@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         idCart: DataTypes.INTEGER,
         idSeller: DataTypes.INTEGER,
         idUser: DataTypes.INTEGER,
+        idProduct: DataTypes.INTEGER
     }, {
         tableName:'cartitem'
     });
@@ -23,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
        CartItem.belongsTo(models.User, {
              as: 'seller',
              foreignKey: 'idSeller'
+         })
+        CartItem.belongsTo(models.Product, {
+             as: 'product',
+             foreignKey: 'idProduct'
          })
      };
 

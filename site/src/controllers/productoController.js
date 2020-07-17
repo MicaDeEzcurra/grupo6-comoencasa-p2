@@ -1,5 +1,6 @@
 const {validationResult} = require('express-validator');
-const { Product,Category} = require('../database/models');
+const { Product, Category} = require('../database/models');
+const db = require('../database/models');
 
 
 const controller = {
@@ -141,6 +142,8 @@ const controller = {
             })
             .catch(error => console.log(error))
     }
+
+    
 
 }
 

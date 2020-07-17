@@ -5,5 +5,13 @@ const authtMiddleware = require('../middlewares/auth');
 
 router.get('/', authtMiddleware, carritoController.index);
 
+router.post('/addToCart', carritoController.addToCart);
+
+router.post('/delete', carritoController.destroy);
+
+/* router.post('/update', carritoController.update); */
+
+router.post('/purchase', carritoController.purchase);
+
 module.exports = router;
 

@@ -41,6 +41,9 @@ router.post('/delete/', productoController.destroy);
 
 router.get('/:productId', productoController.show);
 
+/*carrito*/
+// router.post('/addToCart', productoController.addToCart);
+
 
 
 
