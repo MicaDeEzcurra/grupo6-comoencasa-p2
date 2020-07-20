@@ -62,12 +62,13 @@
                                 </form>
                             </div>
                         <% } else { %> 
-                            
+
                             <form method="POST" action="/carrito/addToCart">
-                                    
+                                    <input type="number" name="quantity" value="1" min='1' max='100' step=1>
                                     <input type="hidden" value="<%= product.id %>" name="id">
                                     <button class="uk-button uk-button-default">Agregar al carrito</button>
                             </form>
+                            
                         <% } %> 
 
                         </article>

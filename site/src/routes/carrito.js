@@ -13,5 +13,7 @@ router.post('/delete', carritoController.destroy);
 
 router.post('/purchase', carritoController.purchase);
 
+router.get('/history', carritoController.history)
+
 module.exports = router;
 

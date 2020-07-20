@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const CartItem = sequelize.define('CartItem', {
+        name: DataTypes.STRING,
         price: DataTypes.DECIMAL,
         quantity: DataTypes.INTEGER,
         status: DataTypes.INTEGER,

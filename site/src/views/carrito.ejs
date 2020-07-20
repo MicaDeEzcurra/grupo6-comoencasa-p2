@@ -20,71 +20,79 @@
                 <h2 class="title-of-cart">CARRITO</h2>
             </div>
             <form class="align-cart">
-                <div class="title-of-cart-container">
-
-
+                
                     <div>
 
-                        <table class="">
-                            <!-- Subtitulos del carrito -->
-                            <thead class="cart-subtitles">
-                                <tr class="cart-subtitles">
-                                    <th>PRODUCTO</th>
-                                    <th>CANTIDAD</th>
-                                    <th>PRECIO</th>
-                                    <th>SUBTOTAL</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <!-- Detalle del producto a comprar -->
-                            <% if(typeof cartProducts !='undefined') { %>
-                            <% cartProducts.forEach(cartProduct => { %>
-                            <div class="product-description">
-                                <td class="producto"> <img class="img-bizco" src="/img/<%= cartProduct.product.img %>"
-                                        alt="Bizcochuelo">
-                                    <%= cartProduct.product.name %></td>
-                                <td class="cantidad">
-                                    <label for="">
-                                        <select class="boton-seleccionar"  id="">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </label>
-                                </td>
+                        <!-- Subtitulos del carrito -->
+                        <div class="cart-subtitles">
+                            <div class="cart-subtitles">
+                                <p class="producto">PRODUCTO</p>
+                                <p class="cantidad">CANTIDAD</p>
+                                <p class="precio">PRECIO</p>
+                                <p class="subtotal">SUBTOTAL</p>
+                                
                             </div>
-                            <td class="precio"> $<%= cartProduct.product.price %></td>
-                            <td class="subtotal">$ <%= cartProduct.product.price %></td>
-                            
-                            <form action="/carrito/delete" method="POST" class="">
-                                <!-- darle una clase de uiKit-->
-                                <input type="hidden" name="idCartItem" value="<%= cartProduct.id %>">
-                                <button type="submit" class="boton-eliminar" uk-close></button>
-                            </form>
-                            <br>
-                            
-                            <% })  %>
-                            
+                        </div>
+                        <!-- Detalle del producto a comprar -->
+                        <% if(typeof cartProducts !='undefined') { %>
+                        <% let total = 0 %>
 
-                          <!--   <form action="/carrito/update" method="POST">
+                        <div class="cart-container">
+                            <% cartProducts.forEach(cartProduct => { %>
+                            <table class="">
+                                <div class="product-description" style="width: 100%;">
+                                    <td class="producto"> <img class="img-bizco"
+                                            src="/img/<%= cartProduct.product.img %>" alt="Bizcochuelo">
+                                        <%= cartProduct.product.name %></td>
+                                    <td class="cantidad">
+                                        <form action="/carrito/quantity" method="POST">
+                                            <p><%= cartProduct.quantity  %> </p>
+                                            <!-- <select class="boton-seleccionar" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select> -->
+                                        </form>
+                                        </label>
+                                    </td>
+                                    <td class="precio"> $<%= cartProduct.product.price %></td>
+                                    <td class="subtotal">$<%= cartProduct.subtotal %></td>
+                                    <td>
+                                        <form action="/carrito/delete" method="POST" class="">
+                                            <!-- darle una clase de uiKit-->
+                                            <input type="hidden" name="idCartItem" value="<%= cartProduct.id %>">
+                                            <button type="submit" class="boton-eliminar" uk-close></button>
+                                        </form>
+                                    </td>
+                                </div>
+                            </table>
+                                <% total += parseFloat(cartProduct.subtotal)  %>
+                                <% console.log (typeof(cartProduct.price)) %>
+                                <% })  %>
+                        </div>
+                        <div class="boton-finalizar-container">
+                            <form action="/carrito/purchase" method="POST">
+                                <button class="boton-finalizar" type="submit">COMPRAR</button>
+                                <div class="total-carrito">
+                                    <br>
+                                    <p class="total-margin">TOTAL: $<%=total%></p>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                        <!--   <form action="/carrito/update" method="POST">
                                 <button type="submit">
                                     <a href="" uk-icon="refresh"></a>
                                 </button>
                             </form> -->
-                            
-                            <div class="boton-finalizar-container">
-                                <form action="/carrito/purchase" method="POST">
-                                    <button class="boton-finalizar" type="submit">COMPRAR</button>
-                                </form>
-                            </div>
-
-
                         </table>
                         <%  } %>
-                       
+                        
+                        <br>
                     </div>
                 </div>
                 </table>
