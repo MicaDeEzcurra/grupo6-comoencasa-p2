@@ -8,8 +8,6 @@
 
         <!-- Home y Que cocinan cerca -->
         <div class="header-barra">
-            <a id="Home" href="/home">HOME</a>
-            <a href="/home">QUIEN COCINA CERCA</a>
         </div>
         <!-- <ul>
             <li><a href="">ICONO</a></li>
@@ -28,6 +26,7 @@
             <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
             <ul>
                 <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+                <li><a class="icons" href="/home" uk-icon="home"></a></li>
                 <div class="uk-inline">
                     <li><a class="icons" href="/users/perfil/<%= locals.user.id %>" uk-icon="user"></a></li>
                     <div uk-dropdown="pos: top-right">
@@ -43,7 +42,6 @@
                             </li>
                         </ul>
             </ul>
-            <li><a class="icons" href="/guardado" uk-icon="heart"></a></li>
             <li><a class="icons" href="/carrito" uk-icon="cart"></a></li>
         </div>
     </div>
@@ -51,10 +49,10 @@
     <% }else { %>
     <ul>
         <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+        
+        <li><a class="icons" href="/home" uk-icon="home"></a></li>
 
         <li><a class="icons" href="/users/login" uk-icon="user"></a></li>
-
-        <li><a class="icons" href="/users/login" uk-icon="heart"></a></li>
 
         <li><a class="icons" href="/users/login" uk-icon="cart"></a></li>
     </ul>

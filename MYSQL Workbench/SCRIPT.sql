@@ -244,8 +244,8 @@ ALTER TABLE `cart`
 --
 -- Filtros para la tabla `cartitem`
 --
-ALTER TABLE `cartitem`
-  ADD CONSTRAINT `cartItem_ibfk_2` FOREIGN KEY (`idSeller`) REFERENCES `users` (`id`),
+  ALTER TABLE `cartitem`
+    ADD CONSTRAINT `cartItem_ibfk_2` FOREIGN KEY (`idSeller`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `cartItem_ibfk_3` FOREIGN KEY (`idCart`) REFERENCES `cart` (`id`),
   ADD CONSTRAINT `cartItem_ibfk_4` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
 

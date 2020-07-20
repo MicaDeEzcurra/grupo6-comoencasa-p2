@@ -10,27 +10,6 @@ const db = require('../database/models')
 
 
 const controller = {
-  addToCart: (req, res) => {
-
-    db.Product.findByPk(req.body.id)
-      .then(product => {
-        let item = {
-          price: product.price,
-          status: 0,
-          quantity: 1,
-          subtotal: product.price * 1,
-          idCart: null,
-          idSeller: product.idSeller,
-          idUser: req.session.user.id,
-          idProduct: product.id
-        }
-        db.CartItem.create(item)
-      })
-      .then(() => {
-        return res.redirect('/carrito')
-      })
-  },
-
   index: (req, res) => {
     db.CartItem.findAll({
         where: {
@@ -46,12 +25,41 @@ const controller = {
           association: 'product',
         }],
       })
-      .then(products => {
+      .then((cartProducts) => {
+        // let total = 0
+        // cartProducts.map(function(producto){
+        //   total = total + producto.price
+        // })
+        /* let total = cartProducts.reduce(
+          (total, cartProduct) => (total + cartProduct.subtotal), 0
+        ); */
+
         return res.render("carrito", {
-          cartProducts: products
+          cartProducts
         })
       })
+  },
+  
+  addToCart: (req, res) => {
 
+    db.Product.findByPk(req.body.id)
+      .then(product => {
+        let item = {
+          name: product.name,
+          price: parseFloat(product.price),
+          status: 0,
+          quantity: req.body.quantity,
+          subtotal: parseFloat(product.price) * req.body.quantity,
+          idCart: null,
+          idSeller: product.idSeller,
+          idUser: req.session.user.id,
+          idProduct: product.id
+        }
+        db.CartItem.create(item)
+      })
+      .then(() => {
+        return res.redirect('/carrito')
+      })
   },
 
   destroy: function (req, res) {
@@ -67,7 +75,8 @@ const controller = {
   },
 
   purchase: function (req, res) {
-    let items;
+
+  let items;
     // Buscar todos los items para tenerlos guardados
     CartItem.findAll({
         where: {
@@ -92,7 +101,7 @@ const controller = {
       .then((cart) => {
         let newCart = {
           cartNumber: cart ? cart.cartNumber + 1 : 1,
-          total: items.reduce((total, cartProduct) => (total += cartProduct.subTotal), 0),
+          total: items.reduce((total, cartProduct) => (total += parseFloat(cartProduct.subtotal)), 0),
           idUser: req.session.user.id,
         };
         return Cart.create(newCart);
@@ -103,9 +112,23 @@ const controller = {
         );
       })
       .then(() => {
-        return res.redirect('/')
-      })
+        return res.redirect('/carrito/history')
+      }) 
   },
+
+   history: function (req, res) {
+     Cart.findAll({
+       where: {
+         idUser: req.session.user.id,
+       },
+       include: {
+         all: true,
+       /*   nested: true, */
+       },
+     }).then((carts) => {
+       return res.render("historial", { carts });
+     });
+   }
 
 }
 

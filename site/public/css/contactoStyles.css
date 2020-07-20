@@ -144,7 +144,7 @@ font-weight: 300;
 
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -185,3 +185,11 @@ font-weight: 300;
 }
 
 /*END OF FOOTER*/
+
+@media (max-width: 480px) {
+
+footer {
+    position: unset;
+}
+
+}

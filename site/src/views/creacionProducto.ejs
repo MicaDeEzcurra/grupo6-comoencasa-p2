@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <label for="price"></label>
-                        <input class="uk-input" type="text" name="price" placeholder="Precio"   value="<%= typeof old != 'undefined' ? old.price : ''%>">
+                        <input class="uk-input" type="text" name="price" placeholder="Precio" value="<%= typeof old != 'undefined' ? old.price : ''%>">
                         <p><% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.price){ %>
                             <%= errors.price.msg %>

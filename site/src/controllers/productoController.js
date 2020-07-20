@@ -13,7 +13,6 @@ const controller = {
     },
 
     detail: (req, res) => {
-
         Product.findByPk(req.params.productId, {
                 include: ['category', 'user']
             })
@@ -23,7 +22,6 @@ const controller = {
                 })
             })
             .catch(error => console.log(error))
-
     },
 
     create: (req, res) => {
@@ -41,7 +39,7 @@ const controller = {
             let product = req.body
             product.img = req.file.filename;
             product.idSeller = req.session.user.id;
-             product.idCategory = req.body.idCategory
+            product.idCategory = req.body.idCategory
     
             Product.create(product)
                 .then(product => {
