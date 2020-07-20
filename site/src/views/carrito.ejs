@@ -20,27 +20,24 @@
                 <h2 class="title-of-cart">CARRITO</h2>
             </div>
             <form class="align-cart">
-                <div class="title-of-cart-container">
-
-
+                
                     <div>
 
                         <!-- Subtitulos del carrito -->
-                        <thead class="cart-subtitles">
-                            <tr class="cart-subtitles">
-                                <th>PRODUCTO</th>
-                                <th>CANTIDAD</th>
-                                <th>PRECIO</th>
-                                <th>SUBTOTAL</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
+                        <div class="cart-subtitles">
+                            <div class="cart-subtitles">
+                                <p class="producto">PRODUCTO</p>
+                                <p class="cantidad">CANTIDAD</p>
+                                <p class="precio">PRECIO</p>
+                                <p class="subtotal">SUBTOTAL</p>
+                                
+                            </div>
+                        </div>
                         <!-- Detalle del producto a comprar -->
                         <% if(typeof cartProducts !='undefined') { %>
                         <% let total = 0 %>
 
-                        <div style="width: 100%; display: flex; flex-wrap: wrap;">
+                        <div class="cart-container">
                             <% cartProducts.forEach(cartProduct => { %>
                             <table class="">
                                 <div class="product-description" style="width: 100%;">
@@ -70,7 +67,7 @@
                                         </form>
                                     </td>
                                 </div>
-
+                            </table>
                                 <% total += parseFloat(cartProduct.subtotal)  %>
                                 <% console.log (typeof(cartProduct.price)) %>
                                 <% })  %>
