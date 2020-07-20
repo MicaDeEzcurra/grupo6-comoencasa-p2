@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const log = require('./middlewares/log')
+const cors = require('cors')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -30,7 +31,8 @@ app.set('view engine', 'ejs');
 
 // Our middlewares
 
-app.use(log)
+app.use(log);
+app.use(cors())
 
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
