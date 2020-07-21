@@ -23,18 +23,18 @@
                 
                     <div>
 
-                        <!-- Subtitulos del carrito -->
-                        <div class="cart-subtitles">
+                         <!-- Detalle del producto a comprar typeof cartProducts !='undefined -->
+                        <% if(cartProducts.length != 0) { %>
+                            <!-- Subtitulos del carrito -->
                             <div class="cart-subtitles">
-                                <p class="producto">PRODUCTO</p>
-                                <p class="cantidad">CANTIDAD</p>
-                                <p class="precio">PRECIO</p>
-                                <p class="subtotal">SUBTOTAL</p>
-                                
+                                <div class="cart-subtitles">
+                                    <p class="producto">PRODUCTO</p>
+                                    <p class="cantidad">CANTIDAD</p>
+                                    <p class="precio">PRECIO</p>
+                                    <p class="subtotal">SUBTOTAL</p>
+                            
+                                </div>
                             </div>
-                        </div>
-                        <!-- Detalle del producto a comprar -->
-                        <% if(typeof cartProducts !='undefined') { %>
                         <% let total = 0 %>
 
                         <div class="cart-container">
@@ -70,7 +70,7 @@
                             </table>
                                 <% total += parseFloat(cartProduct.subtotal)  %>
                                 <% console.log (typeof(cartProduct.price)) %>
-                                <% })  %>
+                                <% }); %>
                         </div>
                         <div class="boton-finalizar-container">
                             <form action="/carrito/purchase" method="POST">
@@ -82,16 +82,17 @@
                             </form>
                         </div>
 
-
-
-                        <!--   <form action="/carrito/update" method="POST">
+                    <!--   <form action="/carrito/update" method="POST">
                                 <button type="submit">
                                     <a href="" uk-icon="refresh"></a>
                                 </button>
                             </form> -->
                         </table>
+                        <% } else { %>
+                        <div>
+                            <h2 id="titleProducts">Aún no agregaste productos al carrito</h2>
+                        </div>
                         <%  } %>
-                        
                         <br>
                     </div>
                 </div>
