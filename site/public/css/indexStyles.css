@@ -38,7 +38,6 @@ a:hover {
     font-weight: 600;
     font-size: 14px;
 }
-
 /*HEADER*/
 /* Logo */
 #logo {
@@ -46,7 +45,9 @@ a:hover {
 }
 
 .logo-container {
-    width: 28%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
 }
 
 
@@ -54,7 +55,7 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 84%;
+    width: 70%;
 }
 
 .header-container {
@@ -67,12 +68,7 @@ a:hover {
     margin-right: 25px;
 }
 
-.header-barra {
-    width: 28%;
-    color: #3D3D3D;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 a:hover {
     color: #FF9F0D;
 }
@@ -80,20 +76,24 @@ a:hover {
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
-    width: 28%;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
+
 /*aca*/
 .header-icons ul {
     display: flex;
+
 }
+
 .icons {
     width: 20px;
     margin-right: 8px;
     height: 20px;
     color: #3D3D3D;
 }
+
 /*Icono perfil*/
 #cerrarSesion {
     left: 19px;
@@ -112,9 +112,11 @@ a:hover {
 svg {
     max-width: none;
 }
+
 /*hasta aca*/
 
 /*END OF HEADER*/
+
 
 /*--- Textos del body ---*/
 .texto-index{

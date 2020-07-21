@@ -47,14 +47,17 @@ a:hover {
 }
 
 .logo-container {
-    width: 28%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
 }
+
 
 .row {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 84%;
+    width: 70%;
 }
 
 .header-container {
@@ -67,12 +70,6 @@ a:hover {
     margin-right: 25px;
 }
 
-.header-barra {
-    width: 28%;
-    color: #3D3D3D;
-    margin-right: auto;
-    margin-left: auto;
-}
 
 a:hover {
     color: #FF9F0D;
@@ -81,14 +78,15 @@ a:hover {
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
-    width: 28%;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 /*aca*/
 .header-icons ul {
     display: flex;
+
 }
 
 .icons {
@@ -100,21 +98,27 @@ a:hover {
 
 /*Icono perfil*/
 #cerrarSesion {
-    left: 21px;
+    left: 19px;
     border: none;
-    color: #3D3D3D;
+    color: grey;
+    font-weight: 500;
     background-color: transparent;
     position: absolute;
     top: 10px;
 }
 
+#cerrarSesion svg {
+    width: 17%;
+}
 
 svg {
     max-width: none;
 }
 
 /*hasta aca*/
+
 /*END OF HEADER*/
+
 
 
 

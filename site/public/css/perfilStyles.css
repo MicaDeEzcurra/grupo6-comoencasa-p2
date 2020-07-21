@@ -39,7 +39,6 @@ a:hover {
     font-weight: 600;
     font-size: 14px;
 }
-
 /*HEADER*/
 /* Logo */
 #logo {
@@ -47,14 +46,17 @@ a:hover {
 }
 
 .logo-container {
-    width: 28%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
 }
+
 
 .row {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 84%;
+    width: 70%;
 }
 
 .header-container {
@@ -67,12 +69,6 @@ a:hover {
     margin-right: 25px;
 }
 
-.header-barra {
-    width: 28%;
-    color: #3D3D3D;
-    margin-right: auto;
-    margin-left: auto;
-}
 
 a:hover {
     color: #FF9F0D;
@@ -81,14 +77,15 @@ a:hover {
 /* --- Iconos ---*/
 /* Cada icono en específico (ul) */
 .header-icons {
-    width: 28%;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 /*aca*/
 .header-icons ul {
     display: flex;
+
 }
 
 .icons {
@@ -109,32 +106,18 @@ a:hover {
     top: 10px;
 }
 
+#cerrarSesion svg {
+    width: 17%;
+}
 
 svg {
     max-width: none;
 }
 
-img.naranja {
-    width: 12%;
-    position: absolute;
-    left: 0;
-    transform: rotate(179deg);
-    top: 40%;
-    opacity: 88%;
-    display: block
-}
-
-.naranjax {
-    width: 7%;
-    position: absolute;
-    right: 0;
-    top: 25%;
-    opacity: 88%;
-    display: block
-}
-
 /*hasta aca*/
+
 /*END OF HEADER*/
+
 
 /* .perfilContainer {
     color: #3D3D3D;
