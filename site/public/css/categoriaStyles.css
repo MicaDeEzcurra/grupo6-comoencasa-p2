@@ -41,7 +41,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -70,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -175,7 +178,7 @@ p {
 }
 
 #name:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 #price {
@@ -201,7 +204,7 @@ p {
 
 /*SUBCATEGORIAS*/
 .uk-tab>.uk-active>a {
-    border-color: #FF9F0D;
+    border-color: #dcc8ae;
 }
 
 /*--- Naranja deco ---*/

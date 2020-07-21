@@ -39,7 +39,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -68,7 +71,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -130,7 +133,7 @@ body{
 }
 
 .uk-button-default {
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     color: white;
     border-radius: 50px;
     position: absolute; 
@@ -147,7 +150,7 @@ body{
 
 .boton-seleccionar {
     background-color: white;
-    border: 2px #FF9F0D solid;
+    border: 2px #dcc8ae solid;
     color: #3D3D3D;
     border-radius: 50px;
     font-family: none;
@@ -162,7 +165,7 @@ body{
 }
 
 .uk-margin-remove-top:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 .precio {
     line-height: 0;
@@ -208,7 +211,7 @@ img.naranja{
 }
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /*--- END OF BODY ---*/

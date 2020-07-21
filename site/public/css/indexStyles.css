@@ -41,8 +41,12 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
+
 
 .logo-container {
     width: 50%;
@@ -70,7 +74,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -140,7 +144,7 @@ h2{
 }
 
 .botonComenzar  {
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     width: 151px;
     height: 49px;
     border-radius: 50px;
@@ -150,7 +154,7 @@ h2{
 }
 
 .botonComenzar:hover {
-    background-color: #ff9900;
+    background-color: #dcc8ae;
 }
 
 
@@ -171,7 +175,7 @@ p{
     /*--- Naranja deco ---*/
     
     img.naranja{
-        width: 12%;
+        width: 30%;
         position: absolute;
         left: 0;
         transform: rotate(179deg);
@@ -179,17 +183,47 @@ p{
         opacity: 88%;
         display:block
     } 
+
+    img.deco1{
+    width: 50%;
+    position: absolute;
+    left: -31%;
+    transform: rotate(179deg);
+    top: 1%;
+    opacity: 88%;
+    display: block;
+    z-index: -1;
+
+    } 
+    img.deco2{
+    width: 24%;
+    position: absolute;
+    left: 92%;
+    top: 44%;
+    opacity: 100%;
+    display: block;
+    
+    } 
+
+    img.deco3{
+        width: 27%;
+        position: absolute;
+        left: 90%;
+        top: -9%;
+        opacity: 100%;
+        display: block;
+        transform: rotateX(45deg);
+        } 
     
     .naranjax{
-        width: 12%;
+        width: 24%;
         position: absolute;
-        right: 0;
-        top: 38%;
-        opacity: 88%;
-        display:block
+        left: 65%;
+        top: 16%;
+        opacity: 100%;
+        display: block;
+
     } 
-    
- /*--- Footer ---*/
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
@@ -281,6 +315,29 @@ p{
         transform: rotate(179deg);
         z-index: -1;
     }
+
+img.deco1 {
+    width: 108%;
+    position: absolute;
+    left: -31%;
+    top: 9%;
+    transform: rotate(179deg);
+    opacity: 88%;
+    display: block;
+    z-index: -1;
+}
+
+img.deco2 { 
+    display: none;
+}
+
+img.deco3 { 
+    display: none;
+}
+
+.naranjax{
+    display: none;
+}
 
     .header-icons ul {
         top: 20px;

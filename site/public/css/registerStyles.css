@@ -40,7 +40,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -69,7 +72,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -140,7 +143,7 @@ width: 50%;
 /*Llenar campos*/
 .uk-input {
     width: 260px;
-    border: #FF9F0D 2px solid;
+    border: #dcc8ae 2px solid;
     border-radius: 50px;
     margin: 5px 0;
     padding: 21px;
@@ -148,7 +151,7 @@ width: 50%;
 
 /*Opciones de registrarse*/
 .options-register {
-    border-color: #FF9F0D;
+    border-color: #dcc8ae;
     border-width: 2px;
     border-radius: 3px;
     padding: 5px;
@@ -169,7 +172,7 @@ width: 50%;
 /*Boton de registrarse*/
 .boton-registrarse {
     margin: 10px;
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     color: white;
     width: 145px;
     height: 47px;

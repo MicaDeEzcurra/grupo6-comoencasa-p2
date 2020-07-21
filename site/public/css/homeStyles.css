@@ -40,7 +40,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -69,7 +72,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -124,11 +127,10 @@ body{
 }
 
 .title-of-home {
-    background-color: #FF9F0D;
-    position: relative;
+      position: relative;
     text-align: center;
     flex-wrap: wrap;
-    color: white;
+    color: #dcc8ae;
     font-size: 30px;
     font-weight: 500;
     padding: 3px 10px;
@@ -136,9 +138,8 @@ body{
     height: 43px;
     margin: 0 auto;
     margin-top: 40px;
-    opacity: 75%;
-    text-transform: uppercase;
-    
+    opacity: 106%;
+    text-transform: uppercase;   
 }
 .uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container{
     margin-right: 10%;
@@ -157,7 +158,7 @@ body{
 }
 
 .nav-categorias li{
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     opacity: 80%;
     width: 150px;
     height: 150px;
@@ -193,25 +194,27 @@ body{
 
  /*--- Naranja deco ---*/
     
- img.naranja{
-    width: 12%;
+ img.foodie1{
+    width: 34%;
     position: absolute;
-    left: 0;
-    transform: rotate(179deg);
-    top: 95%;
-    opacity: 88%;
-    display:block;
-    z-index: -1
+    left: -25%;
+    transform: rotate(348deg);
+    top: 73%;
+    opacity: 56%;
+    display: block;
+    z-index: -1;
+
 } 
 
-.naranjax{
-    width: 7%;
+img.foodie2{
+    width: 28%;
     position: absolute;
-    right: 0;
-    top: 110%;
-    opacity: 88%;
-    display:block;
-    z-index: -1
+    right: -5px;
+    top: 97%;
+    opacity: 69%;
+    display: block;
+    z-index: -1;
+    left: 84%;
 } 
 
 li img {
@@ -329,20 +332,12 @@ li img {
         font-size: 25px;
         margin-bottom: 0;
     }
-    img.naranja {
-        width: 17%;
-        position: absolute;
-        left: -0.5%;
-        top: 51%;
-        transform: rotate(179deg);
-        z-index: -1;
+    img.foodie1 {
+     display: none;
     }
-    img.naranjax {
-        width: 17%;
-        left: inherit;
-        top: 122%;
-        right: 0;
-        z-index: -1;
+
+    img.foodie2{
+        display: none;
     }
     .header-icons ul {
         top: 20px;

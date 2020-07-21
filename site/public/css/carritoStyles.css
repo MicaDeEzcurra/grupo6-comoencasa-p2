@@ -41,7 +41,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -70,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -160,14 +163,25 @@ body{
     justify-content: center;
 }
 /*--- Naranja deco ---*/
-img.naranja{
-    width: 7%;
+img.receta1{
+    width: 25%;
     position: absolute;
-    left: 0;
-    transform: rotate(179deg);
+    left: -12%;
     top: 57%;
     z-index: -1;
+    transform: rotate(37deg);
 }
+
+img.receta2{
+    width: 22%;
+    position: absolute;
+    left: 80%;
+    bottom: -1%;
+    opacity: 95%;
+    z-index: -1;
+}
+
+
 
 /*CARRITO CONTAINER*/
 .container-cart {
@@ -244,11 +258,11 @@ font-size: 14px;
 color: #707070;
 }
 .boton-eliminar:hover{
-    color: #FF9F0D
+    color: #dcc8ae
 }
 /* Boton finalizar */
 .boton-finalizar {
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     width: 151px;
     height: 49px;
     border-radius: 50px;
@@ -420,14 +434,23 @@ footer {
     .producto {
         text-emphasis: none;
     }
-    img.naranja {
-        width: 19%;
-        position: absolute;
-        left: -0.5%;
-        top: 60%;
-        transform: rotate(179deg);
-        z-index: -1;
+    img.receta1{
+        width: 63%;
+    position: absolute;
+    left: -28%;
+    top: 57%;
+    z-index: -1;
+    transform: rotate(37deg);
     }
+
+    img.receta2{
+        display: none;
+    }
+
+
+
+
+
     .boton-finalizar-container {
         text-align: center;
         margin-right: 0;

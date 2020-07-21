@@ -41,7 +41,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -70,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -150,13 +153,13 @@ svg {
 /*Llenar campos*/
 .uk-input {
     width: 260px;
-    border: #FF9F0D 2px solid;
+    border: #dcc8ae 2px solid;
     border-radius: 50px;
     margin: 5px 0;
     padding: 21px;
 }
 .uk-input:focus {
-    border-color: #FF9F0D;
+    border-color: #dcc8ae;
 }
 
 
@@ -170,7 +173,7 @@ svg {
 
 /*Hipervinculo*/
 .hipervinculo:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
     padding: 4px;
 }
 .hipervinculo {
@@ -179,7 +182,7 @@ svg {
 
 /*Boton de iniciar sesion*/
 .boton-iniciar {
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
     color: white;
     width: 149px;
     height: 47px;
@@ -203,7 +206,7 @@ svg {
 
 .uk-grid>*>:last-child {
     margin-bottom: 0;
-    background-color: #FF9F0D;
+    background-color: #dcc8ae;
 }
 
 

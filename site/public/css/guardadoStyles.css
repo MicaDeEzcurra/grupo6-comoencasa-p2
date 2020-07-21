@@ -40,7 +40,10 @@ a:hover {
 /*HEADER*/
 /* Logo */
 #logo {
-    width: 40px;
+    width: 65px;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
 }
 
 .logo-container {
@@ -69,7 +72,7 @@ a:hover {
 
 
 a:hover {
-    color: #FF9F0D;
+    color: #dcc8ae;
 }
 
 /* --- Iconos ---*/
@@ -142,7 +145,7 @@ body{
     justify-content: center;
     text-align: center;
     padding: 0;
-    border-bottom: #FF9F0D;
+    border-bottom: #dcc8ae;
 }
 
 
@@ -153,7 +156,7 @@ body{
     font-size: 30px;
 }
 .uk-tab>.uk-active>a {
-    border-color: #FF9F0D;
+    border-color: #dcc8ae;
 }
 .uk-h1, h1{
     font-size: 17px;
