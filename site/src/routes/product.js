@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productoController = require('../controllers/productoController');
+const productController = require('../controllers/productController');
 const multer = require('multer');
 const path = require('path');
 const validator = require('../middlewares/validator');
@@ -28,18 +28,18 @@ var upload = multer({
 });
 
 
-router.get('/', productoController.index);
-router.get('/detail/:productId/', productoController.detail);
+router.get('/', productController.index);
+router.get('/detail/:productId/', productController.detail);
 
-router.get('/create/', productoController.create);
-router.post('/create/', upload.single('img'), validator.creacion, productoController.store);
+router.get('/create/', productController.create);
+router.post('/create/', upload.single('img'), validator.creacion, productController.store);
 
-router.get('/edit/:productId', productoController.edit);
-router.post('/edit/:productId', upload.single('img'), validator.edicion, productoController.update); /* PUT - Update in DB */
+router.get('/edit/:productId', productController.edit);
+router.post('/edit/:productId', upload.single('img'), validator.edicion, productController.update); /* PUT - Update in DB */
 
-router.post('/delete/', productoController.destroy); 
+router.post('/delete/', productController.destroy); 
 
-router.get('/:productId', productoController.show);
+router.get('/:productId', productController.show);
 
 /*carrito*/
 // router.post('/addToCart', productoController.addToCart);
@@ -50,4 +50,3 @@ router.get('/:productId', productoController.show);
 module.exports = router;
 
 
-// '../../public/img/producto'

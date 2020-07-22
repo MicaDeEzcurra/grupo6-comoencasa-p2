@@ -3,7 +3,7 @@ const { Product, Category} = require('../database/models');
 const db = require('../database/models');
 
 
-const controller = {
+const productController = {
     index: (req, res) => {
         let vac = {
             title: 'Producto'
@@ -145,4 +145,4 @@ const controller = {
 
 }
 
-module.exports = controller;
+module.exports = productController;
