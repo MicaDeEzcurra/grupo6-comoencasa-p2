@@ -34,7 +34,7 @@ body {
 a,
 a:hover {
     color: #3D3D3D;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 14px;
 }
 
@@ -130,6 +130,7 @@ body{
 .uk-search-large {
     width: 500px;
     margin-left: 23%;
+    font-weight: 100;
 }
 .uk-h1, h1 {
     font-size: 1.625rem;
@@ -150,27 +151,49 @@ body{
     font-size: 30px;
 }
 
-
+.uk-text-center {
+    text-align: center!important;
+    font-weight: 200;
+    color: #dcc8ae;
+}
 /*--- Naranja deco ---*/
     
-img.naranja{
-    width: 12%;
+img.crossaint{
+    width: 27%;
     position: absolute;
-    left: 0;
-    transform: rotate(179deg);
-    top: 40%;
+    left: -8%;
+    z-index: -1;
+    top: 62%;
     opacity: 88%;
-    display:block
+    display: block;
 } 
 
-.naranjax{
-    width: 7%;
+.ravioli{
+    width: 22%;
     position: absolute;
-    right: 0;
-    top: 25%;
+    right: -8.5%;
+    top: 45%;
     opacity: 88%;
-    display:block
+    display: block;
+    z-index: -1;
 } 
+
+
+.tasita2{
+
+    position: absolute;
+    top: 31%;
+    opacity: 88%;
+    display: block;
+    z-index: -1;
+    left: 40%;
+    width: 19%;
+}
+#name{
+    color: #cca677;
+    font-weight: 200;
+    background-color: #fafbf5;
+}
 
 #nose{
     padding-bottom: 40%;
@@ -271,20 +294,31 @@ footer {
     }
     
 
-    img.naranja {
-        width: 19%;
-        position: absolute;
-        left: -0.5%;
-        top: 60%;
-        transform: rotate(179deg);
-        z-index: -1;
+    img.crossaint {
+       display: none;
     }
-    img.naranjax {
-        width: 17%;
-        left: inherit;
-        top: 122%;
-        right: 0;
-        z-index: -1;
+    img.ravioli {
+        display: none;
+    }
+
+    .tasita2{
+    position: absolute;
+    top: 41%;
+    opacity: 88%;
+    display: block;
+    z-index: -1;
+    left: 23%;
+    width: 56%;
+
+    }
+
+    #name{
+        font-weight: 400;
+        color: #cca677;
+        right: 67px;
+        bottom: 7px;
+        opacity: 87%;
+        background-color: #fafbf5;
     }
 
     .uk-search-large {
@@ -359,9 +393,9 @@ footer {
 
 #titleProducts {
     font-size: 29px;
-    font-weight: 500;
+    font-weight: 200;
     color: #666;
-    width: 80%;
+    width: 100%;
     margin: 15px auto;
 }
 
@@ -369,11 +403,7 @@ p {
     margin: 0;
 }
 
-#name {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 18px;
-}
+
 
 #name:hover {
     color: #dcc8ae;
