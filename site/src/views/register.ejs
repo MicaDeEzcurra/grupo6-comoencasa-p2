@@ -26,7 +26,7 @@
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Nombre completo" type="text" name="name" value="<%= typeof old != 'undefined' ? old.name : ''%>">
-                    <p><% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.name){ %>
                         <%= errors.name.msg %>
                         <%	} %>
@@ -37,7 +37,7 @@
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text-email" placeholder="Email" type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : ''%>">
-                    <p><% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"><% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.email){ %>
                         <%= errors.email.msg %>
                         <%	} %>
@@ -49,7 +49,7 @@
                 <div class="uk-form-controls">
                     <input class="uk-input" id="exampleInputPassword1" placeholder="Contraseña" type="password"
                         name="password">
-                    <p> <% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"> <% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.password){ %>
 						<%= errors.password.msg %>
 						<%	} %>
@@ -61,7 +61,7 @@
                 <div class="uk-form-controls">
                     <input class="uk-input" id="exampleInputPassword2" placeholder="Repetir Contraseña" type="password"
                         name="retype">
-                    <p><% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"><% if(typeof errors != 'undefined'){ %>
 						<%	if(errors.retype){ %>
 						<%= errors.retype.msg %>
 						<%	} %>

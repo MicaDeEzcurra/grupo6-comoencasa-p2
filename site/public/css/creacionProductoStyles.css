@@ -139,6 +139,10 @@ svg {
     margin: 0 auto;
 }
 
+.errores {
+    color: tomato;
+}
+
 #titulo {
     color: #5c5c5c;
     position: relative;

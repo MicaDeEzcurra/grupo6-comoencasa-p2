@@ -160,7 +160,7 @@ body{
 
 .uk-button-default:hover {
     display: inherit;
-    background-color: #ff8800;
+    background-color: #bdac95;
     color: white;
 }
 
@@ -217,7 +217,7 @@ a:hover {
 /*--- END OF BODY ---*/
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
+footer {
     position: unset;
     bottom: 0;
     width: 100%;
@@ -334,7 +334,7 @@ a:hover {
 }
 
 
-    .all-footer {
+footer {
         bottom: 0;
     }
 }
@@ -398,4 +398,31 @@ a:hover {
 #imgDetail {
     margin-top: 12px;
     padding: 10px;
+}
+
+@media (max-width: 480px) {
+
+    #titulo {
+        font-size: 28px;
+    }
+
+    img.naranja {
+        display: none;
+    }
+
+    button {
+        margin: 0 auto
+    }
+
+    #editar {
+        left: 10%;
+    }
+
+    #eliminar { 
+        right: 10%;
+    }
+
+    #agregar{
+        margin: 0 auto;
+    }
 }

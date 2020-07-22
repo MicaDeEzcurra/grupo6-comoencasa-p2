@@ -57,7 +57,7 @@ const path = require('path');
 
              //retype password
               body('retype')
-              .notEmpty().withMessage('El campo reingresá contraseña es obligatorio')
+              .notEmpty().withMessage('El campo repetir contraseña es obligatorio')
 
      ],
 

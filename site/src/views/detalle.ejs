@@ -35,13 +35,13 @@
             </div>
             <div class="product-detail">
                 <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <img id="imgDetail" src="/img/<%= product.img %>" alt="product image" class="product-detail-img">
-                        <p class="product-detail-description">
-                            <%= product.description %>
-                        </p>
-                    </div>
                     <div class="col-12 col-lg-4">
+                        <div class="col-12 col-lg-8">
+                            <img id="imgDetail" src="/img/<%= product.img %>" alt="product image" class="product-detail-img">
+                            <p class="product-detail-description">
+                                <%= product.description %>
+                            </p>
+                        </div>
                         <article class="product-detail-info">
                             <div class="precioDetalle">
                                 <p>$<%= product.price %></p>
@@ -66,7 +66,7 @@
                             <form method="POST" action="/carrito/addToCart">
                                     <input type="number" name="quantity" value="1" min='1' max='100' step=1>
                                     <input type="hidden" value="<%= product.id %>" name="id">
-                                    <button class="uk-button uk-button-default">Agregar al carrito</button>
+                                    <button class="uk-button uk-button-default" id="agregar">Agregar al carrito</button>
                             </form>
                             
                         <% } %> 

@@ -17,7 +17,8 @@
                 <div>
                     <div>
                         <input class="uk-input" type="text" name="name" placeholder="Producto"   value="<%= typeof old != 'undefined' ? old.name : ''%>">
-                        <p><% if(typeof errors != 'undefined'){ %>
+                        <p class="errores">
+                            <% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.name){ %>
                             <%= errors.name.msg %>
                             <%	} %>
@@ -27,7 +28,8 @@
                     <div>
                         <label for="price"></label>
                         <input class="uk-input" type="text" name="price" placeholder="Precio" value="<%= typeof old != 'undefined' ? old.price : ''%>">
-                        <p><% if(typeof errors != 'undefined'){ %>
+                        <p class="errores">
+                            <% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.price){ %>
                             <%= errors.price.msg %>
                             <%	} %>
@@ -43,7 +45,7 @@
                             <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
                         </select>
-                        <p><% if(typeof errors != 'undefined'){ %>
+                        <p class="errores"><% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.category){ %>
                             <%= errors.category.msg %>
                             <%	} %>
@@ -53,7 +55,7 @@
                     <div>
                         <label id="seleccionarImagen" for="image" type="file"></label>
                         <input id="nuestroinput" type="file" name="img"   value="<%= typeof old != 'undefined' ? old.img : ''%>">
-                        <p><% if(typeof errors != 'undefined'){ %>
+                        <p class="errores"><% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.img){ %>
                             <%= errors.img.msg %>
                             <%	} %>

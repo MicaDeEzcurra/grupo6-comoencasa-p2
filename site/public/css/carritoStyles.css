@@ -190,6 +190,8 @@ width: 90% ;
 justify-content: center;
 margin: 0 auto;
 margin: 4% auto;
+/* background-color: white;
+opacity: 50%; */
 }
 #secciones th {
     width: 20%;
@@ -297,7 +299,6 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100px;
-    position: absolute;
 }
 
 .list-main-container {
@@ -390,7 +391,6 @@ footer {
 
     .all-footer {
         bottom: 0;
-        position: fixed;
     }
 
     .img-bizco {

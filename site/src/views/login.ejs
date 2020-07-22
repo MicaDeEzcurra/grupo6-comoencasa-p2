@@ -26,7 +26,7 @@
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text-email" placeholder="Email" type="text" name="email"
                         value="<%= typeof old != 'undefined' ? old.email : ''%>">
-                    <p><% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"><% if(typeof errors != 'undefined'){ %>
                          <%	if(errors.email){ %>
                          <%= errors.email.msg %>
                          <%	} %>
@@ -39,7 +39,7 @@
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" placeholder="Contraseña" type="password"
                         name="password">
-                    <p> <% if(typeof errors != 'undefined'){ %>
+                    <p class="errores"  > <% if(typeof errors != 'undefined'){ %>
                         <%	if(errors.password){ %>
                         <%= errors.password.msg %>
                         <%	} %>

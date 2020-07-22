@@ -129,6 +129,10 @@ width: 50%;
  text-align: center;
 }
 
+.errores {
+    color: tomato;
+}
+
 /*Titulo del Register*/
 .title-of-register {
     color: #5c5c5c;

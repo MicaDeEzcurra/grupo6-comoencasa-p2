@@ -139,6 +139,10 @@ svg {
 
 }
 
+.errores {
+    color: tomato;
+}
+
 /*Titulo del Login*/
 .title-of-login {
     color: #5c5c5c;
