@@ -17,7 +17,7 @@ const productController = {
                 include: ['category', 'user']
             })
             .then(product => {
-                return res.render('detalle', {
+                return res.render('detail', {
                     product
                 })
             })
@@ -120,7 +120,7 @@ const productController = {
                 }
             })
             .then(() => {
-                return res.redirect('/users/perfil/' + req.session.user.id)
+                return res.redirect('/users/profile/' + req.session.user.id)
             })
             .catch(error => console.log(error))
     },

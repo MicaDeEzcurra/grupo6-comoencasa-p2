@@ -126,7 +126,7 @@ const cartController = {
        /*   nested: true, */
        },
      }).then((carts) => {
-       return res.render("historial", { carts });
+       return res.render('history', { carts });
      });
    }
 
