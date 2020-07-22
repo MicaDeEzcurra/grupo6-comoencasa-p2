@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const buscadorController = require('../controllers/buscadorController');
+const searchController = require('../controllers/searchController');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,10 +26,8 @@ var upload = multer({
     }
 });
 
-router.get('/', buscadorController.index);
-
-// router.get('/search' , buscadorController.searchView)
-router.post('/search', buscadorController.search)
+router.get('/', searchController.index);
+router.post('/search', searchController.search);
 
 module.exports = router;
 

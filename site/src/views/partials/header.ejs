@@ -24,9 +24,9 @@
             <% if (locals.user) { %>
             <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
             <ul>
-                <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+                <li><a class="icons" href="/search" uk-icon="search"></a></li>
                 <li><a class="icons" href="/home" uk-icon="home"></a></li>
-        <li><a class="icons" href="/carrito" uk-icon="cart"></a></li>
+        <li><a class="icons" href="/cart" uk-icon="cart"></a></li>
                 <div class="uk-inline">
                     <li><a class="icons" href="/users/perfil/<%= locals.user.id %>" uk-icon="user"></a></li>
                     <div uk-dropdown="pos: top-right">
@@ -48,7 +48,7 @@
 
     <% }else { %>
     <ul>
-        <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+        <li><a class="icons" href="/search" uk-icon="search"></a></li>
         
         <li><a class="icons" href="/home" uk-icon="home"></a></li>
 

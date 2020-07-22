@@ -28,7 +28,7 @@
                             </time></a>
                         <div class="iconos">
                             <a href="/" uk-icon="location"></a>
-                            <a href="/guardado" uk-icon="heart"></a>
+                            <a href="/favorite" uk-icon="heart"></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                             </div>
                         <% } else { %> 
 
-                            <form method="POST" action="/carrito/addToCart">
+                            <form method="POST" action="/cart/addToCart">
                                     <input type="number" name="quantity" value="1" min='1' max='100' step=1>
                                     <input type="hidden" value="<%= product.id %>" name="id">
                                     <button class="uk-button uk-button-default">Agregar al carrito</button>
