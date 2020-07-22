@@ -18,7 +18,7 @@ router.post('/login', guestMiddleware, validator.login, usersController.processL
 //logout
 router.post('/logout', authtMiddleware, usersController.logout);
 
-router.get('/perfil/:id', usersController.profile);
+router.get('/profile/:id', usersController.profile);
 
 //EXPORTS
 module.exports = router;

@@ -13,18 +13,18 @@ const homeController = {
         return res.render('cookies', vac);
     },
 
-    envios: (req, res) => {
+    shipping: (req, res) => {
         let vac = {
             title: 'ENVIOS'
         }
-        return res.render('envios', vac);
+        return res.render('shipping', vac);
     },
 
-    privacidad: (req, res) => {
+    privacy: (req, res) => {
         let vac = {
             title: 'PRIVACIDAD'
         }
-        return res.render('privacidad', vac);
+        return res.render('privacy', vac);
     },
 
     contact: (req, res) => {
@@ -37,5 +37,3 @@ const homeController = {
 };
 
 module.exports = homeController;
-
-//TERMINADO NO TOCAR
