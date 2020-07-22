@@ -54,8 +54,8 @@ app.use('/', indexRouter);
 app.use('/home', homeRouter);
 app.use('/users', usersRouter);
 app.use('/buscador', buscadorRouter);
-app.use('/categoria', categoryRouter);
-app.use('/producto', productRouter);
+app.use('/category', categoryRouter); //done
+app.use('/product', productRouter); // done
 app.use('/guardado', guardadoRouter);
 app.use('/carrito', carritoRouter);
 

@@ -53,8 +53,8 @@
                             <% if (locals.user.id == product.user.id) { %> 
                             <div class="buttonsContainer">
                                 <button class="uk-button uk-button-default uk-button-detail" id="editar"> <a
-                                        href="/producto/edit/<%= product.id %>" class="action-button edit">EDITAR</a> </button>
-                                <form action="/producto/delete/" method="POST"
+                                        href="/product/edit/<%= product.id %>" class="action-button edit">EDITAR</a> </button>
+                                <form action="/product/delete/" method="POST"
                                     style="display: inline-flex">
                                     <input type="hidden" name="id" id="" value="<%= product.id %>">
                                     <button type="submit" id="eliminar"

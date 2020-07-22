@@ -8,7 +8,7 @@ const productController = {
         let vac = {
             title: 'Producto'
         }
-        return res.render('producto', vac);
+        return res.render('product', vac);
 
     },
 
@@ -43,7 +43,7 @@ const productController = {
     
             Product.create(product)
                 .then(product => {
-                    return res.redirect('/producto/detail/' + product.id)
+                    return res.redirect('/product/detail/' + product.id)
                 })
                  .catch(error => console.log(error))
         } else {
@@ -88,7 +88,7 @@ const productController = {
                         }
                     })
                         .then(confirm => {
-                            return res.redirect('/producto/detail/' + req.params.productId)
+                            return res.redirect('/product/detail/' + req.params.productId)
                         })
                         .catch(error => console.log(error))
                 })
@@ -134,7 +134,7 @@ const productController = {
             })
             .then(producto => {
 
-                return res.render('producto', {
+                return res.render('product', {
                     producto
                 })
             })
