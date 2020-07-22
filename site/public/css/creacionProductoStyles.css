@@ -148,10 +148,10 @@ svg {
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
     padding: 7px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .uk-input {
@@ -242,6 +242,7 @@ svg {
 /*--- Naranja deco ---*/
 
 .naranjax {
+    display: none;
     width: 7%;
     position: absolute;
     right: 0;
@@ -274,6 +275,11 @@ svg {
         top: 13%;
         z-index: 1;
         width: 87%;
+    }
+
+    #titulo {
+        font-size: 25px;
+        font-weight: 300;
     }
 
     .header-home-barra {

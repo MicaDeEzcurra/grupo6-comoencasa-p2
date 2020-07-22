@@ -28,7 +28,7 @@
                             </time></a>
                         <div class="iconos">
                             <a href="/" uk-icon="location"></a>
-                            <a href="/guardado" uk-icon="heart"></a>
+                            <a href="/favorite" uk-icon="heart"></a>
                         </div>
                     </div>
                 </div>
@@ -43,12 +43,12 @@
                             </p>
                         </div>
                         <article class="product-detail-info">
+                            <p class="product-detail-category">
+                                <%= product.category.name %>
+                            </p>
                             <div class="precioDetalle">
                                 <p>$<%= product.price %></p>
                             </div>
-                            <p class="product-detail-price">
-                                <%= product.category.name %>
-                            </p>
                             <hr>
                             <% if (locals.user.id == product.user.id) { %> 
                             <div class="buttonsContainer">
@@ -61,17 +61,18 @@
                                         class="uk-button uk-button-default uk-button-detail">ELIMINAR</button>
                                 </form>
                             </div>
+                        </article>
                         <% } else { %> 
 
-                            <form method="POST" action="/carrito/addToCart">
-                                    <input type="number" name="quantity" value="1" min='1' max='100' step=1>
-                                    <input type="hidden" value="<%= product.id %>" name="id">
-                                    <button class="uk-button uk-button-default" id="agregar">Agregar al carrito</button>
+                            <form method="POST" action="/cart/addToCart">
+                                    <input id="quantity" type="number" name="quantity" value="1" min='1' max='100' step=1> <br>
+                                    <input type="hidden" value="<%= product.id %>" name="id"> <br>
+                                    <button style="text-align: center;" class="uk-button uk-button-default"">Agregar al carrito</button> 
                             </form>
+                            <br>
                             
                         <% } %> 
 
-                        </article>
                     </div>
                 </div>
             </div>
@@ -83,9 +84,9 @@
 
     <!-- FIN DE LOS COMENTARIOS -->
     <!-- Naranja decoración -->
-    <img src="/img/naranja.jpg" alt="" class="naranja">
+    <!-- <img src="/img/naranja.jpg" alt="" class="naranja">
 
-
+ -->
     <!-- END INDEX BODY -->
 
     <!-- PARTIAL FOOTER -->

@@ -9,7 +9,7 @@ const Op = Sequelize.Op;
 const db = require('../database/models')
 
 
-const controller = {
+const cartController = {
   index: (req, res) => {
     db.CartItem.findAll({
         where: {
@@ -34,7 +34,7 @@ const controller = {
           (total, cartProduct) => (total + cartProduct.subtotal), 0
         ); */
 
-        return res.render("carrito", {
+        return res.render('cart', {
           cartProducts
         })
       })
@@ -58,7 +58,7 @@ const controller = {
         db.CartItem.create(item)
       })
       .then(() => {
-        return res.redirect('/carrito')
+        return res.redirect('/cart')
       })
   },
 
@@ -70,7 +70,7 @@ const controller = {
       }
 
     }).then(() => {
-      return res.redirect("/carrito");
+      return res.redirect('/cart');
     });
   },
 
@@ -112,7 +112,7 @@ const controller = {
         );
       })
       .then(() => {
-        return res.redirect('/carrito/history')
+        return res.redirect('/cart/history')
       }) 
   },
 
@@ -132,4 +132,4 @@ const controller = {
 
 }
 
-module.exports = controller;
+module.exports = cartController;

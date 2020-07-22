@@ -39,11 +39,11 @@ app.use(cors())
 const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
-const buscadorRouter = require('./routes/buscador');
-const categoryRouter = require('./routes/category'); //changed name to category
-const productRouter = require('./routes/product'); //changed name to product
-const guardadoRouter = require('./routes/guardado');
-const carritoRouter = require('./routes/carrito');
+const searchRouter = require('./routes/search'); 
+const categoryRouter = require('./routes/category'); 
+const productRouter = require('./routes/product'); 
+const favoriteRouter = require('./routes/favorite'); 
+const cartRouter = require('./routes/cart'); 
 
 //API require route system
 const categoriesApiRouter = require('./routes/apis/categoriesApiRouter');
@@ -53,11 +53,11 @@ const productsApiRouter = require('./routes/apis/productsApiRouter');
 app.use('/', indexRouter);
 app.use('/home', homeRouter);
 app.use('/users', usersRouter);
-app.use('/buscador', buscadorRouter);
-app.use('/category', categoryRouter); //done
-app.use('/product', productRouter); // done
-app.use('/guardado', guardadoRouter);
-app.use('/carrito', carritoRouter);
+app.use('/search', searchRouter); 
+app.use('/category', categoryRouter); 
+app.use('/product', productRouter); 
+app.use('/favorite', favoriteRouter); 
+app.use('/cart', cartRouter); 
 
 
 // API routes

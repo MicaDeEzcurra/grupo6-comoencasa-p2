@@ -54,7 +54,7 @@
                     </div>
                     <div>
                         <label id="seleccionarImagen" for="image" type="file"></label>
-                        <input id="nuestroinput" type="file" name="img"   value="<%= typeof old != 'undefined' ? old.img : ''%>">
+                        <input id="nuestroinput" type="file" name="img" value="<%= typeof old != 'undefined' ? old.img : ''%>">
                         <p class="errores"><% if(typeof errors != 'undefined'){ %>
                             <%	if(errors.img){ %>
                             <%= errors.img.msg %>
@@ -74,9 +74,9 @@
                 </div>
             </form>
 
-            <!-- Naranja decoración -->
+           <!--  Naranja decoración
             <img src="img/naranja.jpg" alt="" class="naranja">
-            <img src="/img/naranja.jpg" alt="" class="naranjax">
+            <img src="/img/naranja.jpg" alt="" class="naranjax"> -->
         </div>
         <!-- PARTIAL FOOTER -->
         <%- include('./partials/footer')%>

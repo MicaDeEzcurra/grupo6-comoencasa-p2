@@ -27,7 +27,7 @@ const productController = {
     create: (req, res) => {
         Category.findAll()
             .then(categories => {
-                return res.render('creacionProducto', { categories });
+                return res.render('createProduct', { categories });
             })
             .catch(error => console.log(error))
     },
@@ -51,7 +51,7 @@ const productController = {
               Category.findAll()
                   .then(categories =>{
               
-                    return res.render('creacionProducto', { categories,  errors: errors.mapped(), old: req.body });
+                    return res.render('createProduct', { categories,  errors: errors.mapped(), old: req.body });
                     })
                   .catch(error => console.log(error))
     }
@@ -65,7 +65,7 @@ const productController = {
 
         Promise.all([product, categories])
             .then(([product, categories]) => {
-                return res.render('edicionProducto', {
+                return res.render('editProduct', {
                     product,
                     categories
                 })
@@ -106,7 +106,7 @@ const productController = {
                         old: req.body
                     }
              //return res.send(errors.mapped())
-            return res.render('edicionProducto', objeto)
+            return res.render('editProduct', objeto)
                  } )
              .catch(error => console.log(error))
        }
@@ -140,8 +140,6 @@ const productController = {
             })
             .catch(error => console.log(error))
     }
-
-    
 
 }
 

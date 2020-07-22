@@ -13,7 +13,7 @@
         <h1 id="titleProducts" style="text-align: center;">RESULTADOS DE TU BUSQUEDA</h1>
         <hr>
         <% if (result.length == 0) { %>
-            <h1 id= "nose" class="uk-heading-line uk-text-center"style="font-weight:200;" ><span>No se encontraron resultados</span></h1>
+            <h1 id= "not-results" class="uk-heading-line uk-text-center"style="font-weight:200;"><span>No se encontraron resultados</span></h1>
             <img src="/img/tasitas.jpg" alt="" class="tasita2">
         <% } else { %>
             <div id=productContainer class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
@@ -23,7 +23,7 @@
                 <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
                     <a href="/product/detail/<%=result[i].id%>">
                         <div style="height: 300px;">
-                            <img src="/img/<%= result[i].img %>" style="height: 75%; width: 100%; margin-bottom:3%" alt=""
+                            <img src="/img/<%= result[i].img %>" alt="producto"
                                 class="imagen-producto">
                             <p id="name"><%= result[i].name %> </p>
                             <p id="price">$<%= result[i].price %> </p>
@@ -38,14 +38,6 @@
             <% }%>
 
 
-
-
-
-
-
-
-
-
             <!-- <div class="row justify-content-center">
             <a href="/producto/detail/">
             <div id=productContainer class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
@@ -54,13 +46,7 @@
                         <img src="/img/ -->
         
 
-
-
-
  <!-- Naranja decoración -->
-
- 
-
 
 
         <!-- END INDEX BODY -->

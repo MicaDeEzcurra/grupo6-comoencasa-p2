@@ -27,11 +27,11 @@ const homeController = {
         return res.render('privacidad', vac);
     },
 
-    contacto: (req, res) => {
+    contact: (req, res) => {
         let vac = {
             title: 'CONTACTO'
         }
-        return res.render('contacto', vac);
+        return res.render('contact', vac);
     },
 
 };

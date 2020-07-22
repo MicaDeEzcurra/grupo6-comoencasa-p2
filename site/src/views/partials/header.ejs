@@ -7,7 +7,7 @@
         </div>
 
         <!-- Home y Que cocinan cerca -->
-       
+
         <!-- <ul>
             <li><a href="">ICONO</a></li>
             <li><a href="">ICONO</a></li>
@@ -24,39 +24,38 @@
             <% if (locals.user) { %>
             <!-- si hay un usuario en sesssion, se muestra lo siguiente: -->
             <ul>
-                <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
+                <li><a class="icons" href="/search" uk-icon="search"></a></li>
                 <li><a class="icons" href="/home" uk-icon="home"></a></li>
-        <li><a class="icons" href="/carrito" uk-icon="cart"></a></li>
+                <li><a class="icons" href="/cart" uk-icon="cart"></a></li>
                 <div class="uk-inline">
                     <li><a class="icons" href="/users/perfil/<%= locals.user.id %>" uk-icon="user"></a></li>
                     <div uk-dropdown="pos: top-right">
                         <ul class="uk-nav uk-dropdown-nav">
-                            <li id="creation"><a class="icons" href="/product/create" uk-icon="plus-circle">Crear
-                                    producto </a></li>
+                            <a class="icons" href="/product/create" uk-icon="plus-circle"></a>
                             <li>
                                 <form action="/users/logout" method="POST">
                                     <button id="cerrarSesion" type="submit">
-                                        <a href="" uk-icon="close">Cerrar Sesión </a>
+                                        <a href="" uk-icon="sign-out"></a>
                                     </button>
                                 </form>
                             </li>
                         </ul>
-            </div>
+                    </div>
 
-    </ul>
-    </div>
+            </ul>
+        </div>
 
-    <% }else { %>
-    <ul>
-        <li><a class="icons" href="/buscador" uk-icon="search"></a></li>
-        
-        <li><a class="icons" href="/home" uk-icon="home"></a></li>
+        <% }else { %>
+        <ul>
+            <li><a class="icons" href="/search" uk-icon="search"></a></li>
 
-        <li><a class="icons" href="/users/login" uk-icon="user"></a></li>
+            <li><a class="icons" href="/home" uk-icon="home"></a></li>
 
-        <li><a class="icons" href="/users/login" uk-icon="cart"></a></li>
-    </ul>
-    <% } %>
+            <li><a class="icons" href="/users/login" uk-icon="user"></a></li>
+
+            <li><a class="icons" href="/users/login" uk-icon="cart"></a></li>
+        </ul>
+        <% } %>
 
     </div>
     </div>

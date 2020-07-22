@@ -171,9 +171,10 @@ p {
 }
 
 #name {
-    font-weight: bold;
-    text-transform: uppercase;
+    color: #cca677;
+    font-weight: 200;
     font-size: 18px;
+    background-color: #fafbf5;
     text-align: center;
 }
 
@@ -182,10 +183,11 @@ p {
 }
 
 #price {
-    font-weight: bold;
+    font-weight: 300;
     font-size: 16px;
     text-align: center;
 }
+
 
 .uk-card {
     padding: 0;
@@ -196,6 +198,7 @@ p {
     display: flex;
     justify-content: center;
     font-size: 30px;
+    font-weight: 300;
 }
 .uk-h1, h1{
     font-size: 17px;
