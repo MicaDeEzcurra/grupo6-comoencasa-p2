@@ -9,4 +9,3 @@ const indexController = {
 
 module.exports = indexController;
 
-//TERMINADO NO TOCAR

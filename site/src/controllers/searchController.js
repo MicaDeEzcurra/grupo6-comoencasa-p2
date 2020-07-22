@@ -27,7 +27,7 @@ const searchController = {
           }
         })
         .then(function(result){
-          return res.render('productoSearch', {result})
+          return res.render('searchProduct', {result})
         })
       }
 

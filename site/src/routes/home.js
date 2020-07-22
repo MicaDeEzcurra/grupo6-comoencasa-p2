@@ -8,7 +8,7 @@ router.get('/', homeController.index);
 router.get('/privacidad', homeController.privacidad);
 router.get('/cookies', homeController.cookies);
 router.get('/envios', homeController.envios);
-router.get('/contacto', homeController.contacto);
+router.get('/contact', homeController.contact);
 
 
 
