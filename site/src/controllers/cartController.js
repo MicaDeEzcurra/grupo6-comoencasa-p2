@@ -34,13 +34,9 @@ const cartController = {
           (total, cartProduct) => (total + cartProduct.subtotal), 0
         ); */
 
-<<<<<<< HEAD:site/src/controllers/carritoController.js
-        return res.render("carrito", { cartProducts })
-=======
         return res.render('cart', {
           cartProducts
         })
->>>>>>> cd94fd69e3cf7fff394f8cad4033756dbfe13da6:site/src/controllers/cartController.js
       })
   },
   

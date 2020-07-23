@@ -16,3 +16,14 @@ where: {
 				}
 			}
 
+			 Favorite.associate = function (models) {
+         Favorite.belongsTo(models.User, {
+             as: 'follow',
+             foreignKey: 'idSeller'
+         })
+         Favorite.belongsTo(models.User, {
+             as: 'follower',
+             foreignKey: 'idUser'
+         })
+    }     
+

@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     });
      Favorite.associate = function (models) {
          Favorite.belongsTo(models.User, {
-             as: 'follow',
+             as: 'followed',
              foreignKey: 'idSeller'
          })
          Favorite.belongsTo(models.User, {
