@@ -28,7 +28,13 @@
                             </time></a>
                         <div class="iconos">
                             <a href="/" uk-icon="location"></a>
-                            <a href="/guardado" uk-icon="heart"></a>
+                    
+                            <form method="POST" action="/guardado/add">
+                                <input type="hidden" value="<%= user.idSeller %>" name="idSeller">
+                                <button  class="uk-button uk-button-default"  id="" type="submit" >
+                                    <a href="/guardado" uk-icon="heart"></a>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -66,7 +72,7 @@
                             <form method="POST" action="/carrito/addToCart">
                                     <input type="number" name="quantity" value="1" min='1' max='100' step=1>
                                     <input type="hidden" value="<%= product.id %>" name="id">
-                                    <button class="uk-button uk-button-default">Agregar al carrito</button>
+                                    <!-- <button class="uk-button uk-button-default">Agregar al carrito</button> -->
                             </form>
                             
                         <% } %> 

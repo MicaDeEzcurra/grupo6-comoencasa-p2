@@ -84,44 +84,44 @@ const productsApiController = {
 
     },
 
-    create: (req, res) => {
-        Category.findAll()
-        .then((category) => {
+    // create: (req, res) => {
+    //     Category.findAll()
+    //     .then((category) => {
 
-            let apiResponse = null;
+    //         let apiResponse = null;
 
-            if(category){
-                apiResponse = {
-                    meta: {
-                        status: 200,
-                        length: category.length,
-                        url: req.originalUrl
-                    },
-                    data: category
-                }
+    //         if(category){
+    //             apiResponse = {
+    //                 meta: {
+    //                     status: 200,
+    //                     length: category.length,
+    //                     url: req.originalUrl
+    //                 },
+    //                 data: category
+    //             }
 
-            } else{
-                apiResponse = {
-                    meta: {
-                        status: 404
-                    },
-                    data: null
-                }    
-            };
+    //         } else{
+    //             apiResponse = {
+    //                 meta: {
+    //                     status: 404
+    //                 },
+    //                 data: null
+    //             }    
+    //         };
 
-            return res.json(apiResponse)
-        })
-        .catch(error => {
-            let apiResponse = {
-                meta: {
-                    status: 404
-                },
-                data: null
-            }
+    //         return res.json(apiResponse)
+    //     })
+    //     .catch(error => {
+    //         let apiResponse = {
+    //             meta: {
+    //                 status: 404
+    //             },
+    //             data: null
+    //         }
 
-            return res.json(apiResponse)
-        });
-    }, 
+    //         return res.json(apiResponse)
+    //     });
+    // }, 
 
     // store: (req, res) => {
 

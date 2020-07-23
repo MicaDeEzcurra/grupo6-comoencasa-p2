@@ -34,9 +34,7 @@ const controller = {
           (total, cartProduct) => (total + cartProduct.subtotal), 0
         ); */
 
-        return res.render("carrito", {
-          cartProducts
-        })
+        return res.render("carrito", { cartProducts })
       })
   },
   

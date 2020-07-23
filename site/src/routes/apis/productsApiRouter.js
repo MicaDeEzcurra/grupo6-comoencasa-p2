@@ -5,7 +5,7 @@ const productsApiController = require('../../controllers/apis/productsApiControl
 router.get('/', productsApiController.index);
 router.get('/detail/:productId/', productsApiController.detail);
 
-router.get('/create', productsApiController.create);
+//router.get('/create', productsApiController.create);
 // router.post('/create/', upload.single('img'), validator.creacion, productoController.store);
 
 

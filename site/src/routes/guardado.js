@@ -4,4 +4,6 @@ const guardadoController = require('../controllers/guardadoController');
 
 router.get('/', guardadoController.index);
 
+//router.post('/add', guardadoController.add);
+
 module.exports = router;

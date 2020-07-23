@@ -14,112 +14,28 @@
     <!--BODY HOME -->
 <!-- Inicio Guardados -->
 
-<h1 class="uk-heading-divider">CHEFS FAVORITOS</h1>
-<ul uk-tab>
-    <li><a href="#">GUARDADOS</a></li>
-    <!-- <li><a href="#">FAVORITOS</a></li>
-    <li><a href="#">RECIENTEMENTE VISTOS</a></li> -->
-</ul>
+        <h1 class="uk-heading-divider">CHEFS FAVORITOS</h1>
+            <ul uk-tab>
+                <li><a href="#">GUARDADOS</a></li>
+            </ul>
+                    <div>
+                         <% if(favorites.length != 0) { %>
+                        <!-- GUARDADOS productos (los cuadraditos)-->
+                         <% favorites.forEach(favorite => { %>
+                        <div>
+                            <p class="product-detail-price">
+                                @ <%=   %>
+                            </p>
+                        </div>
+                        <% }) %>
+                        <% } else { %>
+                        <div class=>
+                            <h2 class="products-title" >Aún no tienes chefs favoritos</h2>
+                        </div>
+                        <% } %>
+                    </div>
 
-<ul class="uk-switcher uk-margin">
-    <!-- GUARDADOS productos (los cuadraditos)-->
-    
-    <li><div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/breakfast.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-    </div></li>
-
-     <!-- FAVORITOS productos (los cuadraditos)-->
-<!-- 
-    <li><div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 130px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 150px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 160px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 180px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px"><a href="#"><img src="/img/almuerzo.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-    </div></li> -->
-
-     <!-- RECIENTEMENTE VISTOS productos (los cuadraditos)-->
-<!-- 
-     <li><div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a>
-                </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 130px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 150px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 160px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 180px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px"><a href="#"><img src="/img/merienda.jpg" alt="" class="imagen-producto"></a></div>
-        </div>
-    </div></li>
-</ul>      -->
-</ul>
+<div>
 
 <!-- Fin Guardados-->
 
