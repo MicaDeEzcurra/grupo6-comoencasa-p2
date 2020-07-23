@@ -142,9 +142,9 @@ width: 50%;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
     padding: 7px;
-    font-weight: 500;
+    font-weight: 200;
 }
 /*Llenar campos*/
 .uk-input {
@@ -186,6 +186,10 @@ width: 50%;
     font-weight: bold;
     border: transparent;
 }
+
+.boton-registrarse:hover {
+    background-color: #bdac95;
+}
 /*--- Naranja deco ---*/
     
 img.naranja{
@@ -208,8 +212,7 @@ img.naranja{
 } 
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
-    position: unset;
+footer {
     bottom: 0;
     width: 100%;
 }

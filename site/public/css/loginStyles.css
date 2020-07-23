@@ -151,10 +151,10 @@ svg {
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
     padding: 7px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 200;
 }
 /*Llenar campos*/
 .uk-input {
@@ -197,6 +197,10 @@ svg {
     border: transparent;
 }
 
+.boton-iniciar:hover {
+    background-color: #bdac95;
+}
+
 #noTenesCuenta {
     margin: 0;
     font-size: 12px;
@@ -213,6 +217,7 @@ svg {
 .uk-grid>*>:last-child {
     margin-bottom: 0;
     background-color: #dcc8ae;
+    border-radius: 15px;
 }
 
 
@@ -241,8 +246,7 @@ img.naranja{
 
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
-    position: fixed;
+footer {
     bottom: 0;
     width: 100%;
 }
