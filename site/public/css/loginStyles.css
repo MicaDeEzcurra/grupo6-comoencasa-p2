@@ -73,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #dcc8ae;
+    color: #bdac95;
 }
 
 /* --- Iconos ---*/
@@ -179,7 +179,7 @@ svg {
 
 /*Hipervinculo*/
 .hipervinculo:hover {
-    color: #dcc8ae;
+    color: #bdac95;
     padding: 4px;
 }
 .hipervinculo {

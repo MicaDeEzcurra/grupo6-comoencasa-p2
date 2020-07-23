@@ -73,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #dcc8ae;
+    color: #bdac95;
 }
 
 /* --- Iconos ---*/
@@ -180,7 +180,7 @@ p {
 }
 
 #name:hover {
-    color: #dcc8ae;
+    color: #bdac95;
 }
 
 #price {
@@ -217,6 +217,7 @@ img.coffee{
     position: absolute;
     left: 77.5%;
     top: 60%;
+    z-index: -1;
 }
 
 /*--- END OF BODY ---*/
