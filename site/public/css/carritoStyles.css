@@ -165,7 +165,7 @@ body{
 img.receta1{
     width: 25%;
     position: absolute;
-    left: -12%;
+    right: 86%;
     top: 57%;
     z-index: -1;
     transform: rotate(37deg);
@@ -175,7 +175,7 @@ img.receta2{
     width: 22%;
     position: absolute;
     left: 80%;
-    bottom: -1%;
+    bottom: 0%;
     opacity: 95%;
     z-index: -1;
 }
@@ -437,7 +437,7 @@ footer {
         text-emphasis: none;
     }
     img.receta1{
-        width: 63%;
+    width: 63%;
     position: absolute;
     left: -28%;
     top: 57%;

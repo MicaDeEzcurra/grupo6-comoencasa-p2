@@ -211,10 +211,10 @@ p {
 }
 
 /*--- Naranja deco ---*/
-img.naranja{
-    width: 7%;
+img.coffee{
+    width: 23%;
     position: absolute;
-    left: 93.5%;
+    left: 77.5%;
     top: 60%;
 }
 
@@ -310,13 +310,8 @@ footer {
         transform: translate(-50%, -50%);
     }
 
-    img.naranja {
-        width: 19%;
-        position: absolute;
-        left: -0.5%;
-        top: 60%;
-        transform: rotate(179deg);
-        z-index: -1;
+    img.coffee {
+       display: none;
     }
 
     .header-icons ul {
