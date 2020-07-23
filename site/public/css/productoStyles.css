@@ -107,6 +107,13 @@ a:hover {
     color: #3D3D3D;
 }
 
+
+.favorite {
+    background-color: transparent;
+    border: none;
+    color:  #999;
+}
+
 /*Icono perfil*/
 #cerrarSesion {
     left: 19px;

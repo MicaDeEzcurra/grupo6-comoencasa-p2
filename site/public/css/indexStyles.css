@@ -198,24 +198,17 @@ p{
     z-index: -1;
 
     } 
-    img.deco2{
-    width: 24%;
-    position: absolute;
-    left: 92%;
-    top: 44%;
-    opacity: 100%;
-    display: block;
-    
-    } 
+   
 
     img.deco3{
-        width: 27%;
+        width: 12.5%;
         position: absolute;
-        left: 90%;
+        left: 88%;
         top: -9%;
         opacity: 100%;
         display: block;
         transform: rotateX(45deg);
+        z-index: -1;
         } 
     
     .naranjax{
