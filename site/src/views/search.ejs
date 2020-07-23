@@ -14,7 +14,7 @@
 
         <!--BODY HOME -->
         <!-- Buscador -->
-        <form class="uk-search uk-search-large" method="POST" action="/buscador/search">
+        <form class="uk-search uk-search-large" method="POST" action="/search/search">
             <span uk-search-icon></span>
             <input class="uk-search-input" type="text" name="search" placeholder="Buscar...">
         </form>
@@ -25,7 +25,7 @@
 
             <% products.forEach(product => { %>
              <div>
-                 <a href="/producto/detail/<%= product.id %>">
+                 <a href="/product/detail/<%= product.id %>">
                      <div class="uk-card uk-card-default uk-card-body">
                          <img src="/img/<%= product.img %>" style="height: 100px; width: 130px; margin:3% 0"
                              alt="<%= product.name %>"

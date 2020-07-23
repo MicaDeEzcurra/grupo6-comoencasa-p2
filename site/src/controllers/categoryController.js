@@ -1,7 +1,7 @@
 const { Product } = require('../database/models');
 
 
-const categoriaController = {
+const categoryController = {
   index: (req, res) => {
     const idCategory = req.params.id;
     Product.findAll({
@@ -9,14 +9,14 @@ const categoriaController = {
         idCategory: idCategory
       }
     }).then(data => {
-      let products = data
-      //let title = 'dasayuno'
-      return res.render('categoria', { products});
+      let products = data;
+
+      return res.render('category', { products});
     })
 
   }
 
 };
 
-module.exports = categoriaController;
+module.exports = categoryController;
 

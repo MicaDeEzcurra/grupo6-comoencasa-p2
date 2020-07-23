@@ -171,9 +171,10 @@ p {
 }
 
 #name {
-    font-weight: bold;
-    text-transform: uppercase;
+    color: #cca677;
+    font-weight: 200;
     font-size: 18px;
+    background-color: #fafbf5;
     text-align: center;
 }
 
@@ -182,10 +183,11 @@ p {
 }
 
 #price {
-    font-weight: bold;
+    font-weight: 300;
     font-size: 16px;
     text-align: center;
 }
+
 
 .uk-card {
     padding: 0;
@@ -196,6 +198,7 @@ p {
     display: flex;
     justify-content: center;
     font-size: 30px;
+    font-weight: 300;
 }
 .uk-h1, h1{
     font-size: 17px;
@@ -208,10 +211,10 @@ p {
 }
 
 /*--- Naranja deco ---*/
-img.naranja{
-    width: 7%;
+img.coffee{
+    width: 23%;
     position: absolute;
-    left: 93.5%;
+    left: 77.5%;
     top: 60%;
 }
 
@@ -224,7 +227,6 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100px;
-    position: absolute;
 }
 
 .body-container {
@@ -308,13 +310,8 @@ footer {
         transform: translate(-50%, -50%);
     }
 
-    img.naranja {
-        width: 19%;
-        position: absolute;
-        left: -0.5%;
-        top: 60%;
-        transform: rotate(179deg);
-        z-index: -1;
+    img.coffee {
+       display: none;
     }
 
     .header-icons ul {
@@ -339,14 +336,10 @@ footer {
 
     p {
         text-align: center;
-        position: absolute;
-        bottom: 20%;
-        left: 29%;
     }
 
 
     .all-footer {
-        position: fixed;
         bottom: 0;
     }
 }

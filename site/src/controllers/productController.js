@@ -3,12 +3,12 @@ const { Product, Category} = require('../database/models');
 const db = require('../database/models');
 
 
-const controller = {
+const productController = {
     index: (req, res) => {
         let vac = {
             title: 'Producto'
         }
-        return res.render('producto', vac);
+        return res.render('product', vac);
 
     },
 
@@ -17,7 +17,7 @@ const controller = {
                 include: ['category', 'user']
             })
             .then(product => {
-                return res.render('detalle', {
+                return res.render('detail', {
                     product
                 })
             })
@@ -27,7 +27,7 @@ const controller = {
     create: (req, res) => {
         Category.findAll()
             .then(categories => {
-                return res.render('creacionProducto', { categories });
+                return res.render('createProduct', { categories });
             })
             .catch(error => console.log(error))
     },
@@ -43,7 +43,7 @@ const controller = {
     
             Product.create(product)
                 .then(product => {
-                    return res.redirect('/producto/detail/' + product.id)
+                    return res.redirect('/product/detail/' + product.id)
                 })
                  .catch(error => console.log(error))
         } else {
@@ -51,7 +51,7 @@ const controller = {
               Category.findAll()
                   .then(categories =>{
               
-                    return res.render('creacionProducto', { categories,  errors: errors.mapped(), old: req.body });
+                    return res.render('createProduct', { categories,  errors: errors.mapped(), old: req.body });
                     })
                   .catch(error => console.log(error))
     }
@@ -65,7 +65,7 @@ const controller = {
 
         Promise.all([product, categories])
             .then(([product, categories]) => {
-                return res.render('edicionProducto', {
+                return res.render('editProduct', {
                     product,
                     categories
                 })
@@ -88,7 +88,7 @@ const controller = {
                         }
                     })
                         .then(confirm => {
-                            return res.redirect('/producto/detail/' + req.params.productId)
+                            return res.redirect('/product/detail/' + req.params.productId)
                         })
                         .catch(error => console.log(error))
                 })
@@ -106,7 +106,7 @@ const controller = {
                         old: req.body
                     }
              //return res.send(errors.mapped())
-            return res.render('edicionProducto', objeto)
+            return res.render('editProduct', objeto)
                  } )
              .catch(error => console.log(error))
        }
@@ -120,7 +120,7 @@ const controller = {
                 }
             })
             .then(() => {
-                return res.redirect('/users/perfil/' + req.session.user.id)
+                return res.redirect('/users/profile/' + req.session.user.id)
             })
             .catch(error => console.log(error))
     },
@@ -134,15 +134,13 @@ const controller = {
             })
             .then(producto => {
 
-                return res.render('producto', {
+                return res.render('product', {
                     producto
                 })
             })
             .catch(error => console.log(error))
     }
 
-    
-
 }
 
-module.exports = controller;
+module.exports = productController;

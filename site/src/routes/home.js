@@ -5,10 +5,10 @@ const homeController = require('../controllers/homeController');
 /* GET home page. */
 router.get('/', homeController.index);
 
-router.get('/privacidad', homeController.privacidad);
+router.get('/privacy', homeController.privacy);
 router.get('/cookies', homeController.cookies);
-router.get('/envios', homeController.envios);
-router.get('/contacto', homeController.contacto);
+router.get('/shipping', homeController.shipping);
+router.get('/contact', homeController.contact);
 
 
 

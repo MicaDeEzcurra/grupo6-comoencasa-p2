@@ -324,7 +324,7 @@ li img {
         margin: 0 23%;
     }
     .nav-categorias li {
-        margin: 15px 15px;
+           margin: 10px auto;
     }
     .cuatro-circulos {
         margin-left: 25px;
@@ -340,7 +340,7 @@ li img {
             font-size: 18px;
             color: #3D3D3D;
             font-weight: 100;
-            TOP: 198%;
+            TOP: 283%;  
             WIDTH: 100%;
             LEFT: 0;
             MARGIN: 0 auto;

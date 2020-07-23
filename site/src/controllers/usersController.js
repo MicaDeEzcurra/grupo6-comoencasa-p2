@@ -109,7 +109,7 @@ profile: function (req, res) {
     }
   })
     .then(user => {
-      return res.render('perfil', { user });
+      return res.render('profile', { user });
     })
 
 }

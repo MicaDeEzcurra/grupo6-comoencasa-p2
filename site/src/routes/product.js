@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const productController = require('../controllers/productController');
 const multer = require('multer');
 const path = require('path');
-const buscadorController = require('../controllers/buscadorController');
+const validator = require('../middlewares/validator');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,10 +27,26 @@ var upload = multer({
     }
 });
 
-router.get('/', buscadorController.index);
 
-// router.get('/search' , buscadorController.searchView)
-router.post('/search', buscadorController.search)
+router.get('/', productController.index);
+router.get('/detail/:productId/', productController.detail);
+
+router.get('/create/', productController.create);
+router.post('/create/', upload.single('img'), validator.creacion, productController.store);
+
+router.get('/edit/:productId', productController.edit);
+router.post('/edit/:productId', upload.single('img'), validator.edicion, productController.update); /* PUT - Update in DB */
+
+router.post('/delete/', productController.destroy); 
+
+router.get('/:productId', productController.show);
+
+/*carrito*/
+// router.post('/addToCart', productoController.addToCart);
+
+
+
 
 module.exports = router;
+
 

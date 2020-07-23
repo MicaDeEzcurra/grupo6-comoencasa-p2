@@ -82,7 +82,19 @@ a:hover {
     justify-content: flex-end;
 }
 
-/*aca*/
+.product-detail-description{
+    color: rgb(170, 170, 170);
+    font-weight: 300;
+}
+
+.product-detail-category {
+    font-weight: 300;
+}
+
+.precioDetalle{
+    font-weight: 300;
+}
+
 .header-icons ul {
     display: flex;
 
@@ -136,10 +148,8 @@ body{
     background-color: #dcc8ae;
     color: white;
     border-radius: 50px;
-    position: absolute; 
     border: transparent;
-    right: 25px;
-    bottom: 30px;
+    text-align: center;
 }
 
 /*Select*/
@@ -159,8 +169,7 @@ body{
 }
 
 .uk-button-default:hover {
-    display: inherit;
-    background-color: #ff8800;
+    background-color: #bdac95;
     color: white;
 }
 
@@ -217,7 +226,7 @@ a:hover {
 /*--- END OF BODY ---*/
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
+footer {
     position: unset;
     bottom: 0;
     width: 100%;
@@ -334,7 +343,7 @@ a:hover {
 }
 
 
-    .all-footer {
+footer {
         bottom: 0;
     }
 }
@@ -347,17 +356,21 @@ a:hover {
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
     padding: 7px;
     font-size: 35px;
     margin-bottom: 0px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 #tituloContainer {
     width: 50%;
     margin: 0px auto;
     margin-top: 2%;
+}
+
+h3 {
+    font-weight: 300;
 }
 
 .uk-width-1-2\@m {
@@ -370,6 +383,7 @@ a:hover {
 .precioDetalle {
     line-height: 0;
     font-size: 22px;
+    font-weight: 300;
 }
 
 .uk-button-detail {
@@ -387,15 +401,46 @@ a:hover {
 
 #editar a  {
     color: white;
-    font-weight: none;
+    font-weight: 400;
 }
 
 #eliminar {
     right: 25%;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 #imgDetail {
     margin-top: 12px;
     padding: 10px;
+}
+
+#quantity{
+    border: 2px solid #dcc8ae;
+    border-radius: 20px;
+    text-align: center;
+    padding: 3px;
+}
+
+@media (max-width: 480px) {
+
+    #titulo {
+        font-size: 28px;
+    }
+
+    img.naranja {
+        display: none;
+    }
+
+    button {
+        margin: 0 auto
+    }
+
+    #editar {
+        left: 10%;
+    }
+
+    #eliminar { 
+        right: 10%;
+    }
+
 }
