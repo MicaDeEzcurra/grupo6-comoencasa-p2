@@ -99,19 +99,20 @@ a:hover {
 
 /*Icono perfil*/
 #cerrarSesion {
-    left: 19px;
     border: none;
-    color: grey;
+    color: #3D3D3D;
     font-weight: 500;
     background-color: transparent;
-    position: absolute;
-    top: 10px;
 }
 
-#cerrarSesion svg {
-    width: 17%;
+.uk-dropdown {
+    z-index: 1;
+    box-sizing: border-box;
+    min-width: 83px;
+    padding: 8px;
+    color: #3D3D3D;
+    background: rgba(255, 255, 255, .15);
 }
-
 svg {
     max-width: none;
 }
