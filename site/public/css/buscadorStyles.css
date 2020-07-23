@@ -163,9 +163,9 @@ body{
 img.crossaint{
     width: 27%;
     position: absolute;
-    left: -8%;
+    right: 75%;
     z-index: -1;
-    top: 62%;
+    top: 44%;
     opacity: 88%;
     display: block;
 } 
@@ -173,7 +173,7 @@ img.crossaint{
 .ravioli{
     width: 22%;
     position: absolute;
-    right: -8.5%;
+    left: 85%;
     top: 45%;
     opacity: 88%;
     display: block;

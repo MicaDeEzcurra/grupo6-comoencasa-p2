@@ -28,7 +28,13 @@
                             </time></a>
                         <div class="iconos">
                             <a href="/" uk-icon="location"></a>
-                            <a href="/favorite" uk-icon="heart"></a>
+                    
+                            <form method="POST" action="/favorite/add">
+                                <input type="hidden" value="<%= user.idSeller %>" name="idSeller">
+                                <button  class="uk-button uk-button-default"  id="" type="submit" >
+                                    <a href="/favorite" uk-icon="heart"></a>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -63,11 +69,11 @@
                             </div>
                         </article>
                         <% } else { %> 
-
+                                    <!-- <button class="uk-button uk-button-default">Agregar al carrito</button> -->
                             <form method="POST" action="/cart/addToCart">
                                     <input id="quantity" type="number" name="quantity" value="1" min='1' max='100' step=1> <br>
                                     <input type="hidden" value="<%= product.id %>" name="id"> <br>
-                                    <button style="text-align: center;" class="uk-button uk-button-default"">Agregar al carrito</button> 
+                                    <button style="text-align: center;" class="uk-button uk-button-default">Agregar al carrito</button> 
                             </form>
                             <br>
                             

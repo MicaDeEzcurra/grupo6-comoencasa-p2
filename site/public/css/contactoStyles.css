@@ -143,6 +143,15 @@ font-weight: 300;
     font-weight: 300;
 }
 
+
+.picada{
+    
+    width: 16%;
+    right: 0;
+    position: absolute;
+    
+}
+
 /*END of BODY*/
 
 
@@ -199,6 +208,12 @@ footer {
 
 footer {
     position: unset;
+}
+
+.picada{
+    
+  display: none;
+    
 }
 
 }

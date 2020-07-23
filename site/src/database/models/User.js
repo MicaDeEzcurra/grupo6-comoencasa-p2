@@ -21,15 +21,15 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'idUser'
         })
 
-        // User.hasMany(models.Favorite, {
-        //     as: 'followers',
-        //     foreignKey: 'idUser'
-        // })
+        User.hasMany(models.Favorite, {
+            as: 'follows',
+            foreignKey: 'idUser'
+        })
 
-        // User.hasMany(models.Favorite, {
-        //     as: 'follows',
-        //     foreignKey: 'idSeller'
-        // })
+        User.hasMany(models.Favorite, {
+            as: 'followers',
+            foreignKey: 'idSeller'
+        })
 
         User.hasMany(models.CartItem, {
             as: 'items',

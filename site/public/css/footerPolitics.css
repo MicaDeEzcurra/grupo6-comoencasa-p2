@@ -139,6 +139,57 @@ font-weight: 300;
     text-decoration: underline;
 }
 
+.cookies{
+    width: 18%;
+    position: absolute;
+    top: 37%;
+    right: 89%;
+    opacity: 88%;
+}
+.cookies1{
+    left: 88%;
+    width: 18%;
+    position: absolute;
+    top: 67%;
+    opacity: 88%;
+}
+
+.desayunos{
+
+    width: 18%;
+    position: absolute;
+    top: 37%;
+    right: 89%;
+    opacity: 95%;
+}
+
+.breakfast{
+    width: 18%;
+    position: absolute;
+    top: 67%;
+    left: 89%;
+    opacity: 95%;
+}
+
+.utencillos{
+    width: 10%;
+    position: absolute;
+    top: 37%;
+    right: 0%;
+    opacity: 95%;
+}
+
+.utencillos1{
+    width: 11%;
+    position: absolute;
+    top: 67%;
+    
+    opacity: 95%;
+}
+
+
+
+
 /*END of BODY*/
 
 
@@ -188,4 +239,29 @@ font-weight: 300;
     padding: 5px;
 }
 
-/*END OF FOOTER*/
+/*END OF FOOTER*/ 
+@media (max-width: 480px) {
+
+    .cookies{
+        display: none;
+    }
+
+    .cookies1{
+        display: none;
+    }
+
+    .desayunos{
+        display: none;
+    }
+
+    .breakfast{
+        display: none;
+    }
+
+    .utencillos{
+        display: none;
+    }
+    .utencillos1{
+        display: none;
+    }
+}
