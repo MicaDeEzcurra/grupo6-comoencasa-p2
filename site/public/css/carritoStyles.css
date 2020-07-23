@@ -73,7 +73,7 @@ a:hover {
 
 
 a:hover {
-    color: #dcc8ae;
+    color: #bdac95;
 }
 
 /* --- Iconos ---*/
@@ -262,7 +262,7 @@ font-size: 14px;
 color: #707070;
 }
 .boton-eliminar:hover{
-    color: #dcc8ae
+    color: #bdac95
 }
 /* Boton finalizar */
 .boton-finalizar {
@@ -276,7 +276,7 @@ color: #707070;
 }
 
 .boton-finalizar:hover {
-    color:white
+    color:#bdac95
 }
 
 .costo-envio {
@@ -393,7 +393,7 @@ footer {
 
 
 
-    .all-footer {
+    footer {
         bottom: 0;
     }
 
@@ -462,4 +462,39 @@ footer {
     }
 
     
+}
+
+
+/*HISTORIAL */
+
+#title {
+    font-size: 35px;
+    font-weight: 300;
+    color: #666;
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+}
+
+#name{
+    text-align: center;
+    color: #dcc8ae;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 3px 10px;
+    width: 100%;
+    height: 43px;
+    opacity: 106%;
+    text-transform: uppercase;
+}
+
+.product-detail {
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+#item {
+    border-bottom: 1px solid gainsboro;
+    width: 250px;
+    margin: 0 auto;
 }

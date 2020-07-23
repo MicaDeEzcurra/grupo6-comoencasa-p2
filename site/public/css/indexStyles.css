@@ -125,9 +125,16 @@ svg {
 
 
 /*--- Textos del body ---*/
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .texto-index{
     text-align: center;
     margin-top: 9%;
+    width: 320px;
 }
 
 h1{
@@ -156,7 +163,7 @@ h2{
 }
 
 .botonComenzar:hover {
-    background-color: #dcc8ae;
+    background-color: #bdac95;
 }
 
 
@@ -215,12 +222,8 @@ p{
     
     .naranjax{
         width: 24%;
-        position: absolute;
-        left: 65%;
-        top: 16%;
-        opacity: 100%;
+        opacity: 90%;
         display: block;
-
     } 
 /*FOOTER*/
 /*Main del footer*/
