@@ -17,12 +17,11 @@ const favoriteController = {
         ]
       },
       include: [{
-        association: 'followed',
+        association: 'followed'
       }],
     })
       
       .then((favorites) => {
-        console.log(favorites);
         return res.render("favorite", { favorites })
       })
       .catch(e => console.log(e))
@@ -35,9 +34,6 @@ const favoriteController = {
     //     return res.render('favorite', { favUserName })
     //   })
     //   .catch(e => console.log(e))
-
-
-
 
   },
   add: (req, res) => {
@@ -52,7 +48,6 @@ const favoriteController = {
          return res.redirect('/favorite');
           })
           .catch(e => console.log(e))
-
   }
 };
 
