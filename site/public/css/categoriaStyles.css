@@ -317,6 +317,11 @@ footer {
        display: none;
     }
 
+
+    .uk-grid>* {
+        padding-left: 0;
+    }
+
     .header-icons ul {
         top: 20px;
         position: absolute;

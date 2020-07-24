@@ -154,20 +154,20 @@ font-weight: 300;
     opacity: 88%;
 }
 
-.desayunos{
-
-    width: 18%;
+.cookingtools{
+    width: 24%;
     position: absolute;
     top: 37%;
-    right: 89%;
+    right: 85%;
     opacity: 95%;
 }
 
-.breakfast{
+
+.teacups{
     width: 18%;
     position: absolute;
     top: 67%;
-    left: 89%;
+    left: 85%;
     opacity: 95%;
 }
 
@@ -262,6 +262,13 @@ font-weight: 300;
         display: none;
     }
     .utencillos1{
+        display: none;
+    }
+
+    img.teacups {
+        display: none;
+    }
+    img.cookingtools {
         display: none;
     }
 }

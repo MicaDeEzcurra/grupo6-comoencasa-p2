@@ -220,18 +220,21 @@ body{
 }
 
 /*--- Naranja deco ---*/
-img.sushi{
-    width: 7%;
+img.honey{
+    width: 23%;
     position: absolute;
-    left: 0%;
-    top: 60%;
+    right: 81%;
+    top: 88%;
+    opacity: 72%;
 }
 
-img.pescados{
-    width: 16%;
+img.soup{
+    width: 24%;
     position: absolute;
-    right: 3%;
-    top: 60%;
+    right: 0%;
+    top: 40%;
+    opacity: 83%;
+    z-index: -1;
 }
 
 a:hover {
@@ -442,7 +445,10 @@ h3 {
         font-size: 28px;
     }
 
-    img.naranja {
+    img.soup {
+        display: none;
+    }
+    img.honey {
         display: none;
     }
 

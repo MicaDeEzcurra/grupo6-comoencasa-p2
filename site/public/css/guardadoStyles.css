@@ -194,11 +194,10 @@ body{
 .food {
     width: 19%;
     position: absolute;
-    left: 0%;
+    right: 85%;
     /* top: 30%; */
     bottom: 3%;
     opacity: 91%;
-    transform: rotate(179deg);
     z-index: -1;
 
 }

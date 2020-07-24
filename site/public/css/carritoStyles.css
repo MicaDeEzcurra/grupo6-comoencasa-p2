@@ -282,6 +282,10 @@ font-size: 14px;
     color: #bdac95;
 }
 
+img.deco1{
+    display: none;
+}
+
 /* total carrito */
 .total-carrito {
     font-weight: bold;
@@ -493,7 +497,16 @@ footer {
     .veggies{
         display: none;
     }
-
+/* img.deco1{
+    width: 108%;
+    position: absolute;
+    left: -31%;
+    top: 9%;
+    transform: rotate(179deg);
+    opacity: 88%;
+    display: block;
+    z-index: -2;
+} */
 
 
     .boton-finalizar-container {
