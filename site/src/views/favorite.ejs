@@ -18,15 +18,15 @@
             <ul uk-tab>
                 <li><a href="#">GUARDADOS</a></li>
             </ul>
-                    <div>
+                    <div class="container">
                          <% if(favorites.length != 0) { %>
                         <!-- GUARDADOS productos (los cuadraditos)-->
                          <% favorites.forEach(favorite => { %>
-                        <div>
-                            <p class="product-detail-price">
-                                @ <%= favorite.followed.name %>
-                            </p>
-                        </div>
+                            <div class="nameContainer">
+                                <p id="name">
+                                    @<%= favorite.followed.name %>
+                                </p>
+                            </div>
                         <% }) %>
                         <% } else { %>
                         <div class=>

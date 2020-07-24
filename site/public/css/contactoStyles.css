@@ -1,14 +1,13 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
 }
 
 *:focus {
     outline: none;
 }
 
-body {
-    font-family: 'Gilroy';
-}
 
 ul,
 ol {
@@ -25,10 +24,6 @@ a:hover {
     text-decoration: none;
 }
 
-body {
-
-    font-family: 'Roboto'
-}
 
 /*Container del body*/
 a,

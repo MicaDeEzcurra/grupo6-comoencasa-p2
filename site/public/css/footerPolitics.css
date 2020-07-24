@@ -1,14 +1,13 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
 }
 
 *:focus {
     outline: none;
 }
 
-body {
-    font-family: 'Gilroy';
-}
 
 ul,
 ol {
@@ -25,10 +24,6 @@ a:hover {
     text-decoration: none;
 }
 
-body {
-
-    font-family: 'Roboto'
-}
 
 /*Container del body*/
 a,
@@ -139,12 +134,18 @@ font-weight: 300;
     text-decoration: underline;
 }
 
+.contenedorEnvios {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .cookies{
     width: 18%;
     position: absolute;
     top: 37%;
     right: 89%;
     opacity: 88%;
+     z-index: -10;
 }
 .cookies1{
     left: 88%;
@@ -152,6 +153,7 @@ font-weight: 300;
     position: absolute;
     top: 67%;
     opacity: 88%;
+     z-index: -10;
 }
 
 .cookingtools{
@@ -160,6 +162,7 @@ font-weight: 300;
     top: 37%;
     right: 85%;
     opacity: 95%;
+    z-index: -10;
 }
 
 
@@ -169,6 +172,7 @@ font-weight: 300;
     top: 67%;
     left: 85%;
     opacity: 95%;
+     z-index: -10;
 }
 
 .utencillos{
@@ -177,13 +181,14 @@ font-weight: 300;
     top: 37%;
     right: 0%;
     opacity: 95%;
+    z-index: -10;
 }
 
 .utencillos1{
     width: 11%;
     position: absolute;
     top: 67%;
-    
+    z-index: -10;
     opacity: 95%;
 }
 
@@ -241,6 +246,10 @@ font-weight: 300;
 
 /*END OF FOOTER*/ 
 @media (max-width: 480px) {
+
+    .contenedorEnvios{
+        width: 80%;
+    }
 
     .cookies{
         display: none;

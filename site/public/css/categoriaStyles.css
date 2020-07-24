@@ -1,14 +1,13 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
 }
 
 *:focus {
     outline: none;
 }
 
-body {
-    font-family: 'Gilroy';
-}
 
 ul,
 ol {
@@ -25,10 +24,6 @@ a:hover {
     text-decoration: none;
 }
 
-body {
-
-    font-family: 'Roboto'
-}
 
 /*Container del body*/
 a,
@@ -222,14 +217,15 @@ img.coffee{
 
 /*--- END OF BODY ---*/
 
-
+#productContainer {
+    padding-bottom: 400px;
+}
 /*FOOTER*/
 /*Main del footer*/
 footer {
     bottom: 0;
     width: 100%;
     height: 100px;
-    position: absolute;
 }
 
 .body-container {
@@ -347,7 +343,8 @@ footer {
     }
 
 
-    .all-footer {
+    footer {
         bottom: 0;
+        padding-top: 100px;
     }
 }

@@ -1,13 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
 }
 
 *:focus {
     outline: none;
-}
-
-body {
-    font-family: 'Gilroy';
 }
 
 ul,
@@ -23,11 +21,6 @@ a,
 a:hover {
     color: #000;
     text-decoration: none;
-}
-
-body {
-
-    font-family: 'Roboto'
 }
 
 /*Container del body*/
@@ -137,14 +130,14 @@ svg {
 }
 
 #titulo {
-    color: #5c5c5c;
+    color: #707070;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
     padding: 7px;
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .uk-input {
@@ -169,8 +162,8 @@ svg {
 }
 
 #idCategory {
-    height: 41px;
-    width: 162px;
+    height: 47px;
+    width: 263px;
     border: #dcc8ae 2px solid;
     border-radius: 50px;
     margin: 5px 0;
@@ -186,7 +179,8 @@ svg {
     width: 151px;
     height: 49px;
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: 400;
+    text-transform: uppercase;
     border: 0px;
     color: white;
 }
@@ -194,7 +188,7 @@ svg {
 /*--- Footer ---*/
 /*FOOTER*/
 /*Main del footer*/
-.all-footer {
+footer {
     bottom: 0;
     width: 100%;
 }
@@ -254,6 +248,18 @@ svg {
         position: absolute;
         left: 5%;
         top: 2%;
+    }
+
+    #titulo{
+        font-size: 25px;
+    }
+
+    .edicionContainer{
+        width: 80%;
+    }
+
+    #idCategory {
+        width: 210px;
     }
 
     .header-logo {

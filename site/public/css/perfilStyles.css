@@ -1,15 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
 }
 
 *:focus {
     outline: none;
-}
-
-body {
-    font-family: 'Gilroy';
-    /*background-image: url('/site/public/img/instagram.png');
-    background-repeat: repeat-x;*/
 }
 
 ul,
@@ -26,12 +22,6 @@ a:hover {
     color: #000;
     text-decoration: none;
 }
-
-body {
-
-    font-family: 'Roboto'
-}
-
 /*Container del body*/
 a,
 a:hover {
