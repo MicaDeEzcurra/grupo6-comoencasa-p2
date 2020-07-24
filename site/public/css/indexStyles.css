@@ -133,7 +133,7 @@ svg {
 
 .texto-index{
     text-align: center;
-    margin-top: 9%;
+    margin-top: 7%;
     width: 320px;
 }
 
@@ -176,7 +176,7 @@ p{
     width: 22%;
     right: 23%;
     top: 22.5%;
-    opacity: 95%;
+    opacity: 90%;
     display: inline-block;
     }
     
@@ -226,8 +226,8 @@ p{
         display: block;
     } 
 /*FOOTER*/
-/*Main del footer*/
-.all-footer {
+/*Main del footer*/ 
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
