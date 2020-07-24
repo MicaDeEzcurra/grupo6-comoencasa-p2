@@ -145,14 +145,14 @@ svg {
 }
 
 #titulo {
-    color: #5c5c5c;
+    color: #707070;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid #707070;
+    border-bottom: 0.5px solid #707070;
     padding: 7px;
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .uk-input {
@@ -177,8 +177,8 @@ svg {
 }
 
 #idCategory {
- height: 41px;
- width: 162px;
+    height: 45px;
+    width: 260px;
  border: #dcc8ae 2px solid;
  border-radius: 50px;
  margin: 5px 0;
@@ -242,15 +242,15 @@ svg {
 }
 /*--- Naranja deco ---*/
 
-.naranjax {
-    display: none;
-    width: 7%;
+.cream {
+    width: 28%;
     position: absolute;
     right: 0;
     top: 25%;
     opacity: 88%;
     display: block
 }
+
 
 /*END OF FOOTER*/
 

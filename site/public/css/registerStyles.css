@@ -137,7 +137,7 @@ width: 50%;
 
 /*Titulo del Register*/
 .title-of-register {
-    color: #5c5c5c;
+    color: #707070;
     font-size: 40px;
     position: relative;
     text-align: center;
@@ -202,13 +202,24 @@ img.naranja{
     display:block
 } 
 
-.naranjax{
-    width: 7%;
+.cafe{
+    width: 16%;
     position: absolute;
-    right: 0;
-    top: 25%;
-    opacity: 88%;
-    display:block
+    right: 7%;
+    top: 36%;
+    opacity: 97%;
+    display: block;
+} 
+
+
+.frutosSecos{
+    width: 15%;
+    position: absolute;
+    left: 15%;
+    top: 55%;
+    opacity: 89%;
+    display: block;
+    transform: rotate(15deg);
 } 
 /*FOOTER*/
 /*Main del footer*/
@@ -293,14 +304,13 @@ footer {
         position: relative;
     }
     
-img.naranjax {
-    width: 17%;
-    position: fixed;
-    left: inherit;
-    top: 42%;
-    right: 0;
-    z-index: -1;
+img.cafe {
+display: none;
 }
+
+img.frutosSecos {
+    display: none;
+    }
 
     .welcome {
         text-align: center;

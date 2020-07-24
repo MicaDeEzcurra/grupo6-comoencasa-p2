@@ -220,10 +220,17 @@ body{
 }
 
 /*--- Naranja deco ---*/
-img.naranja{
+img.sushi{
     width: 7%;
     position: absolute;
-    left: 93.5%;
+    left: 0%;
+    top: 60%;
+}
+
+img.pescados{
+    width: 16%;
+    position: absolute;
+    right: 3%;
     top: 60%;
 }
 
@@ -360,15 +367,15 @@ footer {
 /*DETALLE DE PRODUCTO*/
 
 #titulo {
-    color: #5c5c5c;
+    color: #707070;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
     border-bottom: 1px solid #707070;
     padding: 7px;
     font-size: 35px;
-    margin-bottom: 0px;
-    font-weight: 300;
+    /* margin-bottom: 22px; */
+    font-weight: 200;
 }
 
 #tituloContainer {

@@ -90,8 +90,10 @@
                     </table>
                         <% } else { %>
                         <div>
-                            <h2 style="padding-bottom: 30%; text-align: center;" id="titleProducts">Aún no agregaste productos al carrito</h2>
+                            <h2 style="padding-bottom: 30%; text-align: center;" id="titleProducts">Aún no agregaste productos al carrito!</h2>
                         </div>
+
+                        
                         <%  } %>
                         <br>
                     </div>
@@ -99,6 +101,12 @@
                 </table>
 
             </form>
+        </div>
+        <hr>
+        <div class="botonHistorial">
+            <button  class="uk-button uk-button-default"  id="historial" type="submit" >
+                <a href="/cart/history"> Historial de Compras </a>
+            </button>
         </div>
         <!-- END OF BODY CARRITO -->
 

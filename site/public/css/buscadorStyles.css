@@ -160,12 +160,12 @@ body{
 }
 /*--- Naranja deco ---*/
     
-img.crossaint{
-    width: 27%;
+img.quesos{
+    width: 22%;
     position: absolute;
-    right: 75%;
     z-index: -1;
-    top: 44%;
+    top: 66%;
+    right: 82%;
     opacity: 88%;
     display: block;
 } 

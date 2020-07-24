@@ -156,27 +156,58 @@ body{
     display: flex;
     justify-content: center;
     font-size: 30px;
+    font-weight: 200;
+    color: #707070;
 }
 .uk-tab>.uk-active>a {
+    border: none;
     border-color: #dcc8ae;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #dcc8ae;
 }
 .uk-h1, h1{
     font-size: 17px;
     font-weight: bold;
 }
 /*--- Naranja deco ---*/
-img.naranja{
-    width: 7%;
+.frenchfries {
+    width: 19%;
     position: absolute;
-    left: 93.5%;
+    right: 0%;
     top: 60%;
+    z-index: -1;
 }
 
+
+.avocados {
+    width: 10%;
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    transform: rotate(-29deg);
+    z-index: -1;
+}
+
+
+
+.food {
+    width: 19%;
+    position: absolute;
+    left: 0%;
+    /* top: 30%; */
+    bottom: 3%;
+    opacity: 91%;
+    transform: rotate(179deg);
+    z-index: -1;
+
+}
 /*--- END OF BODY ---*/
 
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -259,14 +290,7 @@ img.naranja{
         transform: translate(-50%, -50%);
     }
 
-    img.naranja {
-        width: 19%;
-        position: absolute;
-        left: -0.5%;
-        top: 60%;
-        transform: rotate(179deg);
-        z-index: -1;
-    }
+
 
     .header-icons ul {
         top: 20px;

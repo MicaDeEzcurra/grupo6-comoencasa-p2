@@ -147,7 +147,7 @@ svg {
 
 /*Titulo del Login*/
 .title-of-login {
-    color: #5c5c5c;
+    color: #707070;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
@@ -235,14 +235,38 @@ img.naranja{
     display:block
 } 
 
-.naranjax{
-    width: 7%;
+.wine{
+    width: 16%;
     position: absolute;
-    right: 0;
-    top: 25%;
+    right: 6%;
+    top: 37%;
     opacity: 88%;
-    display:block
+    z-index: -1;
+    display: block;
 } 
+
+
+.linea1{
+    width: 16%;
+    position: absolute;
+    left: 0;
+    top: 0%;
+    opacity: 88%;
+    z-index: -1;
+    display: block;
+
+} 
+
+.linea2{
+    width: 15%;
+    position: absolute;
+    left: 15%;
+    bottom: 0%;
+    opacity: 88%;
+    z-index: -1;
+    display: block;
+} 
+
 
 /*FOOTER*/
 /*Main del footer*/
@@ -311,13 +335,8 @@ footer {
         right: 35px;
     }
 
-    img.naranjax {
-        width: 17%;
-        position: fixed;
-        left: inherit;
-        top: 42%;
-        right: 0;
-        z-index: -1;
+    img.wine {
+       display: none;
 }
     .header-home-barra {
         position: absolute;
