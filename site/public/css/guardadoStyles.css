@@ -182,7 +182,9 @@ body{
     z-index: -1;
 }
 
-
+.gris{
+    display: none;
+}
 
 .food {
     width: 19%;
@@ -321,6 +323,15 @@ body{
     .food{
         display: none;
     }
+
+    .gris{ width: 100%;
+        position: absolute;
+        right: 32%;
+        top: 6%;
+        z-index: -1;
+        opacity: 90%;
+        display: block;
+       }
 
     .header-icons ul {
         top: 20px;

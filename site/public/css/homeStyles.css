@@ -220,6 +220,10 @@ img.foodie2{
     left: 84%;
 } 
 
+.gris{
+    display: none;
+}
+
 li img {
     height: 330px;
     width: 600px;
@@ -346,6 +350,17 @@ li img {
 
     img.foodie2{
         display: none;
+    }
+
+
+    .gris {
+        width: 100%;
+        position: absolute;
+        right: 32%;
+        top: 45%;
+        z-index: -1;
+        opacity: 90%;
+        display: block;
     }
     .header-icons ul {
         top: 20px;

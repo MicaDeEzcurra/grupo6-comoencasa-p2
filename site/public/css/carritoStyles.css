@@ -278,6 +278,9 @@ font-size: 14px;
 img.deco1{
     display: none;
 }
+.gris{
+    display: none;
+}
 
 /* total carrito */
 .total-carrito {
@@ -423,8 +426,14 @@ footer {
         left: 20%;
     }
 
-
-
+   .gris{ width: 100%;
+    position: absolute;
+    right: 32%;
+    top: 6%;
+    z-index: -1;
+    opacity: 90%;
+    display: block;
+   }
     footer {
         bottom: 0;
     }
@@ -539,6 +548,8 @@ footer {
     text-align: center;
     margin-bottom: 300px;
 }
+
+
 
 #item {
     border-bottom: 1px solid gainsboro;
