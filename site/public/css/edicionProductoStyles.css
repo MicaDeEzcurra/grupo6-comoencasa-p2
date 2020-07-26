@@ -142,7 +142,7 @@ svg {
 
 .uk-input {
     width: 260px;
-    border: #dcc8ae 2px solid;
+    border: #dcc8ae 1px solid;
     border-radius: 50px;
     margin: 5px 0;
     padding: 21px;
@@ -229,13 +229,17 @@ footer {
 
 /*--- Naranja deco ---*/
 
-.naranjax {
-    width: 7%;
+.food {
+    width: 18%;
     position: absolute;
-    right: 0;
-    top: 25%;
-    opacity: 88%;
-    display: block
+    right: 12%;
+    top: 41%;
+    opacity: 95%;
+    display: block;
+}
+
+.gris{
+    display: none;
 }
 
 /*END OF FOOTER*/
@@ -300,6 +304,20 @@ footer {
         top: 20px;
         position: absolute;
         right: 35px;
+    }
+
+    .food{
+        display: none;
+    }
+
+    .gris {
+        width: 100%;
+        position: absolute;
+        right: 17%;
+        top: 12%;
+        z-index: -1;
+        opacity: 90%;
+        display: block;
     }
 
     #cerrarSesion {
