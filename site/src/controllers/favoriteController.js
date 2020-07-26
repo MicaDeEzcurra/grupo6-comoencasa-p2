@@ -48,7 +48,20 @@ const favoriteController = {
          return res.redirect('/favorite');
           })
           .catch(e => console.log(e))
-  }
+  },
+
+  destroy: (req, res) => {
+
+    Favorite.destroy({
+      where: {
+        id: req.body.idSeller
+      }
+    })
+      .then(() => {
+        return res.redirect('/favorite')
+      })
+      .catch(error => console.log(error))
+  },
 };
 
 

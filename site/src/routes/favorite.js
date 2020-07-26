@@ -6,4 +6,5 @@ router.get('/', favoriteController.index);
 
 router.post('/add', favoriteController.add);
 
+router.post('/delete/', favoriteController.destroy); 
 module.exports = router;

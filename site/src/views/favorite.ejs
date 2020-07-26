@@ -27,6 +27,11 @@
                                     @<%= favorite.followed.name %>
                                 </p>
                             </div>
+                            <form action="/favorite/delete" method="POST" class="">
+                                <!-- darle una clase de uiKit-->
+                                <input type="hidden" name="idSeller" value="<%= favorite.id %>">
+                                <button type="submit" class="boton-eliminar" uk-close></button>
+                            </form>
                         <% }) %>
                         <% } else { %>
                         <div class=>

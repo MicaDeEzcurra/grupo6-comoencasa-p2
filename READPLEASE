@@ -9,21 +9,5 @@ npm install
 To do:
 - /recomendados==> traer 5 productos random para recomendados
 - /recomendados==> search formulario por get: product where: {name = req...} 
-where: {
-				name: {
-					[Op.substring]: req.query.search
-					// [Op.like]: `%${req.query.search}%`
-				}
-			}
-
-			 Favorite.associate = function (models) {
-         Favorite.belongsTo(models.User, {
-             as: 'follow',
-             foreignKey: 'idSeller'
-         })
-         Favorite.belongsTo(models.User, {
-             as: 'follower',
-             foreignKey: 'idUser'
-         })
-    }     
+     
 
