@@ -11,9 +11,9 @@ const categoryController = {
     }).then(data => {
       let products = data;
 
-      return res.render('category', { products});
+      return res.render('category', { products });
     })
-
+      .catch(error => console.log(error))
   }
 
 };

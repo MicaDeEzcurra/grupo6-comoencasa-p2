@@ -9,8 +9,6 @@ router.post('/addToCart', cartController.addToCart);
 
 router.post('/delete', cartController.destroy);
 
-/* router.post('/update', cartController.update); */
-
 router.post('/purchase', cartController.purchase);
 
 router.get('/history', cartController.history)

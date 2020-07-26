@@ -47,13 +47,6 @@
                                     <td class="cantidad">
                                         <form action="/cart/quantity" method="POST">
                                             <p><%= cartProduct.quantity  %> </p>
-                                            <!-- <select class="boton-seleccionar" id="">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select> -->
                                         </form>
                                         </label>
                                     </td>
@@ -61,7 +54,6 @@
                                     <td class="subtotal">$<%= cartProduct.subtotal %></td>
                                     <td>
                                         <form action="/cart/delete" method="POST" class="">
-                                            <!-- darle una clase de uiKit-->
                                             <input type="hidden" name="idCartItem" value="<%= cartProduct.id %>">
                                             <button type="submit" class="boton-eliminar" uk-close></button>
                                         </form>
@@ -72,12 +64,6 @@
                                 <% console.log (typeof(cartProduct.price)) %>
                                 <% }); %>
                         </div>
-                        
-                        <!--   <form action="/carrito/update" method="POST">
-                            <button type="submit">
-                                <a href="" uk-icon="refresh"></a>
-                            </button>
-                        </form> -->
                         <div class="boton-finalizar-container">
                             <form action="/cart/purchase" method="POST">
                                 <div class="total-carrito">
@@ -113,7 +99,6 @@
         <!-- Naranja decoración -->
         <img src="img/comida.jpg" alt="" class="receta1">
         <img src="img/fideos.jpg" alt="" class="receta2">
-        <!-- <img src="/img/fondox.jpg" alt="" class="deco1"> -->
 
 
 

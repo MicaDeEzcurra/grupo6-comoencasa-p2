@@ -41,7 +41,6 @@
                         <select name="idCategory" id="idCategory" class="form-input">
                             <option value="">Elegí</option>
                             <% categories.forEach(category => { %>
-                            <!-- <option value="">Elegí</option> -->
                             <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
                         </select>

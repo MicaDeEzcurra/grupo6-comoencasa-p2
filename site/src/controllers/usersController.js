@@ -30,8 +30,10 @@ const controller = {
             console.log(err);
           });
     } else {
-      return res.render('register', { errors: errors.mapped(), old: req.body });
-    }
+      return res.render('register', { errors: errors.mapped(), old: req.body })
+        .catch(error => console.log(error))
+       }
+    
   },
 
   login: function (req, res) {
@@ -69,49 +71,38 @@ const controller = {
       } else {
           //si la contraseña ingresada no existe, le digo que no existe (el usuario si existe)
           //acá le tenemos que poner las validaciones
-          return res.render('login', { errors: errors.mapped(), old: req.body });
+          return res.render('login', { errors: errors.mapped(), old: req.body })
+            .catch(error => console.log(error))
         }
       } else {
         //si el usuario no existe, por que el mail no está en la DB, lo mando al register
         // return res.render('register');
         return res.render('login', { errors: errors.mapped(), old: req.body })
+          .catch(error => console.log(error))
       } 
 });
 
-    //}
   },
-logout: function (req, res) {
-  req.session.destroy();
+   logout: function (req, res) {
+      req.session.destroy();
 
-  if (req.cookies.email) {
-    res.clearCookie('email');
-  }
+      if (req.cookies.email) {
+        res.clearCookie('email');
+      }
 
-  return res.redirect('/');
+      return res.redirect('/');
 },
 
-profile: function (req, res) {
-  //       const idPerfil = req.params.id;
-  //       Product.findAll({
-  //         where: {
-  //           idCategory: idPerfil
-  //         }
-  //       }).then(data => {
-  //         let products = data
-  //         //let title = 'dasayuno'
-  //         return res.render('perfil', { products });
-  //       })
-  // return res.render('perfil');
-
-  User.findByPk(req.params.id, {
-    include: {
-      all: true
-    }
-  })
-    .then(user => {
-      return res.render('profile', { user });
-    })
-
+    profile: function (req, res) {
+ 
+      User.findByPk(req.params.id, {
+        include: {
+          all: true
+        }
+      })
+        .then(user => {
+          return res.render('profile', { user });
+        })
 }
        
 };

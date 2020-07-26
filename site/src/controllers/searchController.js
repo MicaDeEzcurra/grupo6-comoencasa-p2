@@ -12,9 +12,9 @@ const searchController = {
             products: resultados[1],
             title: 'Buscador'
           }
-          res.render('search', vac);
+          return res.render('search', vac);
        })
-
+         .catch(error => console.log(error))
        
      },
 
@@ -29,6 +29,7 @@ const searchController = {
         .then(function(result){
           return res.render('searchProduct', {result})
         })
+          .catch(error => console.log(error))
       }
 
 };
