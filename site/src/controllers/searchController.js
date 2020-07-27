@@ -4,52 +4,35 @@ const sequelize = db.sequelize;
 const Op = db.Sequelize.Op;
 
 const searchController = {
-     index: (req, res) =>{
-       sequelize.query('SELECT * FROM products WHERE deletedAt is NULL ORDER BY RAND() LIMIT 5')
-       .then(resultados => {
-         
-          let vac = {
-            products: resultados[1],
-            title: 'Buscador'
-          }
-          return res.render('search', vac);
-       })
-         .catch(error => console.log(error))
-       
-     },
+  index: (req, res) => {
+    sequelize.query('SELECT * FROM products WHERE deletedAt is NULL ORDER BY RAND() LIMIT 5')
+      .then(resultados => {
 
-      search : (req, res) => {
-        Product.findAll({
-          where: {
-            name:{
-              [Op.substring]: req.body.search
-            } 
+        let vac = {
+          products: resultados[1],
+          title: 'Buscador'
+        }
+        res.render('search', vac);
+      })
+
+
+  },
+
+  search: (req, res) => {
+    Product.findAll({
+        where: {
+          name: {
+            [Op.substring]: req.body.search
           }
+        }
+      })
+      .then(function (result) {
+        return res.render('searchProduct', {
+          result
         })
-        .then(function(result){
-          return res.render('searchProduct', {result})
-        })
-          .catch(error => console.log(error))
-      }
+      })
+  }
 
 };
 
 module.exports = searchController;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
