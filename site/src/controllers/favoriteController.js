@@ -11,11 +11,9 @@ const favoriteController = {
 
     Favorite.findAll({
       where: {
-        [Op.and]: [{
           idUser: req.session.user.id
-        }
-        ]
       },
+      
       include: [{
         association: 'followed'
       }],

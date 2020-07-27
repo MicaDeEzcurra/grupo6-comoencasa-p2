@@ -10,7 +10,6 @@ const categoryController = {
       }
     }).then(data => {
       let products = data;
-
       return res.render('category', { products});
     })
 

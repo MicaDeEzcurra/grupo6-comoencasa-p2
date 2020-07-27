@@ -221,6 +221,11 @@ body{
     margin: 0 auto;
 }
 
+#titleProducts {
+    font-weight: 200;
+    color: #bdac95;
+}
+
 /*FOOTER*/
 /*Main del footer*/
 .all-footer {
