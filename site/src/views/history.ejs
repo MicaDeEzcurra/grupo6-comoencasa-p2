@@ -23,14 +23,6 @@
                     </div>
                 </div>
                 <hr>
-                <!-- <div>
-                    <article class="product-detail-info">
-                        <h2 id="name" class="product-detail-title">
-                            < locals.user.name %>
-                        </h2>
-                        <hr>
-                    </article>
-                </div> -->
                 <div class="product-detail">
                     <div>
                         <div>
@@ -41,21 +33,19 @@
                                         <h4><%= new Date(cart.createdAt).toLocaleDateString() %> </h4>
                                         <section>
                                             <div id="item">
-                                        <% cart.items.forEach(item => { %> 
-                                            <li>
-                                               <b>Item:</b> <%= item.name %> -
-                                                $<%= item.subtotal %>
-                                            </li>
-                                        <% }) %>
-                                        </div>
+                                                 <% cart.items.forEach(item => { %> 
+                                                    <li>
+                                                    <b>Item:</b> <%= item.name %> -
+                                                        $<%= item.subtotal %>
+                                                    </li>
+                                                <% }) %>
+                                            </div>
 
                                             <div>
                                                 <p class="product-detail-price">
                                                   <b>Total:</b> $<%= cart.total %>
                                                 </p>
                                             </div>
-                                        </section>
-                                        <section >
                                         </section>
                                     </section>
                                 </div>

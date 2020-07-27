@@ -41,11 +41,10 @@ const path = require('path');
                      })
         }),
            
-    //        //password
+            //password
          body('password')
             .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
                .isLength({min:6}).withMessage('Debe tener al menos 6 caracteres').bail()
-                //req.body.password == req.body.retype).withMessage('Las contraseñas no coinciden'),
                .custom((value, { req }) => {
                 //    if(value != req.body.retype){
                 //     return false
@@ -73,13 +72,6 @@ const path = require('path');
             })
                 .then(user => {
                     if (user) {
-                        // let resultado = bcrypt.compareSync(req.body.password, user.password)
-                        // if(resultado){
-                        //     return true;
-                        // } else {
-                        //     return Promise.reject('La contraseña y el email no coinciden')
-                        // }
-
                         if (bcrypt.compareSync(req.body.password, user.password)){
                             return true;
                         } else {
@@ -107,7 +99,6 @@ const path = require('path');
 
          // category
            body('category')
-            //   .notEmpty().withMessage('Debes elegir una categoría'),
                  .custom((value, { req }) => req.body.idCategory).withMessage('Debes ingresar una categoría'),
 
          // image
@@ -133,7 +124,6 @@ const path = require('path');
 
          // category
          body('category')
-            //  .notEmpty().withMessage('Debes elegir una categoría'),
              .custom((value, { req }) => req.body.idCategory).withMessage('Debes ingresar una categoría'),
 
          // image

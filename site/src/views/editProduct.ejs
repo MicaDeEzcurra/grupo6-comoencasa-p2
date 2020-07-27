@@ -43,7 +43,6 @@
                         <div class="col-12 col-md-6">
                             <label for="category" class="form-label"></label>
                             <select name="idCategory" id="idCategory" class="form-input">
-                                <!-- <option value="">Elegí</option> -->
                                 <% categories.forEach(category => { %>
                                 <% if (product.idCategory == category.id) { %>
                                 <option selected value="<%= category.id %>"><%= category.name %></option>

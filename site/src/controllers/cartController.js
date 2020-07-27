@@ -1,9 +1,4 @@
-const {
-  CartItem,
-  Product, 
-  Cart,
-  sequelize
-} = require('../database/models');
+const { CartItem, Product, Cart, sequelize} = require('../database/models');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const db = require('../database/models')
@@ -26,18 +21,9 @@ const cartController = {
         }],
       })
       .then((cartProducts) => {
-        // let total = 0
-        // cartProducts.map(function(producto){
-        //   total = total + producto.price
-        // })
-        /* let total = cartProducts.reduce(
-          (total, cartProduct) => (total + cartProduct.subtotal), 0
-        ); */
-
-        return res.render('cart', {
-          cartProducts
-        })
+               return res.render('cart', { cartProducts })
       })
+      .catch(error => console.log(error))
   },
   
   addToCart: (req, res) => {
@@ -60,6 +46,7 @@ const cartController = {
       .then(() => {
         return res.redirect('/cart')
       })
+      .catch(error => console.log(error))
   },
 
   destroy: function (req, res) {
@@ -71,7 +58,8 @@ const cartController = {
 
     }).then(() => {
       return res.redirect('/cart');
-    });
+    })
+      .catch(error => console.log(error))
   },
 
   purchase: function (req, res) {
@@ -114,6 +102,7 @@ const cartController = {
       .then(() => {
         return res.redirect('/cart/history')
       }) 
+      .catch(error => console.log(error))
   },
 
    history: function (req, res) {
@@ -127,7 +116,8 @@ const cartController = {
        },
      }).then((carts) => {
        return res.render('history', { carts });
-     });
+     })
+       .catch(error => console.log(error))
    }
 
 }

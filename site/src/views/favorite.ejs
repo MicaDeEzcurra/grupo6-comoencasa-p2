@@ -20,7 +20,6 @@
             </ul>
                     <div class="container">
                          <% if(favorites.length != 0) { %>
-                        <!-- GUARDADOS productos (los cuadraditos)-->
                          <% favorites.forEach(favorite => { %>
                             <div class="nameContainer">
                                 <p id="name">
@@ -28,7 +27,6 @@
                                 </p>
                             </div>
                             <form action="/favorite/delete" method="POST" class="">
-                                <!-- darle una clase de uiKit-->
                                 <input type="hidden" name="idSeller" value="<%= favorite.id %>">
                                 <button type="submit" class="boton-eliminar" uk-close></button>
                             </form>

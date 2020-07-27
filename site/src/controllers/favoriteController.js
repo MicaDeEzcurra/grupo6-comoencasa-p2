@@ -8,7 +8,6 @@ const db = require('../database/models')
 const favoriteController = {
   index: (req, res) => {
 
-
     Favorite.findAll({
       where: {
           idUser: req.session.user.id
@@ -24,17 +23,9 @@ const favoriteController = {
       })
       .catch(e => console.log(e))
 
-    // const favUserName = User.findByPk(req.body.id);
-
-
-    // Promise.all([favUserName, createFavorite])
-    //   .then((favUserName) => {
-    //     return res.render('favorite', { favUserName })
-    //   })
-    //   .catch(e => console.log(e))
-
   },
-  add: (req, res) => {
+
+    add: (req, res) => {
 
        let favorite = {
          idSeller: req.body.id,
@@ -48,7 +39,7 @@ const favoriteController = {
           .catch(e => console.log(e))
   },
 
-  destroy: (req, res) => {
+    destroy: (req, res) => {
 
     Favorite.destroy({
       where: {
