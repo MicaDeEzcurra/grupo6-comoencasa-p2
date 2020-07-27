@@ -21,10 +21,10 @@
                 <img class="uk-border-circle" width="40" height="40" src="/img/perfil.jpg">
             </div>
             <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom"><%= producto.name %></h3>
-                <a class="uk-text-meta uk-margin-remove-top" href="/users/profile/<%= producto.user.id %>">
+                <h3 class="uk-card-title uk-margin-remove-bottom"><%= product.name %></h3>
+                <a class="uk-text-meta uk-margin-remove-top" href="/users/profile/<%= product.user.id %>">
                      <time datetime="2016-04-01T19:00">
-                         by <%= producto.user.name %>
+                         by <%= product.user.name %>
                     </time>
                 </a>
                 <div class="iconos">
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="uk-card-body">
-        <li><a href="#"><img src="/img/<%= producto.img %>" alt="" class="imagen-producto"></a></li>
+        <li><a href="#"><img src="/img/<%= product.img %>" alt="" class="imagen-producto"></a></li>
     </div>
     <div class="uk-card-footer">
         <div>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="precio">
-        <p>$ <%= producto.price %></p>
+        <p>$ <%= product.price %></p>
         </div>
     </div>
 </div>
