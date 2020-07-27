@@ -28,7 +28,11 @@
                                 <%= product.user.name %>
                             </time></a>
                         <div class="iconos">
-
+                                    <% if (locals.user.id == product.user.id) { %>
+                                    <div class=>
+                                        <h5 id="titleProducts"></h5>
+                                    </div>
+                                    <% } else { %>
                             <% if (locals.user) { %>
                             <form method="POST" action="/favorite/add">
                                 <input type="hidden" value="<%= product.idSeller %>" name="id">
@@ -41,6 +45,7 @@
                                 <button class="favorite" id="" type="submit">
                                     <a href="/users/login" uk-icon="heart"></a>
                                 </button>
+                            <% } %>
                             <% } %>
                         </div>
                     </div>
